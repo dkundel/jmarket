@@ -5,7 +5,7 @@
 @font-face {
     font-family: 'PTSansNarrowRegular';
     src: url('PTN57F-webfont.eot');
-    src: url('PTN57F-webfont.eot?#iefix') format('embedded-opentype'),
+    src: url('PTN57F-webfont.eot') format('embedded-opentype'),
          url('PTN57F-webfont.woff') format('woff'),
          url('PTN57F-webfont.ttf') format('truetype'),
          url('PTN57F-webfont.svg#PTSansNarrowRegular') format('svg');
@@ -17,7 +17,7 @@
 @font-face {
     font-family: 'PTSansCaptionBold';
     src: url('PTC75F-webfont.eot');
-    src: url('PTC75F-webfont.eot?#iefix') format('embedded-opentype'),
+    src: url('PTC75F-webfont.eot') format('embedded-opentype'),
          url('PTC75F-webfont.woff') format('woff'),
          url('PTC75F-webfont.ttf') format('truetype'),
          url('PTC75F-webfont.svg#PTSansCaptionBold') format('svg');
@@ -29,7 +29,7 @@
 @font-face {
     font-family: 'PTSansCaptionRegular';
     src: url('PTC55F-webfont.eot');
-    src: url('PTC55F-webfont.eot?#iefix') format('embedded-opentype'),
+    src: url('PTC55F-webfont.eot') format('embedded-opentype'),
          url('PTC55F-webfont.woff') format('woff'),
          url('PTC55F-webfont.ttf') format('truetype'),
          url('PTC55F-webfont.svg#PTSansCaptionRegular') format('svg');
@@ -41,7 +41,7 @@
 @font-face {
     font-family: 'PTSansBoldItalic';
     src: url('PTS76F-webfont.eot');
-    src: url('PTS76F-webfont.eot?#iefix') format('embedded-opentype'),
+    src: url('PTS76F-webfont.eot') format('embedded-opentype'),
          url('PTS76F-webfont.woff') format('woff'),
          url('PTS76F-webfont.ttf') format('truetype'),
          url('PTS76F-webfont.svg#PTSansBoldItalic') format('svg');
@@ -53,7 +53,7 @@
 @font-face {
     font-family: 'PTSansBold';
     src: url('PTS75F-webfont.eot');
-    src: url('PTS75F-webfont.eot?#iefix') format('embedded-opentype'),
+    src: url('PTS75F-webfont.eot') format('embedded-opentype'),
          url('PTS75F-webfont.woff') format('woff'),
          url('PTS75F-webfont.ttf') format('truetype'),
          url('PTS75F-webfont.svg#PTSansBold') format('svg');
@@ -65,7 +65,7 @@
 @font-face {
     font-family: 'PTSansItalic';
     src: url('PTS56F-webfont.eot');
-    src: url('PTS56F-webfont.eot?#iefix') format('embedded-opentype'),
+    src: url('PTS56F-webfont.eot') format('embedded-opentype'),
          url('PTS56F-webfont.woff') format('woff'),
          url('PTS56F-webfont.ttf') format('truetype'),
          url('PTS56F-webfont.svg#PTSansItalic') format('svg');
@@ -77,7 +77,7 @@
 @font-face {
     font-family: 'PTSansRegular';
     src: url('PTS55F-webfont.eot');
-    src: url('PTS55F-webfont.eot?#iefix') format('embedded-opentype'),
+    src: url('PTS55F-webfont.eot') format('embedded-opentype'),
          url('PTS55F-webfont.woff') format('woff'),
          url('PTS55F-webfont.ttf') format('truetype'),
          url('PTS55F-webfont.svg#PTSansRegular') format('svg');
@@ -89,7 +89,7 @@
 @font-face {
     font-family: 'PTSansNarrowBold';
     src: url('PTN77F-webfont.eot');
-    src: url('PTN77F-webfont.eot?#iefix') format('embedded-opentype'),
+    src: url('PTN77F-webfont.eot') format('embedded-opentype'),
          url('PTN77F-webfont.woff') format('woff'),
          url('PTN77F-webfont.ttf') format('truetype'),
          url('PTN77F-webfont.svg#PTSansNarrowBold') format('svg');
