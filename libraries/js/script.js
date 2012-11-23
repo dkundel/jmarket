@@ -1,6 +1,10 @@
 /* Author:
 
 */
+window.jMarket = {};
+window.jMarket.Modules={
+    MainPage : null
+};
 
 jQuery(function(){
 	var $modal = $('#sign_up_modal');

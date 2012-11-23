@@ -1,0 +1,21 @@
+<%
+import os,json
+
+__functionspath__ = "jmarket/scripts/load_functions"
+
+def LF_get_mainpage_content():
+    req.write("It works")
+
+if form.has_key("function"):
+    funcName = "LF_" + form["function"]
+    req.write(__functionspath__)
+    if os.path.isfile(__functionspath__+funcName+".psp"):
+        try:
+            func = locals()[funcName]
+            if callable(func):
+                func()      # depends on function, of course
+        except:
+            req.write(json.dumps(funcName + " is not defined"))
+    else:
+        req.write(json.dumps("File "+funcName+".psp does not exists"))
+
