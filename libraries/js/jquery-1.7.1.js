@@ -431,7 +431,7 @@ jQuery.extend({
 				return;
 			}
 
-			// If there are functions bound, to execute
+			// If there are load_functions bound, to execute
 			readyList.fireWith( document, [ jQuery ] );
 
 			// Trigger any bound ready events
@@ -487,7 +487,7 @@ jQuery.extend({
 	},
 
 	// See test/unit/core.js for details concerning isFunction.
-	// Since version 1.3, DOM methods and functions like alert
+	// Since version 1.3, DOM methods and load_functions like alert
 	// aren't supported. They return false on IE (#2968).
 	isFunction: function( obj ) {
 		return jQuery.type(obj) === "function";
@@ -685,7 +685,7 @@ jQuery.extend({
 		var ret = results || [];
 
 		if ( array != null ) {
-			// The window, strings (and functions) also have 'length'
+			// The window, strings (and load_functions) also have 'length'
 			// Tweaked logic slightly to handle Blackberry 4.7 RegExp issues #6930
 			var type = jQuery.type( array );
 
@@ -916,7 +916,7 @@ if ( rnotwhite.test( "\xA0" ) ) {
 // All jQuery objects should point back to these
 rootjQuery = jQuery(document);
 
-// Cleanup functions for the document ready method
+// Cleanup load_functions for the document ready method
 if ( document.addEventListener ) {
 	DOMContentLoaded = function() {
 		document.removeEventListener( "DOMContentLoaded", DOMContentLoaded, false );
@@ -948,7 +948,7 @@ function doScrollCheck() {
 		return;
 	}
 
-	// and execute any waiting functions
+	// and execute any waiting load_functions
 	jQuery.ready();
 }
 
@@ -2834,7 +2834,7 @@ var rformElems = /^(?:textarea|input|select)$/i,
 	};
 
 /*
- * Helper functions for managing events -- not part of the public interface.
+ * Helper load_functions for managing events -- not part of the public interface.
  * Props to Dean Edwards' addEvent library for many of the ideas.
  */
 jQuery.event = {
@@ -3804,7 +3804,7 @@ jQuery.fn.extend({
 				return args[ lastToggle ].apply( this, arguments ) || false;
 			};
 
-		// link all the functions, so any of them can unbind this click handler
+		// link all the load_functions, so any of them can unbind this click handler
 		toggler.guid = guid;
 		while ( i < args.length ) {
 			args[ i++ ].guid = guid;
@@ -7087,7 +7087,7 @@ jQuery.fn.extend({
 	}
 });
 
-// Attach a bunch of functions for handling common AJAX events
+// Attach a bunch of load_functions for handling common AJAX events
 jQuery.each( "ajaxStart ajaxStop ajaxComplete ajaxError ajaxSuccess ajaxSend".split( " " ), function( i, o ){
 	jQuery.fn[ o ] = function( f ){
 		return this.on( o, f );
@@ -7762,7 +7762,7 @@ function ajaxConvert( s, response ) {
 		conversion,
 		// Conversion function
 		conv,
-		// Conversion functions (transitive conversion)
+		// Conversion load_functions (transitive conversion)
 		conv1,
 		conv2;
 
@@ -8831,7 +8831,7 @@ jQuery.extend( jQuery.fx, {
 	}
 });
 
-// Adds width/height step functions
+// Adds width/height step load_functions
 // Do not set anything below 0
 jQuery.each([ "width", "height" ], function( i, prop ) {
 	jQuery.fx.step[ prop ] = function( fx ) {
