@@ -42,6 +42,23 @@ p.address{
   line-height: 15px;
 }
 
+.nav_bar_left .nav{
+  padding-top: 20px;
+}
+
+.content_wrapper {
+  padding: 20px 20px;
+}
+
+li.span3.product {
+  margin-left: 0px;
+  margin-right: 1.564102564102564%;
+}
+
+#input-price-from, #input-price-to {
+  position: static;
+}
+
 .btn-jmarket-orange {
   background-color: hsl(34, 98%, 44%) !important;
   background-repeat: repeat-x;
