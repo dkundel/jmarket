@@ -42,8 +42,9 @@ p.address{
   line-height: 15px;
 }
 
-.nav_bar_left .nav{
-  padding-top: 20px;
+.nav_bar_left .sidebar-nav{
+  margin-top: 20px;
+  margin-left: 10px;
 }
 
 .content_wrapper {
@@ -57,6 +58,21 @@ li.span3.product {
 
 #input-price-from, #input-price-to {
   position: static;
+}
+
+.thumbnail .caption p {
+  display: inline-block;
+}
+
+.price-tag {
+  float: right;
+  display: inline-block;
+  margin: 0px;
+  line-height: 30px;
+}
+
+.price-tag:after{
+  content: " €";
 }
 
 .btn-jmarket-orange {
