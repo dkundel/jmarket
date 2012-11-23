@@ -1,0 +1,109 @@
+<% import time %>
+<!doctype html>
+<!--[if lt IE 7]> <html class='no-js lt-ie9 lt-ie8 lt-ie7' lang='en'> <![endif]-->
+<!--[if IE 7]>    <html class='no-js lt-ie9 lt-ie8' lang='en'> <![endif]-->
+<!--[if IE 8]>    <html class='no-js lt-ie9' lang='en'> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class='no-js' lang='en'> <!--<![endif]-->
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+
+  <title>jMarket - Maintenance</title>
+  <meta name='description' content='jMarket'>
+  <meta name='viewport' content='width=device-width'>
+  <link rel='stylesheet' href='../bootstrap/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='../fonts/stylesheet_ptsans.css'>
+  <link rel='stylesheet' href='../fonts/stylesheet_chunk.css'>
+  <link rel='stylesheet' href='../css/style.css'>
+  <script src='../js/libs/modernizr-2.5.3.min.js'></script>
+</head>
+<body>
+  <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href='http://browsehappy.com/'>Upgrade to a different browser</a> or <a href='http://www.google.com/chromeframe/?redirect=true'>install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+  <header>
+    <div class='navbar navbar-static-top'>
+      <div class='navbar-inner'>
+        <div class='container-fluid'>
+          <a class='btn btn-navbar' data-toggle='collapse' data-target='.nav-collapse'>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+          </a>
+          <a class='brand' href='../index.html' name='jMarket'><img alt='jMarket' src='../img/jmarket_150.png'></a>
+          <div class='nav-collapse collapse'>
+            <ul class="nav">
+              <li><a href="../index.html"><i class="icon-home"></i> Home</a></li>
+              <li class="divider-vertical"></li>
+              <li><a href="#"><i class="icon-tags"></i> Categories</a></li>
+              <li class="divider-vertical"></li>
+              <li><a href="#"><i class="icon-list-alt"></i> Offer</a></li>
+              <li class="divider-vertical"></li>
+              <li class="active"><a href="../maintenance.html"><i class="icon-wrench"></i> Maintenance</a></li>
+              <li class="divider-vertical"></li>
+              <li><a href="../imprint.html"><i class="icon-info-sign"></i> Imprint</a></li>
+            </ul>
+            <ul class='nav pull-right'>
+              <form class='navbar-search pull-left'>
+                <input type='text' class='search-query' placeholder='Search'>
+              </form>
+              <li><a href='/signup.html'>Sign Up</a></li>
+              <li class='divider-vertical'></li>
+              <li><a href='#'>Sign In</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div role='main'>
+    <div class='well content span9 offset3'>
+      <a href="../maintenance.html">Back to Maintenance</a><br>
+      <a href="free_user_product.html">Back to Search Free Products</a><br>
+      <table class="table table-condensed table-hover table-bordered">
+      <thead>
+        <tr>
+          <th>User Email</th>
+          <th>Product Name</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+<% 
+import MySQLdb as mdb
+import sys
+
+if form.has_key('filterName'):
+  search_query = "SELECT p.`product_id`, u.`email`, p.`name` FROM `give_away` ga INNER JOIN `product` p ON p.`product_id` = ga.`product_id` INNER JOIN `users` u ON ga.`user_id` = u.`user_id` WHERE p.`name` LIKE `%" + filter['filterName'].upper() + "%`;"
+else:
+  search_query = "SELECT p.`product_id`, u.`email`, p.`name` FROM `give_away` ga INNER JOIN `product` p ON p.`product_id` = ga.`product_id` INNER JOIN `users` u ON ga.`user_id` = u.`user_id`;"
+
+try:
+  con = mdb.connect('localhost', 'root', '', 'jMarket');
+  with con:
+    cur = con.cursor()
+    cur.execute(search_query)
+    numrows = int(cur.rowcount)
+    html = ""
+    for i in range(numrows):
+      row = cur.fetchone()
+      html += "<tr><td>" + row[1] + "</td><td>" + row[2] + "</td><td><a href='details_free.psp?id=" + str(row[0]) + "'>See details...</td></tr>"
+    req.write(html)
+except mdb.Error, e:
+  req.write("Error %d: %s" % (e.args[0],e.args[1]))
+  sys.exit(1)
+%>
+    </tbody></table>
+    </div>
+  </div>
+  <footer>
+  </footer>
+
+
+  <script src='//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js'></script>
+  <script>window.jQuery || document.write('<script src='../js/libs/jquery-1.7.1.min.js'><\/script>')</script>
+
+  <script src='../bootstrap/js/bootstrap.min.js'></script>
+  <script src='../js/plugins.js'></script>
+  <script src='../js/script.js'></script>
+</body>
+</html>
