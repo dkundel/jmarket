@@ -75,6 +75,11 @@ li.span3.product {
   content: " €";
 }
 
+.user-actions {
+  float: right;
+  margin-bottom: 20px;
+}
+
 .btn-jmarket-orange {
   background-color: hsl(34, 98%, 44%) !important;
   background-repeat: repeat-x;

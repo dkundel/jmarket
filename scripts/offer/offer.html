@@ -1,0 +1,80 @@
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3>Create Offer</h3>
+      </div>
+      <div class="modal-body">
+        <div class="row-fluid">
+          <form class="form-horizontal" action='' method="POST">
+            <fieldset>
+              <div class="control-group">
+                <!-- Name -->
+                <label class="control-label"  for="name">Product Name</label>
+                <div class="controls">
+                  <input type="text" id="name" name="name" placeholder="" class="input-xlarge">
+                  <p class="help-block">Please enter the name of your offer</p>
+                </div>
+              </div>
+
+              <div class="control-group">
+                <!-- Category -->
+                <label class="control-label" for="category">Category</label>
+                <div class="controls">
+                  <select id="category" name="category" placeholder="" class="input-xlarge">
+                    <!-- different categories -->
+                    <option name="electronics">Electronics</option>
+                    <option name="clothing">Clothing</option>
+                    <option name="furniture">Furniture</option>
+                    <!-- end different categories -->
+                  </select>
+                  <p class="help-block">Please state the category</p>
+                </div>
+              </div>
+
+              <div class="control-group">
+                <!-- Description -->
+                <label class="control-label"  for="description">Description</label>
+                <div class="controls">
+                  <textarea id="description" name="description" placeholder="" class="input-xlarge"></textarea>
+                  <p class="help-block">Please enter a description for your offer.</p>
+                </div>
+              </div>
+
+              <div class="control-group">
+                <!-- Price -->
+                <label class="control-label"  for="price">Price</label>
+                <div class="controls">
+                  <div class="input-append">
+                    <input class="input-small" id="price" name="price" type="text">
+                    <span class="add-on">&euro;</span>
+                  </div>
+                  <p class="help-block">Please enter a price.</p>
+                </div>
+              </div>
+
+              <div class="control-group">
+                <!-- Expiry date -->
+                <label class="control-label"  for="expirydate">Valid Until</label>
+                <div class="controls">
+                  <input type="text" placeholder="dd/mm/yyyy" id="expirydate" name="expirydate">
+                  <p class="help-block">Please enter the time until your offer is valid. (dd/mm/yyyy)</p>
+                </div>
+              </div>
+
+              <div class="control-group">
+                <!-- Picture-->
+                <label class="control-label" for="picture">Picture</label>
+                <div class="controls">
+                  <input type="file" id="picture" name="picture" placeholder="" class="input-xlarge">
+                  <p class="help-block">Please upload a picture</p>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" data-dismiss="modal" class="btn">Close</button>
+        <button type="button" class="btn btn-jmarket-orange">Create Offer</button>
+      </div>
+
+
