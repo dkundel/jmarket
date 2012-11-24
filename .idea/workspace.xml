@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80bc9143-5dd0-4a6d-99bf-35d49c6ea826" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/load_function.psp" afterPath="$PROJECT_DIR$/scripts/load_function.psp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/main_page/main_page.js" afterPath="$PROJECT_DIR$/scripts/main_page/main_page.js" />
     </list>
@@ -58,21 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main_page.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main_page.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/main_page/main_page.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="37" selection-start="1747" selection-end="1747" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1353722224293" expanded="true" signature="96:2120" placeholder="{&quot;data_content&quot;: null...}" />
-                <marker date="1353722224293" expanded="true" signature="814:970" placeholder="{...}" />
-                <marker date="1353722224293" expanded="true" signature="1021:1273" placeholder="/** ...*/" />
-                <marker date="1353722224293" expanded="true" signature="1361:1822" placeholder="{...}" />
-                <marker date="1353722224293" expanded="true" signature="1738:1810" placeholder="{...}" />
-                <marker date="1353722224293" expanded="true" signature="1832:1901" placeholder="/** ...*/" />
-                <marker date="1353722224293" expanded="true" signature="1951:1963" placeholder="{...}" />
-                <marker date="1353722224293" expanded="true" signature="2005:2017" placeholder="{...}" />
-                <marker date="1353722224293" expanded="true" signature="2053:2113" placeholder="{...}" />
-              </folding>
+            <state line="45" column="91" selection-start="1361" selection-end="1361" vertical-scroll-proportion="0.6185567">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -86,10 +74,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="load_function.psp" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="load_function.psp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/load_function.psp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="37" selection-start="556" selection-end="556" vertical-scroll-proportion="0.41580757">
+            <state line="28" column="67" selection-start="586" selection-end="586" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -439,23 +427,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/main_page/main_page.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="37" selection-start="1747" selection-end="1747" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1353722224293" expanded="true" signature="96:2120" placeholder="{&quot;data_content&quot;: null...}" />
-            <marker date="1353722224293" expanded="true" signature="814:970" placeholder="{...}" />
-            <marker date="1353722224293" expanded="true" signature="1021:1273" placeholder="/** ...*/" />
-            <marker date="1353722224293" expanded="true" signature="1361:1822" placeholder="{...}" />
-            <marker date="1353722224293" expanded="true" signature="1738:1810" placeholder="{...}" />
-            <marker date="1353722224293" expanded="true" signature="1832:1901" placeholder="/** ...*/" />
-            <marker date="1353722224293" expanded="true" signature="1951:1963" placeholder="{...}" />
-            <marker date="1353722224293" expanded="true" signature="2005:2017" placeholder="{...}" />
-            <marker date="1353722224293" expanded="true" signature="2053:2113" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/DatabaseHandler.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="18" selection-end="18" vertical-scroll-proportion="0.0">
@@ -465,7 +436,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/load_function.psp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="37" selection-start="556" selection-end="556" vertical-scroll-proportion="0.41580757">
+        <state line="28" column="67" selection-start="586" selection-end="586" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/main_page/main_page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="91" selection-start="1361" selection-end="1361" vertical-scroll-proportion="0.6185567">
           <folding />
         </state>
       </provider>

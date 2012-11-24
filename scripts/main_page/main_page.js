@@ -36,12 +36,9 @@
                 function:"get_latest_offers"
             }
             $.post("scripts/load_function.psp", data, function (data) {
-<<<<<<< HEAD
                 data = JSON.parse(data);
-                console.log(data);
-=======
                 content = '<div class="row-fluid"><ul class="thumbnails">';
-                for(int i=0; i < data.length; ++i){
+                for(var i=0; i < data.length; ++i){
                         content += '<li class="span3 product"><div class="thumbnail">'+
                         '<img src="http://placehold.it/300x200" alt=""><div class="caption">';
                         content += '<h3>' + data[i][1] + '</h3>';
@@ -51,8 +48,7 @@
                         content += '<div class="clearfix"></div></div></div></li>';
                 }
                 this.page_html = content;
-                this._display_page();
->>>>>>> e56477f2a9ba8edf15d2c38874f6c8f22b7b1682
+                $('div.content_wrapper').html(content);
             });
         },
         /**
