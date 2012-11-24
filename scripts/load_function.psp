@@ -26,7 +26,7 @@ if conn:
 
     def LF_get_latest_offers():
         global cursor
-        query = "SELECT p.product_id    ,p.name,p.description " \
+        query = "SELECT p.product_id ,p.name,p.description " \
                 "FROM product p " \
                 "INNER JOIN selling_products sp ON sp.product_id = p.product_id " \
                 "ORDER BY sp.create_date DESC " \
