@@ -33,9 +33,10 @@
          */
         _fetch_content:function () {
             var data = {
-                function:"get_ceva"
+                function:"get_latest_offers"
             }
             $.post("scripts/load_function.psp", data, function (data) {
+                data = JSON.parse(data);
                 console.log(data);
             });
         },

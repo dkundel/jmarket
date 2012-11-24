@@ -2,17 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80bc9143-5dd0-4a6d-99bf-35d49c6ea826" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/george.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/DatabaseHandler.psp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/config.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/load_function.psp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/load_functions/LF_getmainpage_content.psp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/load_functions/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/main_page/main_page.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/main_page/main_page.psp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/jquery-1.7.1.js" afterPath="$PROJECT_DIR$/libraries/js/jquery-1.7.1.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/script.js" afterPath="$PROJECT_DIR$/libraries/js/script.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/DatabaseHandler.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/DatabaseHandler.psp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/config.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/load_functions/LF_getmainpage_content.psp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/load_functions/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/main_page/main_page.psp" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/load_function.psp" afterPath="$PROJECT_DIR$/scripts/load_function.psp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/main_page/main_page.js" afterPath="$PROJECT_DIR$/scripts/main_page/main_page.js" />
     </list>
     <list id="b5db40e1-5186-4751-8aff-90f92af58882" name="New changelist" comment="New changelist" />
     <ignored path="jmarket.iws" />
@@ -52,10 +50,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="script.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="script.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/libraries/js/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="81" selection-end="81" vertical-scroll-proportion="0.10600707">
+            <state line="6" column="0" selection-start="81" selection-end="81" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -66,65 +64,25 @@
       <file leaf-file-name="main_page.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/main_page/main_page.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="16" selection-start="791" selection-end="791" vertical-scroll-proportion="0.0">
+            <state line="38" column="40" selection-start="824" selection-end="824" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main_page.psp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/main_page/main_page.psp">
+      <file leaf-file-name="DatabaseHandler.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/DatabaseHandler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="1" column="0" selection-start="18" selection-end="18" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/config.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="247" selection-end="247" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DatabaseHandler.psp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/DatabaseHandler.psp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="load_function.psp" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="load_function.psp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/load_function.psp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="51" selection-start="70" selection-end="70" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LF_getmainpage_content.psp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/load_functions/LF_getmainpage_content.psp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="18" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1353709822737" expanded="true" signature="11:30" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libraries/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="94" column="0" selection-start="1885" selection-end="1885" vertical-scroll-proportion="0.0">
+            <state line="28" column="40" selection-start="559" selection-end="559" vertical-scroll-proportion="0.41580757">
               <folding />
             </state>
           </provider>
@@ -146,13 +104,15 @@
         <option value="$PROJECT_DIR$/libraries/css/style.css" />
         <option value="$PROJECT_DIR$/scripts/main_page/main_page.psp" />
         <option value="$PROJECT_DIR$/scripts/config.py" />
-        <option value="$PROJECT_DIR$/scripts/DatabaseHandler.py" />
-        <option value="$PROJECT_DIR$/scripts/DatabaseHandler.psp" />
         <option value="$PROJECT_DIR$/scripts/functions/LF_get_mainpage.py" />
         <option value="$PROJECT_DIR$/scripts/functions/__init__.py" />
         <option value="$PROJECT_DIR$/scripts/functions/gogu.py" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/libraries/js/script.js" />
+        <option value="$PROJECT_DIR$/scripts/load_functions/__init__.py" />
+        <option value="$PROJECT_DIR$/scripts/__init__.py" />
+        <option value="$PROJECT_DIR$/scripts/DatabaseHandler.psp" />
+        <option value="$PROJECT_DIR$/scripts/DatabaseHandler.py" />
         <option value="$PROJECT_DIR$/scripts/main_page/main_page.js" />
         <option value="$PROJECT_DIR$/scripts/load_function.psp" />
       </list>
@@ -444,45 +404,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/main_page/main_page.psp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="247" selection-end="247" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/DatabaseHandler.psp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/load_functions/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="1" selection-end="1" vertical-scroll-proportion="0.01718213">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/load_functions/LF_getmainpage_content.psp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="18" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1353709822737" expanded="true" signature="11:30" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="60" selection-start="1683" selection-end="1683" vertical-scroll-proportion="-19.375">
@@ -500,26 +421,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="81" selection-end="81" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/main_page/main_page.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="16" selection-start="791" selection-end="791" vertical-scroll-proportion="0.0">
+        <state line="38" column="40" selection-start="824" selection-end="824" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/DatabaseHandler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="18" selection-end="18" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/load_function.psp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="51" selection-start="70" selection-end="70" vertical-scroll-proportion="0.0">
+        <state line="28" column="40" selection-start="559" selection-end="559" vertical-scroll-proportion="0.41580757">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="81" selection-end="81" vertical-scroll-proportion="0.10600707">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

@@ -1,21 +1,76 @@
 <%
-import os,json
+import json,sys,MySQLdb as MDB
 
-__functionspath__ = "jmarket/scripts/load_functions"
+conn = None
 
-def LF_get_mainpage_content():
-    req.write("It works")
 
-if form.has_key("function"):
-    funcName = "LF_" + form["function"]
-    req.write(__functionspath__)
-    if os.path.isfile(__functionspath__+funcName+".psp"):
+def echo(text):
+    req.write(json.dumps(text))
+
+def create_db_connection():
+    global conn
+    if not conn:
+        host = "localhost"
+        user = "dominik"
+        password ="password123"
+        db = "jMarket"
+        try:
+            conn = MDB.connect(host,user,password,db)
+        except:
+            echo("Failed to connect to the database")
+
+create_db_connection()
+
+if conn:
+    cursor = conn.cursor()
+
+    def LF_get_latest_offers():
+        global cursor
+        query = "SELECT p.product_id    ,p.name,p.description " \
+                "FROM product p " \
+                "INNER JOIN selling_products sp ON sp.product_id = p.product_id " \
+                "ORDER BY sp.create_date DESC " \
+                "LIMIT 0, 16"
+        cursor.execute(query)
+        rows = cursor.fetchall()
+        echo(rows)
+
+
+    def LF_get_offers_by_category():
+        echo("")
+
+    def LF_get_user_information():
+        echo("")
+
+    def LF_get_categories():
+        echo("")
+
+    def LF_sign_up():
+        echo("")
+
+    def LF_sign_in():
+        echo()
+
+    def LF_create_review():
+        echo()
+
+    def LF_create_offer():
+        echo()
+
+    def LF_get_product_info():
+        echo()
+
+
+    if form.has_key("function"):
+        funcName = "LF_" + form["function"]
         try:
             func = locals()[funcName]
             if callable(func):
-                func()      # depends on function, of course
+                try:
+                    func()      # depends on function, of course
+                except:
+                    echo("There was an error in the function")
         except:
-            req.write(json.dumps(funcName + " is not defined"))
-    else:
-        req.write(json.dumps("File "+funcName+".psp does not exists"))
-
+            echo(funcName + " is not defined")
+else:
+    echo("Inexisting database connection")
