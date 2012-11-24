@@ -60,7 +60,7 @@ li.span3.product {
   position: static;
 }
 
-.thumbnail .caption p {
+.thumbnail .caption p.caption_bottom {
   display: inline-block;
 }
 

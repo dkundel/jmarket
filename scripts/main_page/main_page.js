@@ -43,7 +43,7 @@
                         '<img src="http://placehold.it/300x200" alt=""><div class="caption">';
                         content += '<h3>' + data[i][1] + '</h3>';
                         content += '<p>' + data[i][2] + '</p>';
-                        content += '<p><a href="#' + data[i][0] + '" class="btn btn-jmarket-orange"><i class="icon-share icon-white"></i> Details</a></p>';
+                        content += '<p class="caption_bottom"><a href="#' + data[i][0] + '" class="btn btn-jmarket-orange"><i class="icon-share icon-white"></i> Details</a></p>';
                         content += '<h3 class="price-tag">' + data[i][3] + '</h3>';
                         content += '<div class="clearfix"></div></div></div></li>';
                 }
