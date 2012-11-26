@@ -41,13 +41,29 @@ if conn:
         echo("")
 
     def LF_get_user_information():
-        echo("")
+        global cursor
+        if form.has_key("id"):
+            query = "SELECT u.user_id, u.email, u.address, u.phone "\
+                    "FROM users u"\
+                    "WHERE u.user_id=" + form["id"];
+            cursor.execute(query)
+            rows = cursor.fetchall()
+            echo(rows)
+        else:
+            echo("No user id as 'id' passed")
 
     def LF_get_categories():
         echo()
 
     def LF_sign_up():
-        echo("")
+        global cursor
+        if form.has_key("email") and form.has_key("password") and form.has_key("address") and form.has_key("phone"):
+            query = "INSERT INTO `users` (`email`,`password`,`address`,`phone`,`type`,`createtime`) VALUES "\
+                    "('" + form["email"] + "',MD5('" + form["password"] + "'),'" + form["address"] + "','" + form["phone"] + "','regular',NOW());"
+            cursor.execute(query)
+            echo(cursor.info())
+        else:
+            echo("Not enough parameters provided to create account")
 
     def LF_sign_in():
         echo()
