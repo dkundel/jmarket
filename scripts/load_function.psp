@@ -69,7 +69,21 @@ if conn:
         echo()
 
     def LF_create_review():
-        echo()
+        global cursor
+        if form.has_key("from") and form.has_key("to") and form.has_key("review") and form.has_key("rating"):
+            query = "SELECT u.user_id "\
+                    "FROM users "\
+                    "WHERE u.email = '" + form["to"] + "';"
+            cursor.execute(query)
+            if cursor.rowcount == 1:
+                user = cursor.fetchone()
+                query = "INSERT INTO `user_review` (`ratter_id`,`rated_id`,`rating`,`comment`) VALUES "\
+                        "(" + form["from"] + "," + user[0] + "," + form["rating"] + ",'" + form["review"] + "');"
+                cursor.execute(query)
+                echo(cursor.info())
+            else:
+                echo("Could not determine user from email")
+        echo("Not enough parameters provided to create review")
 
     def LF_create_offer():
         echo()
