@@ -1,14 +1,14 @@
 <!doctype html>
 <!--[if lt IE 7]>
-  <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]>
-  <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
 <!--[if IE 8]>
-  <html class="no-js lt-ie9" lang="en"> <![endif]-->
-  <!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
-  <!--[if gt IE 8]><!-->
-  <html class="no-js" lang="en"> <!--<![endif]-->
-  <head>
+<html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
@@ -36,92 +36,114 @@
                 new window.jMarket.Modules.MainPage()
         );
 
+        function test_request(function_name) {
+            var data = {
+                function:function_name,
+                user: 'g.merticariu@jacobs-university.de',
+                password: 'password123'
+            }
+            $.post("scripts/load_function.psp", data, function (data) {
+                data = JSON.parse(data);
+                console.log(data);
+            });
+        }
+
     </script>
-  </head>
-  <body>
+</head>
+<body>
 <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a
     different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a>
     to experience this site.</p><![endif]-->
-    <header>
-      <div class="navbar navbar-static-top" style="position: fixed; top:0; left: 0">
+<header>
+    <div class="navbar navbar-static-top" style="position: fixed; top:0; left: 0">
         <div class="navbar-inner">
-          <div class="container-fluid">
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </a>
-            <a class="brand" href="index.html" name="jMarket"><img alt="jMarket" src="img/logo/jmarket_150.png"></a>
+            <div class="container-fluid">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="index.html" name="jMarket"><img alt="jMarket" src="img/logo/jmarket_150.png"></a>
 
-            <div class="nav-collapse collapse">
-              <ul class="nav">
-                <li class="active"><a href="index.html"><i class="icon-home"></i> Home</a></li>
-                <li class="divider-vertical"></li>
-                <li><a href="#"><i class="icon-tags"></i> Categories</a></li>
-                <li class="divider-vertical"></li>
-                <li><a href="#"><i class="icon-user"></i> My Account</a></li>
-                <li class="divider-vertical"></li>
-                <li><a href="scripts/imprint/imprint.html"><i class="icon-info-sign"></i> Imprint</a></li>
-              </ul>
-              <ul class="nav pull-right">
-                <form class="navbar-search pull-left">
-                  <input type="text" class="search-query" placeholder="Search">
-                </form>
-                <li class="dropdown">
-                  <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
-                  <div class="clearfix"></div>
-                  <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
-                    <form method="post" action="login" accept-charset="UTF-8">
-                      <input style="margin-bottom: 15px;" type="text" placeholder="Username" id="username" name="username">
-                      <input style="margin-bottom: 15px;" type="password" placeholder="Password" id="password" name="password">
-                      <input style="float: left; margin-right: 10px;" type="checkbox" name="remember-me" id="remember-me" value="1">
-                      <label class="string optional" for="user_remember_me"> Remember me</label>
-                      <input class="btn btn-primary btn-block" type="submit" id="sign-in" value="Sign In">
-                      <input type="button" class="btn btn-primary btn-block" id="sign-up-btn" value="Sign Up">
-                    </form>
-                  </div>
-                </li>
-              </ul>
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li class="active"><a href="index.html"><i class="icon-home"></i> Home</a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a href="#"><i class="icon-tags"></i> Categories</a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a href="#"><i class="icon-user"></i> My Account</a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a href="scripts/imprint/imprint.html"><i class="icon-info-sign"></i> Imprint</a></li>
+                    </ul>
+                    <ul class="nav pull-right">
+                        <form class="navbar-search pull-left">
+                            <input type="text" class="search-query" placeholder="Search">
+                        </form>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong
+                                    class="caret"></strong></a>
+
+                            <div class="clearfix"></div>
+                            <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+                                <form method="post" action="login" accept-charset="UTF-8">
+                                    <input style="margin-bottom: 15px;" type="text" placeholder="Username" id="username"
+                                           name="username">
+                                    <input style="margin-bottom: 15px;" type="password" placeholder="Password"
+                                           id="password" name="password">
+                                    <input style="float: left; margin-right: 10px;" type="checkbox" name="remember-me"
+                                           id="remember-me" value="1">
+                                    <label class="string optional" for="user_remember_me"> Remember me</label>
+                                    <input class="btn btn-primary btn-block" type="submit" id="sign-in" value="Sign In">
+                                    <input type="button" class="btn btn-primary btn-block" id="sign-up-btn"
+                                           value="Sign Up">
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </header>
-    <div role="main" class="row-fluid">
-      <!-- Category navbar -->
-      <div class="span2 nav_bar_left" style="display:none;">
+    </div>
+</header>
+<div role="main" class="row-fluid">
+    <!-- Category navbar -->
+    <div class="span2 nav_bar_left" style="display:none;">
         <div class="sidebar-nav">
-          <div class="well" style="width:100%;">
-            <ul class="nav nav-list"> 
-              <li class="nav-header">Category</li>        
-              <li class="active"><a href="#">All</a></li>
-              <li><a href="#">Clothing <span class="badge badge-info">4</span></a></li>
-              <li><a href="#">Electronics <span class="badge badge-info">10</span></a></li>
-              <li><a href="#">Furniture <span class="badge badge-info">200</span></a></li>
-              <li class="divider"></li>
-              <li class="nav-header">From</li>
-              <li><div class="input-append">
-                <input class="input-small" id="input-price-from" type="text">
-                <span class="add-on">.00 &euro;</span>
-              </div></li>
-              <li class="nav-header">To</li>
-              <li><div class="input-append">
-                <input class="input-small" id="input-price-to" type="text">
-                <span class="add-on">.00 &euro;</span>
-              </div></li>
-            </ul>
-          </div>
+            <div class="well" style="width:100%;">
+                <ul class="nav nav-list">
+                    <li class="nav-header">Category</li>
+                    <li class="active"><a href="#">All</a></li>
+                    <li><a href="#">Clothing <span class="badge badge-info">4</span></a></li>
+                    <li><a href="#">Electronics <span class="badge badge-info">10</span></a></li>
+                    <li><a href="#">Furniture <span class="badge badge-info">200</span></a></li>
+                    <li class="divider"></li>
+                    <li class="nav-header">From</li>
+                    <li>
+                        <div class="input-append">
+                            <input class="input-small" id="input-price-from" type="text">
+                            <span class="add-on">.00 &euro;</span>
+                        </div>
+                    </li>
+                    <li class="nav-header">To</li>
+                    <li>
+                        <div class="input-append">
+                            <input class="input-small" id="input-price-to" type="text">
+                            <span class="add-on">.00 &euro;</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
-      <!-- End Category navbar -->
-      <div class="span10 content_wrapper">
+    </div>
+    <!-- End Category navbar -->
+    <div class="span10 content_wrapper">
 
-      </div>
-      <div id="sign_up_modal" class="modal hide fade" tabindex="-1" data-width="760">
-      </div>
-      <footer>
-      </footer>
+    </div>
+    <div id="sign_up_modal" class="modal hide fade" tabindex="-1" data-width="760">
+    </div>
+    <footer>
+    </footer>
 
 
-    </body>
-    </html>
+</body>
+</html>
