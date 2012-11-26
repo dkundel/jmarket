@@ -140,8 +140,8 @@ if conn:
                     "WHERE UPPER(c.name) = UPPER('" + str(form["category"]) + "');"
             cursor.execute(query)
             category_id = cursor.fetchone()[0]
-            query = "INSERT INTO `selling_products` (`user_id`, `product_id`, `price`, `create_date`, `expire_date`) "\
-                    "VALUES (" + str(form["user_id"]) + "," + str(product_id) + "," + str(form["price"]) + ",NOW(),DATE_ADD(NOW(), INTERVAL 1 MONTH));"
+            query = "INSERT INTO `selling_products` (`user_id`, `product_id`, `price`, `create_date`, `expire_date`, `negotiable`) "\
+                    "VALUES (" + str(form["user_id"]) + "," + str(product_id) + "," + str(form["price"]) + ",NOW(),DATE_ADD(NOW(), INTERVAL 1 MONTH),0);"
             cursor.execute(query)
             query = "INSERT INTO `product_to_category` (`product_id`,`category_id`) "\
                     "VALUES (" + str(product_id) + "," + str(category_id) + ");"
