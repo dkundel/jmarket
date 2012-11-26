@@ -1,7 +1,5 @@
 <%
-import json,sys,MySQLdb as MDB
-import time
-from mod_python import Session
+import json,MySQLdb as MDB
 
 conn = None
 
@@ -41,7 +39,6 @@ if conn:
         global cursor
         if form.has_key("product_name"):
             name = form['product_name']
-
             query = "SELECT p.product_id ,p.name,p.description,sp.price,p.picture_path "\
                     "FROM products p "\
                     "INNER JOIN selling_products sp ON sp.product_id = p.product_id "\
@@ -92,7 +89,7 @@ if conn:
             passwd = form['password']
             query = "SELECT `user_id` " \
                     "FROM `users` " \
-                    "WHERE `email`="+str(user)+" AND `password`=MD5("+str(passwd)+")"
+                    "WHERE `email`='"+str(user)+"' AND `password`=MD5('"+str(passwd)+"')"
             cursor.execute(query)
             id = cursor.fetchone()
             if id:
