@@ -42,7 +42,16 @@ if conn:
         echo("")
 
     def LF_get_user_information():
-        echo("")
+        global cursor
+        if form.has_key("id"):
+            query = "SELECT u.user_id, u.email, u.address, u.phone "\
+                    "FROM users u"\
+                    "WHERE u.user_id=" + form["id"];
+            cursor.execute(query)
+            rows = cursor.fetchall()
+            echo(rows)
+        else:
+            echo("No user id as 'id' passed")
 
     def LF_get_categories():
         global cursor
@@ -55,7 +64,14 @@ if conn:
 
 
     def LF_sign_up():
-        echo("")
+        global cursor
+        if form.has_key("email") and form.has_key("password") and form.has_key("address") and form.has_key("phone"):
+            query = "INSERT INTO `users` (`email`,`password`,`address`,`phone`,`type`,`createtime`) VALUES "\
+                    "('" + form["email"] + "',MD5('" + form["password"] + "'),'" + form["address"] + "','" + form["phone"] + "','regular',NOW());"
+            cursor.execute(query)
+            echo(cursor.info())
+        else:
+            echo("Not enough parameters provided to create account")
 
     def LF_sign_in():
         if (form.has_key('user') and form.has_key('password')):
@@ -73,7 +89,21 @@ if conn:
 
 
     def LF_create_review():
-        echo()
+        global cursor
+        if form.has_key("from") and form.has_key("to") and form.has_key("review") and form.has_key("rating"):
+            query = "SELECT u.user_id "\
+                    "FROM users "\
+                    "WHERE u.email = '" + form["to"] + "';"
+            cursor.execute(query)
+            if cursor.rowcount == 1:
+                user = cursor.fetchone()
+                query = "INSERT INTO `user_review` (`ratter_id`,`rated_id`,`rating`,`comment`) VALUES "\
+                        "(" + form["from"] + "," + user[0] + "," + form["rating"] + ",'" + form["review"] + "');"
+                cursor.execute(query)
+                echo(cursor.info())
+            else:
+                echo("Could not determine user from email")
+        echo("Not enough parameters provided to create review")
 
     def LF_create_offer():
         echo()
