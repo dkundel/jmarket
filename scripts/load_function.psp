@@ -28,7 +28,8 @@ if conn:
         global cursor
         query = "SELECT p.product_id ,p.name,p.description,sp.price " \
                 "FROM product p " \
-                "INNER JOIN selling_products sp ON sp.product_id = p.product_id " \
+                "INNER JOIN selling_products sp ON sp.product_id = p.product_id "\
+                "WHERE sp.expire_date > NOW() "\
                 "ORDER BY sp.create_date DESC " \
                 "LIMIT 0, 16"
         cursor.execute(query)
@@ -43,7 +44,7 @@ if conn:
         echo("")
 
     def LF_get_categories():
-        echo("")
+        echo()
 
     def LF_sign_up():
         echo("")
