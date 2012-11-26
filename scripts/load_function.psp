@@ -27,8 +27,8 @@ if conn:
 
     def LF_get_latest_offers():
         global cursor
-        query = "SELECT p.product_id ,p.name,p.description,sp.price " \
-                "FROM product p " \
+        query = "SELECT p.product_id ,p.name,p.description,sp.price,p.picture_path " \
+                "FROM products p " \
                 "INNER JOIN selling_products sp ON sp.product_id = p.product_id "\
                 "WHERE sp.expire_date > NOW() "\
                 "ORDER BY sp.create_date DESC " \
@@ -37,6 +37,19 @@ if conn:
         rows = cursor.fetchall()
         echo(rows)
 
+    def LF_search_product():
+        global cursor
+        if form.has_key("product_name"):
+            name = form['product_name']
+
+            query = "SELECT p.product_id ,p.name,p.description,sp.price,p.picture_path "\
+                    "FROM products p "\
+                    "INNER JOIN selling_products sp ON sp.product_id = p.product_id "\
+                    "WHERE sp.expire_date > NOW() AND p.name LIKE ('%"+str(name)+"%') "\
+                    "ORDER BY sp.price DESC "
+            cursor.execute(query)
+            rows = cursor.fetchall()
+            echo(rows)
 
     def LF_get_offers_by_category():
         echo("")
