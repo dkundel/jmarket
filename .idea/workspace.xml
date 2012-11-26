@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80bc9143-5dd0-4a6d-99bf-35d49c6ea826" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/load_function.psp" afterPath="$PROJECT_DIR$/scripts/load_function.psp" />
     </list>
     <list id="b5db40e1-5186-4751-8aff-90f92af58882" name="New changelist" comment="New changelist" />
@@ -64,7 +63,7 @@
       <file leaf-file-name="load_function.psp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/load_function.psp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="21" selection-start="1557" selection-end="1557" vertical-scroll-proportion="0.70446736">
+            <state line="30" column="7" selection-start="655" selection-end="655" vertical-scroll-proportion="0.2749141">
               <folding>
                 <element signature="e#3#33#0" expanded="true" />
               </folding>
@@ -504,7 +503,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/load_function.psp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="21" selection-start="1557" selection-end="1557" vertical-scroll-proportion="0.70446736">
+        <state line="30" column="7" selection-start="655" selection-end="655" vertical-scroll-proportion="0.2749141">
           <folding>
             <element signature="e#3#33#0" expanded="true" />
           </folding>

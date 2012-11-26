@@ -122,7 +122,22 @@ if conn:
         echo()
 
     def LF_get_product_info():
-        echo()
+        global cursor
+        if form.has_key("id"):
+            query = "SELECT p.product_id, p.name, p.description, p.picture_path, s.expire_date, s.price, s.negotiable, u.email "\
+                    "FROM products p "\
+                    "INNER JOIN selling_products s ON p.product_id = s.product_id "\
+                    "INNER JOIN users u ON s.user_id = u.user_id "\
+                    "WHERE p.product_id = " + form["id"] + ";"
+            cursor.execute(query)
+            if cursor.rowcount == 1:
+                rows = cursor.fetchall()
+                echo(rows)
+            else:
+                echo("No product with this id")
+        else:
+            echo("No product id as 'id' provided")
+
 
 
 if form.has_key("function"):
