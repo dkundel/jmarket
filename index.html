@@ -39,8 +39,8 @@
         function test_request(function_name) {
             var data = {
                 function:'sign_in',
-                user: 'g.merticariu@jacobs-university.de',
-                password: 'password123'
+                user:'g.merticariu@jacobs-university.de',
+                password:'password123'
             }
             $.post("scripts/load_function.psp", data, function (data) {
                 data = JSON.parse(data);
@@ -92,7 +92,6 @@
                                            id="password" name="password">
                                     <input style="float: left; margin-right: 10px;" type="checkbox" name="remember-me"
                                            id="remember-me" value="1">
-                                    <label class="string optional" for="user_remember_me"> Remember me</label>
                                     <input class="btn btn-primary btn-block" type="submit" id="sign-in" value="Sign In">
                                     <input type="button" class="btn btn-primary btn-block" id="sign-up-btn"
                                            value="Sign Up">
@@ -107,17 +106,16 @@
 </header>
 <div role="main" class="row-fluid">
     <!-- Category navbar -->
-    <div class="span2 nav_bar_left" style="display:none;">
+    <div class="span2 nav_bar_left">
         <div class="sidebar-nav">
             <div class="well" style="width:100%;">
-                <ul class="nav nav-list">
-                    <li class="nav-header">Category</li>
+                <ul class="nav nav-list" id="category_list">
+                    <li class="nav-header">Categories</li>
                     <li class="active"><a href="#">All</a></li>
-                    <li><a href="#">Clothing <span class="badge badge-info">4</span></a></li>
-                    <li><a href="#">Electronics <span class="badge badge-info">10</span></a></li>
-                    <li><a href="#">Furniture <span class="badge badge-info">200</span></a></li>
-                    <li class="divider"></li>
-                    <li class="nav-header">From</li>
+                </ul>
+
+                <ul class="nav nav-list">
+                    <li class="nav-header">FROM</li>
                     <li>
                         <div class="input-append">
                             <input class="input-small" id="input-price-from" type="text">
@@ -137,7 +135,7 @@
     </div>
     <!-- End Category navbar -->
     <div class="span10 content_wrapper">
-                
+
     </div>
     <div id="sign_up_modal" class="modal hide fade" tabindex="-1" data-width="760">
     </div>

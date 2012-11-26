@@ -23,7 +23,18 @@ create_db_connection()
 if conn:
     cursor = conn.cursor()
 
-    def LF_get_latest_offers():
+    def PRIVATE_get_categories():
+        global cursor
+        query = "SELECT c.`category_id`, c.`name`,COUNT(ptc.`product_id`) "\
+                "FROM `categories` c "\
+                "INNER JOIN product_to_category ptc ON ptc.`category_id`=c.`category_id` " \
+                "GROUP BY c.`name`"\
+                "ORDER BY c.`name` ASC"
+        cursor.execute(query)
+        rows = cursor.fetchall()
+        return rows
+
+    def LF_construct_main_page():
         global cursor
         query = "SELECT p.product_id ,p.name,p.description,sp.price,p.picture_path " \
                 "FROM products p " \
@@ -32,8 +43,10 @@ if conn:
                 "ORDER BY sp.create_date DESC " \
                 "LIMIT 0, 16"
         cursor.execute(query)
-        rows = cursor.fetchall()
-        echo(rows)
+        products = cursor.fetchall()
+        categories = PRIVATE_get_categories()
+        res  = [products,categories]
+        echo(res)
 
     def LF_search_product():
         global cursor
@@ -48,8 +61,11 @@ if conn:
             rows = cursor.fetchall()
             echo(rows)
 
-    def LF_get_offers_by_category():
+    def LF_get_offers_by_category_name():
         echo("")
+
+    def LF_get_offers_by_category_type():
+        echo()
 
     def LF_get_user_information():
         global cursor
@@ -62,16 +78,6 @@ if conn:
             echo(rows)
         else:
             echo("No user id as 'id' passed")
-
-    def LF_get_categories():
-        global cursor
-        query = "SELECT `category_id`, `name`, `type` " \
-                "FROM `categories` " \
-                "ORDER BY `type` ASC"
-        cursor.execute(query)
-        rows = cursor.fetchall()
-        echo(rows)
-
 
     def LF_sign_up():
         global cursor
