@@ -22,7 +22,6 @@
             }
             $.post("scripts/load_function.psp", data, function (data) {
                 data = JSON.parse(data);
-                console.log(data);
                 content = '<div class="row-fluid"><ul class="thumbnails">';
                 content_data = data[0];
                 for (var i = 0; i < content_data.length; ++i) {
@@ -40,7 +39,7 @@
                 nav_content = data[1];
                 nav_list = $('div.nav_bar_left').find('ul#category_list');
                 for (var i=0; i<nav_content.length; ++i){
-                    nav_list.append('<li><a style="text-transform: capitalize" href="#" data-category-id="'+nav_content[i][0]+'">'+nav_content[i][1]+'<span style="margin-left: 5px" class="badge badge-info">'+nav_content[i][2]+'</span></a></li>');
+                    nav_list.append('<li><a style="text-transform: capitalize; cursor: pointer" data-category-id="'+nav_content[i][0]+'">'+nav_content[i][1]+'<span style="margin-left: 5px" class="badge badge-info">'+nav_content[i][2]+'</span></a></li>');
                 }
             });
         }
