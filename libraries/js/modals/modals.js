@@ -35,7 +35,11 @@ var Modals = {
 				return;
 			}
 			$.post(window.jMarket.requestURL, data, function(data){
+				data = JSON.parse(data);
 				Modals.modal.modal('hide');
+				var date = new Date();
+ 				date.setTime(date.getTime() + (30 * 60 * 1000));
+				$.cookie('user_id', data, { expires: date, path: '/' });
 			});
 		}
 	},
