@@ -170,7 +170,26 @@ if conn:
         else:
             echo("No product id as 'id' provided")
 
+    def LF_delete_product():
+        global cursor
+        if form.has_key("id"):
+            query = "DELETE FROM products "\
+                    "WHERE product_id=" + str(form["id"])
+            cursor.execute(query)
+            echo(cursor.info())
+        else:
+            echo("No product_id as id provided!")
 
+    def LF_change_password():
+        global cursor
+        if form.has_key("password") and form.has_key("id"):
+            query = "UPDATE users "\
+                    "SET password=MD5('" + str(form["password"]) + "') "\
+                    "WHERE user_id=" + str(form["id"]) + ";"
+            cursor.execute(query)
+            echo(cursor.info())
+        else:
+            echo("Not enough parameters provided")
 
 if form.has_key("function"):
     funcName = "LF_" + form["function"]

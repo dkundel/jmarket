@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80bc9143-5dd0-4a6d-99bf-35d49c6ea826" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/js/main_page/main_page.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/js/modals/modals.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/change_password/change_password.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/script.js" afterPath="$PROJECT_DIR$/libraries/js/script.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/load_function.psp" afterPath="$PROJECT_DIR$/scripts/load_function.psp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/user/user.html" afterPath="$PROJECT_DIR$/scripts/user/user.html" />
     </list>
     <list id="b5db40e1-5186-4751-8aff-90f92af58882" name="New changelist" comment="New changelist" />
     <ignored path="jmarket.iws" />
@@ -26,10 +32,10 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="39" selection-start="1648" selection-end="1648" vertical-scroll-proportion="0.56537104">
+            <state line="30" column="51" selection-start="1557" selection-end="1557" vertical-scroll-proportion="0.42402828">
               <folding>
-                <marker date="1354116749529" expanded="true" signature="2788:3021" placeholder="..." />
-                <marker date="1354116749529" expanded="true" signature="2856:2894" placeholder="..." />
+                <marker date="1354116793797" expanded="true" signature="2799:3032" placeholder="..." />
+                <marker date="1354116793797" expanded="true" signature="2867:2905" placeholder="..." />
                 <element signature="n#style#0;n#input#0;n#div#0;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#div#1;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -70,7 +76,7 @@
       <file leaf-file-name="load_function.psp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/load_function.psp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="140" column="23" selection-start="5500" selection-end="5500" vertical-scroll-proportion="0.0">
+            <state line="160" column="23" selection-start="6629" selection-end="6629" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -88,7 +94,7 @@
       <file leaf-file-name="user.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/user/user.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="2" column="0" selection-start="52" selection-end="52" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -472,7 +478,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/user/user.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="2" column="0" selection-start="52" selection-end="52" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -484,7 +490,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/load_function.psp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="140" column="23" selection-start="5500" selection-end="5500" vertical-scroll-proportion="0.0">
+        <state line="160" column="23" selection-start="6629" selection-end="6629" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -508,10 +514,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="39" selection-start="1648" selection-end="1648" vertical-scroll-proportion="0.56537104">
+        <state line="30" column="51" selection-start="1557" selection-end="1557" vertical-scroll-proportion="0.42402828">
           <folding>
-            <marker date="1354116749529" expanded="true" signature="2788:3021" placeholder="..." />
-            <marker date="1354116749529" expanded="true" signature="2856:2894" placeholder="..." />
+            <marker date="1354116793797" expanded="true" signature="2799:3032" placeholder="..." />
+            <marker date="1354116793797" expanded="true" signature="2867:2905" placeholder="..." />
             <element signature="n#style#0;n#input#0;n#div#0;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#1;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>

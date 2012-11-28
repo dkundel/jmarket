@@ -35,8 +35,9 @@
     <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
     <script>
         $(document).ready(
-                new window.jMarket.Modules.MainPage()
-        );
+                window.jMarket.Modules.MainPage.load();
+        )
+        ;
 
         function test_request(function_name) {
             var data = {
@@ -132,13 +133,13 @@
 
                     <div class="input-prepend input-append">
                         <span class="add-on">Min</span>
-                        <input  class="span3"  type="text" id="min_amount"
+                        <input class="span3" type="text" id="min_amount"
                                style="border: 0; color: #f6931f; font-weight: bold;" value="0"/>
                         <span class="add-on">&euro;</span>
                     </div>
                     <div class="input-prepend input-append">
                         <span class="add-on">Max</span>
-                        <input class="span3"  type="text" id="max_amount"
+                        <input class="span3" type="text" id="max_amount"
                                style="border: 0; color: #f6931f; font-weight: bold;" value="0"/>
                         <span class="add-on">&euro;</span>
                     </div>
@@ -153,7 +154,7 @@
     <div class="span10 content_wrapper">
 
     </div>
-    <div id="sign_up_modal" class="modal hide fade" tabindex="-1" data-width="760">
+    <div id="modal_container" class="modal hide fade" tabindex="-1" data-width="760">
     </div>
     <footer>
     </footer>
