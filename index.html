@@ -34,10 +34,14 @@
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css"/>
     <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
     <script>
-        $(document).ready(
-                window.jMarket.Modules.MainPage.load();
+        $(document).ready(function () {
+//                    window.jMarket.Modules.MainPage.load();
+                    $('button#sign-in').live('click', function () {
+                        window.jMarket.Modules.LogIn.log_in();
+                    });
+                }
         )
-        ;
+
 
         function test_request(function_name) {
             var data = {
@@ -101,14 +105,13 @@
 
                             <div class="clearfix"></div>
                             <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
-                                <form method="post" action="login" accept-charset="UTF-8">
+                                <form accept-charset="UTF-8">
                                     <input style="margin-bottom: 15px;" type="text" placeholder="Username" id="username"
                                            name="username">
                                     <input style="margin-bottom: 15px;" type="password" placeholder="Password"
                                            id="password" name="password">
-                                    <input class="btn btn-primary btn-block" type="submit" id="sign-in" value="Sign In">
-                                    <input type="button" class="btn btn-primary btn-block" id="sign-up-btn"
-                                           value="Sign Up">
+                                    <button class="btn btn-primary btn-block" id="sign-in">Sign In</button>
+                                    <button type="button" class="btn btn-primary btn-block" id="sign-up-btn">Sign Up</button>
                                 </form>
                             </div>
                         </li>
@@ -129,23 +132,29 @@
                 </ul>
 
                 <ul class="nav nav-list price-filter">
-                    <p>
+                    <li>
 
-                    <div class="input-prepend input-append">
-                        <span class="add-on">Min</span>
-                        <input class="span3" type="text" id="min_amount"
-                               style="border: 0; color: #f6931f; font-weight: bold;" value="0"/>
-                        <span class="add-on">&euro;</span>
-                    </div>
-                    <div class="input-prepend input-append">
-                        <span class="add-on">Max</span>
-                        <input class="span3" type="text" id="max_amount"
-                               style="border: 0; color: #f6931f; font-weight: bold;" value="0"/>
-                        <span class="add-on">&euro;</span>
-                    </div>
-                    </p>
+                        <div class="input-prepend input-append">
+                            <span class="add-on">Min</span>
+                            <input class="span3" type="text" id="min_amount"
+                                   style="color: #f6931f; font-weight: bold;" value="0"/>
+                            <span class="add-on">&euro;</span>
+                        </div>
+                        <div class="input-prepend input-append">
+                            <span class="add-on">Max</span>
+                            <input class="span3" type="text" id="max_amount"
+                                   style="color: #f6931f; font-weight: bold;" value="0"/>
+                            <span class="add-on">&euro;</span>
+                        </div>
+                    </li>
+                    <li style="margin-top: 10px;">
+                        <div id="slider-range"></div>
+                    </li>
+                    <li style="margin-top: 5px;text-align: center">
+                        <button class="btn btn-mini">Filter</button>
+                        <button class="btn btn-mini">Remove filter</button>
+                    </li>
 
-                    <div id="slider-range"></div>
                 </ul>
             </div>
         </div>

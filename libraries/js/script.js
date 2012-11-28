@@ -2,11 +2,9 @@
 
 */
 window.jMarket = {};
-window.jMarket.Modules={
-    MainPage : null
-};
+window.jMarket.Modules = {};
 
-
+window.jMarket.requestUrl = "scripts/load_function.psp";
 
 jQuery(function(){
 	var $modal = $('#sign_up_modal');
@@ -22,11 +20,4 @@ jQuery(function(){
 				'</div>');
 		}, 1000);
 	});
-
-
-
 });
-
-
-
-

@@ -1,5 +1,4 @@
 var MainPage = {
-	requestURL: "scripts/load_functio.psp",
 	requestData: {
 		function: "construct_main_page"
 	},
@@ -23,9 +22,9 @@ var MainPage = {
         for (var i=0; i<nav_content.length; ++i){
             nav_list.append('<li><a style="text-transform: capitalize; cursor: pointer" data-category-id="'+nav_content[i][0]+'">'+nav_content[i][1]+'<span style="margin-left: 5px" class="badge badge-info">'+nav_content[i][2]+'</span></a></li>');
         }
-	}
+	},
 	load: function _load(){
-		$.post(MainPage.requestURL, requestData, function(data){
+		$.post(MainPage.requestURL, MainPage.requestData, function(data){
 			data = JSON.parse(data);
 			MainPage._renderData(data);
 		});
