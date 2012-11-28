@@ -1,14 +1,7 @@
 require([
-		"jquery", 
-		"jquery-ui.min", 
-		"jquery.cookie",
-		"bootstrap.min",
-		"bootstrap-modal",
-		"bootstrap-modalmanager",
-		"bootstrap-datepicker",
-		"order!script",
-		"order!main_page/main_page",
-		"order!modals/modals"
+		"jquery",
+		"vendor/order!vendor/libs",
+		"vendor/order!modules/modules"
 	],
 	function($) {
 	    $(function() {
