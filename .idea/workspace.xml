@@ -10,7 +10,26 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/libraries/bootstrap/img/glyphicons-halflings.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/libraries/bootstrap/js/bootstrap.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/libraries/bootstrap/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libraries/js/bootstrap-datepicker.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libraries/js/bootstrap-modal.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libraries/js/bootstrap-modalmanager.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libraries/js/bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libraries/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libraries/js/display_message/display_message.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libraries/js/jquery-1.7.1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libraries/js/jquery-1.7.1.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libraries/js/jquery-ui.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libraries/js/jquery.cookie.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libraries/js/log_in/log_in.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libraries/js/main_page/main_page.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libraries/js/modals/modals.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libraries/js/modernizr-2.5.3.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libraries/js/order.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libraries/js/plugins.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libraries/js/require-jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libraries/js/require.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/script.js" afterPath="$PROJECT_DIR$/libraries/js/script.js" />
     </list>
     <list id="b5db40e1-5186-4751-8aff-90f92af58882" name="New changelist" comment="New changelist" />
     <ignored path="jmarket.iws" />
@@ -31,10 +50,19 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="log_in.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/libraries/js/modules/log_in.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="24" selection-start="483" selection-end="483" vertical-scroll-proportion="0.2749141">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="41" selection-start="1674" selection-end="1674" vertical-scroll-proportion="-9.272727">
+            <state line="17" column="49" selection-start="656" selection-end="656" vertical-scroll-proportion="-10.625">
               <folding>
                 <marker date="1354134325181" expanded="true" signature="1259:1492" placeholder="..." />
                 <marker date="1354134325181" expanded="true" signature="1327:1365" placeholder="..." />
@@ -48,84 +76,6 @@
                 <element signature="n#style#0;n#li#1;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#li#2;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="log_in.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libraries/js/log_in/log_in.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="11" selection-start="1138" selection-end="1138" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libraries/js/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="33" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="img_upload.psp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/img_upload.psp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="21" selection-start="353" selection-end="353" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="modals.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libraries/js/modals/modals.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="40" selection-start="1489" selection-end="1489" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="modules.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libraries/js/modules/modules.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="29" selection-start="34" selection-end="34" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main_page.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libraries/js/main_page/main_page.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="0" selection-start="1550" selection-end="1550" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1354125654602" expanded="false" signature="1176:1219" placeholder="..." />
-                <marker date="1354125654602" expanded="false" signature="1296:1312" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="display_message.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libraries/js/display_message/display_message.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="103" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1354128301436" expanded="true" signature="274:324" placeholder="..." />
-                <marker date="1354128301436" expanded="true" signature="486:550" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="offer.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/scripts/offer/offer.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="47" selection-start="855" selection-end="855" vertical-scroll-proportion="-0.024734983">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -150,15 +100,15 @@
         <option value="$PROJECT_DIR$/img/.htaccess" />
         <option value="$PROJECT_DIR$/libraries/css/style.css" />
         <option value="$PROJECT_DIR$/scripts/main_page/main_page.js" />
-        <option value="$PROJECT_DIR$/libraries/js/script.js" />
         <option value="$PROJECT_DIR$/libraries/js/main_page/main_page.js" />
         <option value="$PROJECT_DIR$/scripts/load_function.psp" />
         <option value="$PROJECT_DIR$/libraries/js/display_message/display_message.js" />
         <option value="$PROJECT_DIR$/libraries/js/modals/modals.js" />
-        <option value="$PROJECT_DIR$/libraries/js/log_in/log_in.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/libraries/js/modules/modules.js" />
         <option value="$PROJECT_DIR$/libraries/js/app.js" />
+        <option value="$PROJECT_DIR$/libraries/js/script.js" />
+        <option value="$PROJECT_DIR$/libraries/js/log_in/log_in.js" />
       </list>
     </option>
   </component>
@@ -221,7 +171,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
+              <option name="myItemId" value="libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -235,11 +189,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
+              <option name="myItemId" value="libraries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="offer" />
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jmarket" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jmarket" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libraries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -369,11 +341,12 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="24" width="1920" height="1055" extended-state="0" />
+    <frame x="0" y="24" width="1920" height="1055" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25250924" sideWeight="0.33813748" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25535333" sideWeight="0.6707317" order="0" side_tool="false" content_ui="combo" />
@@ -385,7 +358,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -463,59 +435,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/js/require-jquery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11415" column="0" selection-start="343863" selection-end="343863" vertical-scroll-proportion="0.569378">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/js/plugins.js">
+    <entry file="file://$PROJECT_DIR$/scripts/products/products.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/js/script.js">
+    <entry file="file://$PROJECT_DIR$/libraries/js/modules/modules.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="18" selection-start="1271" selection-end="1271" vertical-scroll-proportion="0.0">
+        <state line="1" column="28" selection-start="33" selection-end="33" vertical-scroll-proportion="0.01718213">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/js/display_message/display_message.js">
+    <entry file="file://$PROJECT_DIR$/scripts/img_upload.psp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="103" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1354128301436" expanded="true" signature="274:324" placeholder="..." />
-            <marker date="1354128301436" expanded="true" signature="486:550" placeholder="..." />
-          </folding>
+        <state line="12" column="21" selection-start="353" selection-end="353" vertical-scroll-proportion="0.20618556">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/js/main_page/main_page.js">
+    <entry file="file://$PROJECT_DIR$/libraries/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="1550" selection-end="1550" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1354125654602" expanded="false" signature="1176:1219" placeholder="..." />
-            <marker date="1354125654602" expanded="false" signature="1296:1312" placeholder="..." />
-          </folding>
+        <state line="1" column="33" selection-start="38" selection-end="38" vertical-scroll-proportion="0.01718213">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/js/log_in/log_in.js">
+    <entry file="file://$PROJECT_DIR$/libraries/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="11" selection-start="1138" selection-end="1138" vertical-scroll-proportion="0.0">
+        <state line="5" column="28" selection-start="109" selection-end="109" vertical-scroll-proportion="0.05154639">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/offer/offer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="0" selection-start="3089" selection-end="3089" vertical-scroll-proportion="0.89399296">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="41" selection-start="1674" selection-end="1674" vertical-scroll-proportion="-9.272727">
+        <state line="17" column="49" selection-start="656" selection-end="656" vertical-scroll-proportion="-10.625">
           <folding>
             <marker date="1354134325181" expanded="true" signature="1259:1492" placeholder="..." />
             <marker date="1354134325181" expanded="true" signature="1327:1365" placeholder="..." />
@@ -532,53 +496,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/js/modernizr-2.5.3.min.js">
+    <entry file="file://$PROJECT_DIR$/libraries/js/modules/log_in.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/js/modals/modals.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="40" selection-start="1489" selection-end="1489" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/js/modules/modules.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="29" selection-start="34" selection-end="34" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="33" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/products/products.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/img_upload.psp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="21" selection-start="353" selection-end="353" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/offer/offer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="47" selection-start="855" selection-end="855" vertical-scroll-proportion="-0.024734983">
+        <state line="16" column="24" selection-start="483" selection-end="483" vertical-scroll-proportion="0.2749141">
           <folding />
         </state>
       </provider>
