@@ -1,7 +1,19 @@
+requirejs.config({
+    shim: {
+        'modules/sign_in': ['modules/jmarket'],
+        'modules/main_page': ['modules/jmarket'],
+        'modules/modals': ['modules/jmarket'],
+        'jquery.cookie': ['jquery'],
+        'vendor/bootstrap-modal': ['vendor/bootstrap.min'],
+        'vendor/bootstrap-modalmanager': ['vendor/bootstrap-modal'],
+        'vendor/bootstrap-datepicker': ['vendor/bootstrap.min']
+    }
+});
+
 require([
 		"jquery",
-		"vendor/order!vendor/libs",
-		"vendor/order!modules/modules"
+		"vendor/libs",
+		"modules/modules"
 	],
 	function($) {
 	    $(function() {
