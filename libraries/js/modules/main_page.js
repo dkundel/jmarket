@@ -1,4 +1,3 @@
-define(['jquery','modules/jmarket'], function ($) {
 
 var MainPage = {
 	requestData: {
@@ -37,4 +36,3 @@ var MainPage = {
 };
 
 window.jMarket.Modules.MainPage = MainPage;
-});
