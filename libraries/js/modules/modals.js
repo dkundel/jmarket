@@ -1,4 +1,3 @@
-define(['jquery','vendor/libs','modules/modules'], function ($) {
 
 var Modals = {
 	modal: $('#modal_container'),
@@ -82,4 +81,3 @@ var Modals = {
 }
 
 window.jMarket.Modules.Modals = Modals;
-});

@@ -1,4 +1,3 @@
-define(['jquery','vendor/libs','modules/modules'], function ($) {
 var LogIn = {
     requestData:{
         user:null,
@@ -24,4 +23,3 @@ var LogIn = {
 };
 
 window.jMarket.Modules.LogIn = LogIn;
-});
