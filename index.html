@@ -30,9 +30,8 @@
     <script src="libraries/js/bootstrap-modalmanager.js"></script>
     <script src="libraries/js/plugins.js"></script>
     <script src="libraries/js/script.js"></script>
-    <script src="scripts/main_page/main_page.js"></script>
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
-    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script src="libraries/js/main_page/main_page.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css"/>
     <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
     <script>
         $(document).ready(
@@ -51,18 +50,17 @@
             });
         }
 
-        $(function() {
-            $( "#slider-range" ).slider({
-                range: true,
-                min: 0,
-                max: 500,
-                values: [ 0, 0 ],
-                slide: function( event, ui ) {
-                    $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+        $(function () {
+            $("#slider-range").slider({
+                range:true,
+                min:0,
+                max:1000,
+                values:[ 0, 0 ],
+                slide:function (event, ui) {
+                    $("#min_amount").val(ui.values[ 0 ]);
+                    $("#max_amount").val(ui.values[ 1 ]);
                 }
             });
-            $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
-                    " - $" + $( "#slider-range" ).slider( "values", 1 ) );
         });
 
     </script>
@@ -126,28 +124,24 @@
             <div class="well">
                 <ul class="nav nav-list" id="category_list">
                     <li class="nav-header">Categories</li>
-                    <li class="active"><a href="#">All</a></li>
+                    <li><a href="#">All</a></li>
                 </ul>
 
                 <ul class="nav nav-list price-filter">
-                    <!--<li class="nav-header">FROM</li>-->
-                    <!--<li>-->
-                        <!--<div class="input-append">-->
-                            <!--<input class="input-small" id="input-price-from" type="text">-->
-                            <!--<span class="add-on">&euro;</span>-->
-                        <!--</div>-->
-                    <!--</li>-->
-                    <!--<li class="nav-header">To</li>-->
-                    <!--<li>-->
-                        <!--<div class="input-append">-->
-                            <!--<input class="input-small" id="input-price-to" type="text">-->
-                            <!--<span class="add-on"> &euro;</span>-->
-                        <!--</div>-->
-                    <!--</li>-->
-                    <!--<li><button class="btn" >Filter</button> </li>-->
                     <p>
-                        <label for="amount">Price range:</label>
-                        <input readonly="readonly" type="text" id="amount" style="border: 0; color: #f6931f; font-weight: bold;" />
+
+                    <div class="input-prepend input-append">
+                        <span class="add-on">Min</span>
+                        <input  class="span3"  type="text" id="min_amount"
+                               style="border: 0; color: #f6931f; font-weight: bold;" value="0"/>
+                        <span class="add-on">&euro;</span>
+                    </div>
+                    <div class="input-prepend input-append">
+                        <span class="add-on">Max</span>
+                        <input class="span3"  type="text" id="max_amount"
+                               style="border: 0; color: #f6931f; font-weight: bold;" value="0"/>
+                        <span class="add-on">&euro;</span>
+                    </div>
                     </p>
 
                     <div id="slider-range"></div>

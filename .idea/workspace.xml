@@ -2,51 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80bc9143-5dd0-4a6d-99bf-35d49c6ea826" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/DatabaseHandler.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/logo/jmarket_150.png" afterPath="$PROJECT_DIR$/img/logo/jmarket_150.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/logo/jmarket_250.png" afterPath="$PROJECT_DIR$/img/logo/jmarket_250.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/logo/jmarket_375.png" afterPath="$PROJECT_DIR$/img/logo/jmarket_375.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/logo/jmarket_500.png" afterPath="$PROJECT_DIR$/img/logo/jmarket_500.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/logo/jmarket_mono_250.png" afterPath="$PROJECT_DIR$/img/logo/jmarket_mono_250.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/logo/jmarket_mono_375.png" afterPath="$PROJECT_DIR$/img/logo/jmarket_mono_375.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/logo/jmarket_mono_500.png" afterPath="$PROJECT_DIR$/img/logo/jmarket_mono_500.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/logo/jmarket_square_150.png" afterPath="$PROJECT_DIR$/img/logo/jmarket_square_150.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/logo/jmarket_square_300.png" afterPath="$PROJECT_DIR$/img/logo/jmarket_square_300.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/logo/jmarket_square_80.png" afterPath="$PROJECT_DIR$/img/logo/jmarket_square_80.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/logo/jmarket_square_mono_150.png" afterPath="$PROJECT_DIR$/img/logo/jmarket_square_mono_150.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/logo/jmarket_square_mono_300.png" afterPath="$PROJECT_DIR$/img/logo/jmarket_square_mono_300.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/logo/jmarket_square_mono_80.png" afterPath="$PROJECT_DIR$/img/logo/jmarket_square_mono_80.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/products/galaxysIII.png" afterPath="$PROJECT_DIR$/img/products/galaxysIII.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/products/ipad_mini.png" afterPath="$PROJECT_DIR$/img/products/ipad_mini.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/products/kindle.png" afterPath="$PROJECT_DIR$/img/products/kindle.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/george.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/george.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jmarket.iml" afterPath="$PROJECT_DIR$/.idea/jmarket.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/sass_stdlib.xml" afterPath="$PROJECT_DIR$/.idea/libraries/sass_stdlib.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/other.xml" afterPath="$PROJECT_DIR$/.idea/other.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/testrunner.xml" afterPath="$PROJECT_DIR$/.idea/testrunner.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/css/bootstrap-modal.css" afterPath="$PROJECT_DIR$/libraries/css/bootstrap-modal.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/css/style.css" afterPath="$PROJECT_DIR$/libraries/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/bootstrap-modal.js" afterPath="$PROJECT_DIR$/libraries/js/bootstrap-modal.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/bootstrap-modalmanager.js" afterPath="$PROJECT_DIR$/libraries/js/bootstrap-modalmanager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/jquery-ui.min.js" afterPath="$PROJECT_DIR$/libraries/js/jquery-ui.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/imprint/imprint.html" afterPath="$PROJECT_DIR$/scripts/imprint/imprint.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/load_function.psp" afterPath="$PROJECT_DIR$/scripts/load_function.psp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/main_page/main_page.js" afterPath="$PROJECT_DIR$/scripts/main_page/main_page.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/offer/offer.html" afterPath="$PROJECT_DIR$/scripts/offer/offer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/products/products.html" afterPath="$PROJECT_DIR$/scripts/products/products.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/review/review.html" afterPath="$PROJECT_DIR$/scripts/review/review.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/sign_up/sign_up.html" afterPath="$PROJECT_DIR$/scripts/sign_up/sign_up.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/user/user.html" afterPath="$PROJECT_DIR$/scripts/user/user.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/values.sql" afterPath="$PROJECT_DIR$/values.sql" />
     </list>
     <list id="b5db40e1-5186-4751-8aff-90f92af58882" name="New changelist" comment="New changelist" />
     <ignored path="jmarket.iws" />
@@ -70,11 +26,12 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="24" selection-start="2571" selection-end="2571" vertical-scroll-proportion="0.24816626">
+            <state line="32" column="39" selection-start="1648" selection-end="1648" vertical-scroll-proportion="0.56537104">
               <folding>
-                <marker date="1354111956305" expanded="true" signature="2989:3222" placeholder="..." />
-                <marker date="1354111956305" expanded="true" signature="3057:3095" placeholder="..." />
-                <element signature="n#style#0;n#input#0;n#p#0;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1354116749529" expanded="true" signature="2788:3021" placeholder="..." />
+                <marker date="1354116749529" expanded="true" signature="2856:2894" placeholder="..." />
+                <element signature="n#style#0;n#input#0;n#div#0;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#1;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -551,11 +508,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="24" selection-start="2571" selection-end="2571" vertical-scroll-proportion="0.24816626">
+        <state line="32" column="39" selection-start="1648" selection-end="1648" vertical-scroll-proportion="0.56537104">
           <folding>
-            <marker date="1354111956305" expanded="true" signature="2989:3222" placeholder="..." />
-            <marker date="1354111956305" expanded="true" signature="3057:3095" placeholder="..." />
-            <element signature="n#style#0;n#input#0;n#p#0;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1354116749529" expanded="true" signature="2788:3021" placeholder="..." />
+            <marker date="1354116749529" expanded="true" signature="2856:2894" placeholder="..." />
+            <element signature="n#style#0;n#input#0;n#div#0;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#1;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
