@@ -1,9 +1,9 @@
 
 $LAB
-.script('jquery-1.7.1.js').wait();
-.script('jquery-ui.min.js');
-.script('jquery.cookie.js');
-.script('bootstrap.min.js').wait();
-.script('bootstrap-modal.js');
-.script('bootstrap-modalmanager.js');
-.script('bootstrap-datepicker.js');
+.script('libraries/js/vendor/jquery-1.7.1.js').wait()
+.script('libraries/js/vendor/jquery-ui.min.js')
+.script('libraries/js/vendor/jquery.cookie.js')
+.script('libraries/js/vendor/bootstrap.min.js').wait()
+.script('libraries/js/vendor/bootstrap-modal.js')
+.script('libraries/js/vendor/bootstrap-modalmanager.js')
+.script('libraries/js/vendor/bootstrap-datepicker.js');
