@@ -6,18 +6,15 @@ window.jMarket.Modules = {};
 
 window.jMarket.requestUrl = "scripts/load_function.psp";
 
-jQuery(function(){
-	var $modal = $('#sign_up_modal');
+function test_request(function_name) {
+            var data = {
+                function:'sign_in',
+                user:'g.merticariu@jacobs-university.de',
+                password:'password123'
+            }
+            $.post("scripts/load_function.psp", data, function (data) {
+                data = JSON.parse(data);
 
-	$modal.on('click', '.update', function(){
-		$modal.modal('loading');
-		setTimeout(function(){
-			$modal
-			.modal('loading')
-			.find('.modal-body')
-			.prepend('<div class="alert alert-info fade in">' +
-				'Updated!<button type="button" class="close" data-dismiss="alert">&times;</button>' +
-				'</div>');
-		}, 1000);
-	});
-});
+            });
+        }
+
