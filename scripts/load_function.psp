@@ -70,7 +70,7 @@ if conn:
         global cursor
         if form.has_key("id"):
             query = "SELECT u.user_id, u.email, u.address, u.phone "\
-                    "FROM users u"\
+                    "FROM users u "\
                     "WHERE u.user_id=" + str(form["id"])
             cursor.execute(query)
             rows = cursor.fetchall()
@@ -208,8 +208,8 @@ if form.has_key("function"):
             try:
                 func()      # depends on function, of course
             except:
-                echo({'error':"Server encountered an error. Please try again later."})
+                echo({'error':"Server encountered an error. Please try again later.(1)"})
     except:
-        echo({'error':"Server encountered an error. Please try again later."})
+        echo({'error':"Server encountered an error. Please try again later.(2)"})
 else:
     echo({'error':"No database connection. Please try again later."})
