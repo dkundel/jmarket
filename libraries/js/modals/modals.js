@@ -53,6 +53,7 @@ var Modals = {
 			  	});
 			  }, 1000);
 		}
+		
 	},
 	createReview: {
 		load: function _load(){
