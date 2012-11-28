@@ -2,29 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80bc9143-5dd0-4a6d-99bf-35d49c6ea826" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/js/modules/jmarket.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/js/modules/log_in.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/js/modules/main_page.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/js/modules/modals.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/js/modules/modules.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/js/vendor/bootstrap-datepicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/js/vendor/bootstrap-modal.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/js/vendor/bootstrap-modalmanager.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/js/vendor/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/js/vendor/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/js/vendor/jquery-1.7.1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/js/vendor/jquery-1.7.1.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/js/vendor/jquery-ui.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/js/vendor/jquery.cookie.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/js/vendor/libs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/js/vendor/modernizr-2.5.3.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/js/vendor/order.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/js/vendor/require-jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/js/vendor/require.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libraries/bootstrap/css/bootstrap-responsive.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libraries/bootstrap/css/bootstrap-responsive.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libraries/bootstrap/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libraries/bootstrap/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libraries/bootstrap/img/glyphicons-halflings-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libraries/bootstrap/img/glyphicons-halflings.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libraries/bootstrap/js/bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libraries/bootstrap/js/bootstrap.min.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/app.js" afterPath="$PROJECT_DIR$/libraries/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/script.js" afterPath="$PROJECT_DIR$/libraries/js/script.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/css/bootstrap.css" afterPath="$PROJECT_DIR$/libraries/css/bootstrap.css" />
     </list>
     <list id="b5db40e1-5186-4751-8aff-90f92af58882" name="New changelist" comment="New changelist" />
     <ignored path="jmarket.iws" />
@@ -48,10 +36,10 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="4" selection-start="1198" selection-end="1198" vertical-scroll-proportion="-1.1821516">
+            <state line="20" column="72" selection-start="889" selection-end="889" vertical-scroll-proportion="0.36674815">
               <folding>
-                <marker date="1354132687745" expanded="true" signature="1344:1577" placeholder="..." />
-                <marker date="1354132687745" expanded="true" signature="1412:1450" placeholder="..." />
+                <marker date="1354133265365" expanded="true" signature="1340:1573" placeholder="..." />
+                <marker date="1354133265365" expanded="true" signature="1408:1446" placeholder="..." />
                 <element signature="n#style#0;n#div#0;n#li#0;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#li#0;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#1;n#form#0;n#div#0;n#li#0;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -574,10 +562,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="4" selection-start="1198" selection-end="1198" vertical-scroll-proportion="-1.1821516">
+        <state line="20" column="72" selection-start="889" selection-end="889" vertical-scroll-proportion="0.36674815">
           <folding>
-            <marker date="1354132687745" expanded="true" signature="1344:1577" placeholder="..." />
-            <marker date="1354132687745" expanded="true" signature="1412:1450" placeholder="..." />
+            <marker date="1354133265365" expanded="true" signature="1340:1573" placeholder="..." />
+            <marker date="1354133265365" expanded="true" signature="1408:1446" placeholder="..." />
             <element signature="n#style#0;n#div#0;n#li#0;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#li#0;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#1;n#form#0;n#div#0;n#li#0;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
