@@ -85,7 +85,12 @@ if conn:
             query = "INSERT INTO `users` (`email`,`password`,`address`,`phone`,`type`,`createtime`) VALUES "\
                     "('" + str(form["email"]) + "',MD5('" + str(form["password"]) + "'),'" + str(form["address"]) + "','" + str(form["phone"]) + "','regular',NOW());"
             cursor.execute(query)
-            echo(cursor.info())
+            query = "SELECT user_id "\
+                    "FROM users "\
+                    "WHERE email='" + str(form["email"]) + "' AND address='" + str(form["address"]) + "' AND phone='" + str(form["phone"]) + "';"
+            cursor.execute(query)
+            user_id = cursor.fetchone()[0]
+            echo(user_id)
         else:
             echo("Not enough parameters provided to create account")
 
