@@ -74,7 +74,12 @@ if conn:
                     "WHERE u.user_id=" + str(form["id"])
             cursor.execute(query)
             rows = cursor.fetchall()
-            echo({'user_info':rows})
+            query = "SELECT AVG(`rating`) "\
+                    "FROM user_review "\
+                    "WHERE rated_id=" + str(form["id"])
+            cursor.execute(query)
+            rnk = cursor.fetchone()[0]
+            echo({'user_info':rows, 'user_ranking': rnk})
         else:
             echo({'error':"No user id as 'id' passed"})
 

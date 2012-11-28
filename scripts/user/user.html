@@ -1,76 +1,12 @@
-<div class="well">
-  <div class="user-information">
-    <h2>Gogu Gogutz</h2>
-    <p><i class="icon-envelope"></i> gogu@gogutz.com</p>
-    <p><i class="icon-home"></i> XF-201</p>
+<div class='well'>
+  <div class='user-information'>
+    <p><i class='icon-envelope'></i> gogu@gogutz.com</p>
+    <p><i class='icon-home'></i> XF-201</p>
+    <p>Rating: <span class="rating_stars"></span></p>
   </div>
-  <div class="user-actions">
-    <a class="create-offer-btn btn btn-jmarket-orange"><i class="icon-plus icon-white"></i> Create New Offer</a>
-    <a class="create-review-btn btn btn-jmarket-orange"><i class="icon-edit icon-white"></i> Create User Review</a>
-    <a class="change-password-btn btn btn-jmarket-orange"><i class="icon-edit icon-white"></i> Change Password</a>
+  <div class='user-actions'>
+    <a href='javascript:jMarket.Modules.Modals.createOffer.load();' class='create-review-btn btn btn-jmarket-orange'><i class='icon-edit icon-white'></i> Create User Review</a>
+    <a href='javascript:jMarket.Modules.Modals.changePassword.load();' class='change-password-btn btn btn-jmarket-orange'><i class='icon-edit icon-white'></i> Change Password</a>
   </div>
-  <div class="clearfix"></div>
-  <div class="accordion" id="user-content">
-    <div class="accordion-group">
-      <div class="accordion-heading">
-        <a class="accordion-toggle" data-toggle="collapse" data-parent="#user-content" href="#collapseOne">
-          User Reviews
-        </a>
-      </div>
-      <div id="collapseOne" class="accordion-body collapse in">
-        <div class="accordion-inner">
-          <table class="table table-condensed table-hover table-bordered">
-            <thead>
-              <tr>
-                <th class="span2">Name</th>
-                <th class="span7">Review</th>
-                <th class="span2">Rating</th>
-                <th class="span3">Date</th>
-              </tr>
-            </thead>
-            <tbody>
-              <!-- to be repeated -->
-              <tr>
-                <td><strong>John Doe</strong></td>
-                <td><strong>Message body goes here</strong></td>
-                <td><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i></td>
-                <td><strong>11:23 PM</strong></td>
-              </tr>
-              <tr>
-              <!-- end of to be repeated -->
-               
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-    <div class="accordion-group">
-      <div class="accordion-heading">
-        <a class="accordion-toggle" data-toggle="collapse" data-parent="#user-content" href="#collapseTwo">
-          User Products
-        </a>
-      </div>
-      <div id="collapseTwo" class="accordion-body collapse">
-        <div class="accordion-inner">
-          <div class="row-fluid">
-            <ul class="thumbnails">
-              <!--- START do be repeated -->
-              <li class="span3 product">
-                <div class="thumbnail">
-                  <img src="http://placehold.it/300x200" alt="">
-                  <div class="caption">
-                    <h3>Thumbnail label</h3>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                    <p><a href="#" class="btn btn-jmarket-orange"><i class="icon-share icon-white"></i> Details</a></p> <h3 class="price-tag">300</h3>
-                    <div class="clearfix"></div>                </div>
-                  </div>
-                </li>
-                <!--- END do be repeated -->
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <div class='clearfix'></div>
 </div>
