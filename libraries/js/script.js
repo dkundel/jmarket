@@ -31,6 +31,16 @@ jQuery(function () {
                 '</div>');
         }, 1000);
     });
+
+    var login_check = $.cookie('user_login');
+    if (login_check){
+        login_check = JSON.parse(login_check);
+        window.jMarket.Modules.LogIn._display_welcome(login_check.email);
+    }
+
+    $('a#logout_button').click(function(){
+        window.jMarket.Modules.LogOut.logout();
+    });
 });
 
 

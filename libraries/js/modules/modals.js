@@ -40,7 +40,7 @@ var Modals = {
 				Modals.modal.modal('hide');
 				var date = new Date();
  				date.setTime(date.getTime() + (30 * 60 * 1000));
-				$.cookie('user_id', data, { expires: date, path: '/' });
+				$.cookie('user_login', data, { expires: date, path: '/' });
 			});
 		}
 	},

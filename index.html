@@ -21,7 +21,6 @@
     <link rel="stylesheet" href="libraries/fonts/stylesheet_ptsans.css">
     <link rel="stylesheet" href="libraries/fonts/stylesheet_chunk.css">
     <link rel="stylesheet" href="libraries/css/style.css">
-
     <link rel="stylesheet" href="libraries/fontawesome/css/font-awesome.css">
     <script src="libraries/js/vendor/LAB.min.js"></script>
     <script src="libraries/js/app.js"></script>
@@ -70,16 +69,17 @@
                                 </form>
                             </div>
                         </li>
-                        <li class="dropdown logout" style="display:">
-                            <a class="dropdown-toggle" href="#" data-toggle="dropdown">Welcome!<strong
+                        <li class="dropdown logout" style="display: none">
+                            <a class="dropdown-toggle" href="#" data-toggle="dropdown">Welcome <span
+                                    id="user_name"></span><strong
                                     class="caret"></strong></a>
 
                             <ul class="dropdown-menu" role="menu" style="padding-bottom: 5px;">
-                                <li><a tabindex="-1" href="#"><i class="icon-user"></i>My account</a></li>
-                                <li><a tabindex="-1" href="#">My products</a></li>
-                                <li><a tabindex="-1" href="#">Sell product</a></li>
+                                <li><a tabindex="-1"><i class="icon-user"></i>My account</a></li>
+                                <li><a tabindex="-1">My products</a></li>
+                                <li><a tabindex="-1">Sell product</a></li>
                                 <li class="divider"></li>
-                                <li><a tabindex="-1" href="#">Log out!</a></li>
+                                <li><a tabindex="-1" id="logout_button">Log out!</a></li>
                             </ul>
                         </li>
                     </ul>

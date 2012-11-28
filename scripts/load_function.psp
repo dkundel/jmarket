@@ -84,12 +84,12 @@ if conn:
             query = "INSERT INTO `users` (`email`,`password`,`address`,`phone`,`type`,`createtime`) VALUES "\
                     "('" + str(form["email"]) + "',MD5('" + str(form["password"]) + "'),'" + str(form["address"]) + "','" + str(form["phone"]) + "','regular',NOW());"
             cursor.execute(query)
-            query = "SELECT user_id "\
+            query = "SELECT `user_id`, `email` "\
                     "FROM users "\
                     "WHERE email='" + str(form["email"]) + "' AND address='" + str(form["address"]) + "' AND phone='" + str(form["phone"]) + "';"
             cursor.execute(query)
-            user_id = cursor.fetchone()[0]
-            echo({'user_id':user_id})
+            res = cursor.fetchone()
+            echo({'user_id':res[0],'email':res[1]})
         else:
             echo({'error':"Not enough parameters provided to create account"})
 
@@ -97,13 +97,13 @@ if conn:
         if (form.has_key('user') and form.has_key('password')):
             user = form['user']
             passwd = form['password']
-            query = "SELECT `user_id` " \
+            query = "SELECT `user_id`, `email` " \
                     "FROM `users` " \
                     "WHERE `email`='"+str(user)+"' AND `password`=MD5('"+str(passwd)+"')"
             cursor.execute(query)
             id = cursor.fetchone()
             if id:
-                echo({"user_id":id[0]})
+                echo({"user_id":id[0],"email":id[1]})
             else:
                 echo({'error':'Invalid user or password'})
 
@@ -203,8 +203,8 @@ if form.has_key("function"):
             try:
                 func()      # depends on function, of course
             except:
-                echo({'error':"There was an error in the function"})
+                echo({'error':"Server encountered an error. Please try again later."})
     except:
-        echo({'error':funcName + " is not defined"})
+        echo({'error':"Server encountered an error. Please try again later."})
 else:
-    echo({'error':"Inexisting database connection"})
+    echo({'error':"No database connection. Please try again later."})

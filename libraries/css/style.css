@@ -101,3 +101,7 @@ li.span3.product {
     margin-top: 50px;
 }
 
+.logout li{
+    cursor: pointer;
+}
+
