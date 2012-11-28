@@ -1,10 +1,7 @@
 /* Author:
 
 */
-window.jMarket = {};
-window.jMarket.Modules = {};
 
-window.jMarket.requestUrl = "scripts/load_function.psp";
 
 function test_request(function_name) {
             var data = {
