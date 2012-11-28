@@ -1,4 +1,4 @@
-define(['jquery','vendor/order!vendor/libs','vendor/order!modules/modules'], function ($) {
+define(['jquery','vendor/libs','modules/modules'], function ($) {
 var LogIn = {
     requestData:{
         user:null,
