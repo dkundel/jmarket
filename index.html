@@ -21,8 +21,14 @@
     <link rel="stylesheet" href="libraries/fonts/stylesheet_ptsans.css">
     <link rel="stylesheet" href="libraries/fonts/stylesheet_chunk.css">
     <link rel="stylesheet" href="libraries/css/style.css">
+<<<<<<< HEAD
     
     <script data-main="libraries/js/app.js" src="libraries/js/vendor/require.js"></script>
+=======
+    <link rel="stylesheet" href="libraries/fontawesome/css/font-awesome.css">
+    <script data-main="libraries/js/app.js" src="libraries/js/require-jquery.js"></script>
+    <script data-main="libraries/js/app.js" src="libraries/js/vendor/require-jquery.js"></script>
+>>>>>>> a63ba8280e95898fac8e1378183d78e717c8f1bc
 </head>
 <body>
 <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a
@@ -45,29 +51,40 @@
                         <li class="divider-vertical"></li>
                         <li><a href="#"><i class="icon-tags"></i> Categories</a></li>
                         <li class="divider-vertical"></li>
-                        <li><a href="#"><i class="icon-user"></i> My Account</a></li>
-                        <li class="divider-vertical"></li>
                         <li><a href="scripts/imprint/imprint.html"><i class="icon-info-sign"></i> Imprint</a></li>
                     </ul>
                     <ul class="nav pull-right">
                         <form class="navbar-search pull-left">
                             <input type="text" class="search-query" placeholder="Search">
                         </form>
-                        <li class="dropdown">
+                        <li class="dropdown login">
                             <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong
                                     class="caret"></strong></a>
 
-                            <div class="clearfix"></div>
                             <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
                                 <form accept-charset="UTF-8" id="login_form">
                                     <input style="margin-bottom: 15px;" type="text" placeholder="Username" id="username"
                                            name="username">
                                     <input style="margin-bottom: 15px;" type="password" placeholder="Password"
                                            id="password" name="password">
-                                    <input class="btn btn-primary btn-block" id="sign-in" type="submit" value="Sing In"/>
-                                    <input type="button" class="btn btn-primary btn-block" id="sign_up_modal" value="Sign Up"/>
+                                    <input class="btn btn-primary btn-block" id="sign-in" type="submit"
+                                           value="Sing In"/>
+                                    <input type="button" class="btn btn-primary btn-block" id="sign_up_modal"
+                                           value="Sign Up"/>
                                 </form>
                             </div>
+                        </li>
+                        <li class="dropdown logout" style="display: none">
+                            <a class="dropdown-toggle" href="#" data-toggle="dropdown">Welcome!<strong
+                                    class="caret"></strong></a>
+
+                            <ul class="dropdown-menu" role="menu" style="padding-bottom: 5px;">
+                                <li><a tabindex="-1" href="#"><i class="icon-user"></i>My account</a></li>
+                                <li><a tabindex="-1" href="#">My products</a></li>
+                                <li><a tabindex="-1" href="#">Sell product</a></li>
+                                <li class="divider"></li>
+                                <li><a tabindex="-1" href="#">Log out!</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
