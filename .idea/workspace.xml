@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80bc9143-5dd0-4a6d-99bf-35d49c6ea826" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/js/log_in/log_in.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/js/display_message/display_message.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/log_in/log_in.js" afterPath="$PROJECT_DIR$/libraries/js/log_in/log_in.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/main_page/main_page.js" afterPath="$PROJECT_DIR$/libraries/js/main_page/main_page.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/script.js" afterPath="$PROJECT_DIR$/libraries/js/script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/main_page/main_page.js" afterPath="$PROJECT_DIR$/scripts/main_page/main_page.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/load_function.psp" afterPath="$PROJECT_DIR$/scripts/load_function.psp" />
     </list>
     <list id="b5db40e1-5186-4751-8aff-90f92af58882" name="New changelist" comment="New changelist" />
     <ignored path="jmarket.iws" />
@@ -28,13 +28,14 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="107" column="60" selection-start="5135" selection-end="5135" vertical-scroll-proportion="0.54063606">
+            <state line="34" column="64" selection-start="1795" selection-end="1795" vertical-scroll-proportion="-4.375">
               <folding>
-                <marker date="1354118689461" expanded="true" signature="2982:3215" placeholder="..." />
-                <marker date="1354118689461" expanded="true" signature="3050:3088" placeholder="..." />
+                <marker date="1354126138318" expanded="true" signature="3182:3415" placeholder="..." />
+                <marker date="1354126138318" expanded="true" signature="3250:3288" placeholder="..." />
+                <element signature="n#style#0;n#input#0;n#form#0;n#div#1;n#li#0;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#div#0;n#li#0;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#div#1;n#li#0;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#li#1;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -47,7 +48,7 @@
       <file leaf-file-name="log_in.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/libraries/js/log_in/log_in.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="5" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0">
+            <state line="17" column="65" selection-start="549" selection-end="549" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -56,7 +57,49 @@
       <file leaf-file-name="load_function.psp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/load_function.psp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="13" selection-start="3069" selection-end="3069" vertical-scroll-proportion="0.0">
+            <state line="108" column="0" selection-start="4036" selection-end="4036" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main_page.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libraries/js/main_page/main_page.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="0" selection-start="1550" selection-end="1550" vertical-scroll-proportion="0.0">
+              <folding>
+                <marker date="1354125654602" expanded="false" signature="1176:1219" placeholder="..." />
+                <marker date="1354125654602" expanded="false" signature="1296:1312" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="display_message.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/libraries/js/display_message/display_message.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="105" selection-start="550" selection-end="550" vertical-scroll-proportion="0.22674419">
+              <folding>
+                <marker date="1354128301436" expanded="true" signature="274:324" placeholder="..." />
+                <marker date="1354128301436" expanded="true" signature="486:550" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plugins.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libraries/js/plugins.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="script.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libraries/js/script.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="18" selection-start="283" selection-end="283" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -93,22 +136,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/scripts/functions/__init__.py" />
         <option value="$PROJECT_DIR$/scripts/functions/gogu.py" />
         <option value="$PROJECT_DIR$/scripts/load_functions/__init__.py" />
         <option value="$PROJECT_DIR$/scripts/__init__.py" />
         <option value="$PROJECT_DIR$/scripts/DatabaseHandler.psp" />
         <option value="$PROJECT_DIR$/scripts/DatabaseHandler.py" />
         <option value="$PROJECT_DIR$/values.sql" />
-        <option value="$PROJECT_DIR$/scripts/load_function.psp" />
         <option value="$PROJECT_DIR$/.htaccess" />
         <option value="$PROJECT_DIR$/img/.htaccess" />
         <option value="$PROJECT_DIR$/libraries/css/style.css" />
         <option value="$PROJECT_DIR$/scripts/main_page/main_page.js" />
-        <option value="$PROJECT_DIR$/libraries/js/main_page/main_page.js" />
         <option value="$PROJECT_DIR$/libraries/js/script.js" />
-        <option value="$PROJECT_DIR$/libraries/js/log_in/log_in.js" />
+        <option value="$PROJECT_DIR$/libraries/js/main_page/main_page.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/scripts/load_function.psp" />
+        <option value="$PROJECT_DIR$/libraries/js/log_in/log_in.js" />
+        <option value="$PROJECT_DIR$/libraries/js/display_message/display_message.js" />
       </list>
     </option>
   </component>
@@ -211,29 +254,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="main_page" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jmarket" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jmarket" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="log_in" />
+              <option name="myItemId" value="display_message" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -377,7 +398,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="24" width="1920" height="1055" extended-state="0" />
+    <frame x="0" y="24" width="1920" height="1055" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -454,16 +475,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/scripts/main_page/main_page.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="38" selection-start="630" selection-end="630" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1354117585061" expanded="false" signature="1702:1745" placeholder="..." />
-            <marker date="1354117585061" expanded="false" signature="1822:1838" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/load_function.psp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="67" selection-start="586" selection-end="586" vertical-scroll-proportion="0.0">
@@ -472,11 +483,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/img/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/js/plugins.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
@@ -498,13 +504,6 @@
         <state line="4" column="0" selection-start="84" selection-end="84" vertical-scroll-proportion="0.06872852" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/offer/offer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="7" selection-start="165" selection-end="165" vertical-scroll-proportion="-0.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libraries/js/modals/modals.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -512,26 +511,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/js/main_page/main_page.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="30" selection-start="921" selection-end="921" vertical-scroll-proportion="0.27906978">
-          <folding>
-            <marker date="1354117585065" expanded="false" signature="1162:1205" placeholder="..." />
-            <marker date="1354117585065" expanded="false" signature="1282:1298" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libraries/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="100" column="18" selection-start="1991" selection-end="1991" vertical-scroll-proportion="0.9140893">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="25" selection-start="61" selection-end="61" vertical-scroll-proportion="0.03436426">
           <folding />
         </state>
       </provider>
@@ -546,30 +528,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="18" selection-start="283" selection-end="283" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/offer/offer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="7" selection-start="165" selection-end="165" vertical-scroll-proportion="-0.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/js/plugins.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/js/main_page/main_page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="0" selection-start="1550" selection-end="1550" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1354125654602" expanded="false" signature="1176:1219" placeholder="..." />
+            <marker date="1354125654602" expanded="false" signature="1296:1312" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="64" selection-start="1795" selection-end="1795" vertical-scroll-proportion="-4.375">
+          <folding>
+            <marker date="1354126138318" expanded="true" signature="3182:3415" placeholder="..." />
+            <marker date="1354126138318" expanded="true" signature="3250:3288" placeholder="..." />
+            <element signature="n#style#0;n#input#0;n#form#0;n#div#1;n#li#0;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#li#0;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#1;n#li#0;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#1;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#2;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/load_function.psp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="13" selection-start="3069" selection-end="3069" vertical-scroll-proportion="0.0">
+        <state line="108" column="0" selection-start="4036" selection-end="4036" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/libraries/js/log_in/log_in.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="5" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0">
+        <state line="17" column="65" selection-start="549" selection-end="549" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/libraries/js/display_message/display_message.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="60" selection-start="5135" selection-end="5135" vertical-scroll-proportion="0.54063606">
+        <state line="13" column="105" selection-start="550" selection-end="550" vertical-scroll-proportion="0.22674419">
           <folding>
-            <marker date="1354118689461" expanded="true" signature="2982:3215" placeholder="..." />
-            <marker date="1354118689461" expanded="true" signature="3050:3088" placeholder="..." />
-            <element signature="n#style#0;n#input#0;n#div#0;n#li#0;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#1;n#li#0;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#1;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#2;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1354128301436" expanded="true" signature="274:324" placeholder="..." />
+            <marker date="1354128301436" expanded="true" signature="486:550" placeholder="..." />
           </folding>
         </state>
       </provider>

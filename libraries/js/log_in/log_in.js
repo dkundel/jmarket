@@ -1,20 +1,22 @@
 var LogIn = {
     requestData:{
-        userName:null,
-        passwd:null,
+        user:null,
+        password:null,
         function:'sign_in'
     },
 
-    log_in:function () {
-        LogIn.requestData.userName = $("input#username").val();
-        LogIn.requestData.passwd = $("input#password").val();
+    log_in:function (form) {
+        LogIn.requestData.user = form.find("input#username").val();
+        LogIn.requestData.password =form.find("input#password").val();
         LogIn._send_request();
     },
 
     _send_request:function () {
         $.post(window.jMarket.requestUrl, LogIn.requestData, function (data) {
-            data = JSON.parse();
-            console.log(data);
+        data = JSON.parse(data)
+        if (data.error){
+            window.jMarket.Modules.DisplayMessage.print(data.error,'error');
+        }
         });
     }
 

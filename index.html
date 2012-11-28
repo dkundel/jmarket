@@ -31,14 +31,17 @@
     <script src="libraries/js/plugins.js"></script>
     <script src="libraries/js/script.js"></script>
     <script src="libraries/js/main_page/main_page.js"></script>
+    <script src="libraries/js/log_in/log_in.js"></script>
+    <script src="libraries/js/display_message/display_message.js"></script>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css"/>
     <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
     <script src="libraries/js/jquery.cookie.js"></script>
     <script>
         $(document).ready(function () {
-//                    window.jMarket.Modules.MainPage.load();
-                    $('button#sign-in').live('click', function () {
-                        window.jMarket.Modules.LogIn.log_in();
+                    window.jMarket.Modules.MainPage.load();
+                    $('form#login_form').submit(function(e){
+                        e.preventDefault();
+                        window.jMarket.Modules.LogIn.log_in($(this));
                     });
                 }
         )
@@ -52,7 +55,7 @@
             }
             $.post("scripts/load_function.psp", data, function (data) {
                 data = JSON.parse(data);
-                console.log(data);
+
             });
         }
 
@@ -106,13 +109,13 @@
 
                             <div class="clearfix"></div>
                             <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
-                                <form accept-charset="UTF-8">
+                                <form accept-charset="UTF-8" id="login_form">
                                     <input style="margin-bottom: 15px;" type="text" placeholder="Username" id="username"
                                            name="username">
                                     <input style="margin-bottom: 15px;" type="password" placeholder="Password"
                                            id="password" name="password">
-                                    <button class="btn btn-primary btn-block" id="sign-in">Sign In</button>
-                                    <button type="button" class="btn btn-primary btn-block" id="sign-up-btn">Sign Up</button>
+                                    <input class="btn btn-primary btn-block" id="sign-in" type="submit" value="Sing In"/>
+                                    <input type="button" class="btn btn-primary btn-block" id="sign_up_modal" value="Sign Up"/>
                                 </form>
                             </div>
                         </li>
