@@ -31,14 +31,21 @@
     <script src="libraries/js/plugins.js"></script>
     <script src="libraries/js/script.js"></script>
     <script src="libraries/js/main_page/main_page.js"></script>
+    <script src="libraries/js/log_in/log_in.js"></script>
+    <script src="libraries/js/display_message/display_message.js"></script>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css"/>
     <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
     <script src="libraries/js/jquery.cookie.js"></script>
     <script>
-        $(document).ready(
-                window.jMarket.Modules.MainPage.load();
+        $(document).ready(function () {
+                    window.jMarket.Modules.MainPage.load();
+                    $('form#login_form').submit(function(e){
+                        e.preventDefault();
+                        window.jMarket.Modules.LogIn.log_in($(this));
+                    });
+                }
         )
-        ;
+
 
         function test_request(function_name) {
             var data = {
@@ -48,7 +55,7 @@
             }
             $.post("scripts/load_function.psp", data, function (data) {
                 data = JSON.parse(data);
-                console.log(data);
+
             });
         }
 
@@ -102,14 +109,13 @@
 
                             <div class="clearfix"></div>
                             <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
-                                <form method="post" action="login" accept-charset="UTF-8">
+                                <form accept-charset="UTF-8" id="login_form">
                                     <input style="margin-bottom: 15px;" type="text" placeholder="Username" id="username"
                                            name="username">
                                     <input style="margin-bottom: 15px;" type="password" placeholder="Password"
                                            id="password" name="password">
-                                    <input class="btn btn-primary btn-block" type="submit" id="sign-in" value="Sign In">
-                                    <input type="button" class="btn btn-primary btn-block" id="sign-up-btn"
-                                           value="Sign Up">
+                                    <input class="btn btn-primary btn-block" id="sign-in" type="submit" value="Sing In"/>
+                                    <input type="button" class="btn btn-primary btn-block" id="sign_up_modal" value="Sign Up"/>
                                 </form>
                             </div>
                         </li>
@@ -130,23 +136,29 @@
                 </ul>
 
                 <ul class="nav nav-list price-filter">
-                    <p>
+                    <li>
 
-                    <div class="input-prepend input-append">
-                        <span class="add-on">Min</span>
-                        <input class="span3" type="text" id="min_amount"
-                               style="border: 0; color: #f6931f; font-weight: bold;" value="0"/>
-                        <span class="add-on">&euro;</span>
-                    </div>
-                    <div class="input-prepend input-append">
-                        <span class="add-on">Max</span>
-                        <input class="span3" type="text" id="max_amount"
-                               style="border: 0; color: #f6931f; font-weight: bold;" value="0"/>
-                        <span class="add-on">&euro;</span>
-                    </div>
-                    </p>
+                        <div class="input-prepend input-append">
+                            <span class="add-on">Min</span>
+                            <input class="span3" type="text" id="min_amount"
+                                   style="color: #f6931f; font-weight: bold;" value="0"/>
+                            <span class="add-on">&euro;</span>
+                        </div>
+                        <div class="input-prepend input-append">
+                            <span class="add-on">Max</span>
+                            <input class="span3" type="text" id="max_amount"
+                                   style="color: #f6931f; font-weight: bold;" value="0"/>
+                            <span class="add-on">&euro;</span>
+                        </div>
+                    </li>
+                    <li style="margin-top: 10px;">
+                        <div id="slider-range"></div>
+                    </li>
+                    <li style="margin-top: 5px;text-align: center">
+                        <button class="btn btn-mini">Filter</button>
+                        <button class="btn btn-mini">Remove filter</button>
+                    </li>
 
-                    <div id="slider-range"></div>
                 </ul>
             </div>
         </div>

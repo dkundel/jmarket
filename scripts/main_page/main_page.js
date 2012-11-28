@@ -20,7 +20,7 @@
             var data = {
                 function:"construct_main_page"
             }
-            $.post("scripts/load_function.psp", data, function (data) {
+            $.post(window.jMarket.requestUrl, data, function (data) {
                 data = JSON.parse(data);
                 content = '<div class="row-fluid"><ul class="thumbnails">';
                 content_data = data[0];
