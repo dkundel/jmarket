@@ -1,8 +1,7 @@
 /* Author:
 
 */
-function($) {
-	    $(function() {
+	    jQuery(function() {
 	         window.jMarket.Modules.MainPage.load();
                     $('form#login_form').submit(function(e){
                         e.preventDefault();
