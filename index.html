@@ -30,13 +30,13 @@
     <script src="libraries/js/bootstrap-modalmanager.js"></script>
     <script src="libraries/js/plugins.js"></script>
     <script src="libraries/js/script.js"></script>
-    <script src="scripts/main_page/main_page.js"></script>
+    <script src="js/main_page/main_page.js"></script>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
     <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
     <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
     <script>
         $(document).ready(
-                new window.jMarket.Modules.MainPage()
+                window.jMarket.Modules.MainPage.load();
         );
 
         function test_request(function_name) {
@@ -159,7 +159,7 @@
     <div class="span10 content_wrapper">
 
     </div>
-    <div id="sign_up_modal" class="modal hide fade" tabindex="-1" data-width="760">
+    <div id="modal_container" class="modal hide fade" tabindex="-1" data-width="760">
     </div>
     <footer>
     </footer>

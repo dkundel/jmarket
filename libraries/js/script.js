@@ -6,41 +6,10 @@ window.jMarket.Modules={
     MainPage : null
 };
 
+
+
 jQuery(function(){
 	var $modal = $('#sign_up_modal');
-
-	$('#sign-up-btn').on('click', function(){
-	  // create the backdrop and wait for next modal to be triggered
-	  $('body').modalmanager('loading');
-
-	  setTimeout(function(){
-	  	$modal.load('scripts/sign_up/sign_up.html', '', function(){
-	  		$modal.modal();
-	  	});
-	  }, 1000);
-	});
-
-	$('.create-offer-btn').on('click', function(){
-	  // create the backdrop and wait for next modal to be triggered
-	  $('body').modalmanager('loading');
-
-	  setTimeout(function(){
-	  	$modal.load('scripts/offer/offer.html', '', function(){
-	  		$modal.modal();
-	  	});
-	  }, 1000);
-	});
-
-	$('.create-review-btn').on('click', function(){
-	  // create the backdrop and wait for next modal to be triggered
-	  $('body').modalmanager('loading');
-
-	  setTimeout(function(){
-	  	$modal.load('scripts/review/review.html', '', function(){
-	  		$modal.modal();
-	  	});
-	  }, 1000);
-	});
 
 	$modal.on('click', '.update', function(){
 		$modal.modal('loading');
@@ -53,6 +22,8 @@ jQuery(function(){
 				'</div>');
 		}, 1000);
 	});
+
+
 
 });
 
