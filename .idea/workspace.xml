@@ -2,29 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80bc9143-5dd0-4a6d-99bf-35d49c6ea826" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/js/modules/jmarket.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/js/modules/log_in.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/js/modules/main_page.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/js/modules/modals.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/js/modules/modules.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/js/vendor/bootstrap-datepicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/js/vendor/bootstrap-modal.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/js/vendor/bootstrap-modalmanager.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/js/vendor/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/js/vendor/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/js/vendor/jquery-1.7.1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/js/vendor/jquery-1.7.1.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/js/vendor/jquery-ui.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/js/vendor/jquery.cookie.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/js/vendor/libs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/js/vendor/modernizr-2.5.3.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/js/vendor/order.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/js/vendor/require-jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/js/vendor/require.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libraries/bootstrap/css/bootstrap-responsive.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libraries/bootstrap/css/bootstrap-responsive.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libraries/bootstrap/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libraries/bootstrap/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libraries/bootstrap/img/glyphicons-halflings-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libraries/bootstrap/img/glyphicons-halflings.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libraries/bootstrap/js/bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libraries/bootstrap/js/bootstrap.min.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/app.js" afterPath="$PROJECT_DIR$/libraries/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/script.js" afterPath="$PROJECT_DIR$/libraries/js/script.js" />
     </list>
     <list id="b5db40e1-5186-4751-8aff-90f92af58882" name="New changelist" comment="New changelist" />
     <ignored path="jmarket.iws" />
@@ -45,13 +31,13 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="4" selection-start="1198" selection-end="1198" vertical-scroll-proportion="-1.1821516">
+            <state line="35" column="41" selection-start="1674" selection-end="1674" vertical-scroll-proportion="-9.272727">
               <folding>
-                <marker date="1354132687745" expanded="true" signature="1344:1577" placeholder="..." />
-                <marker date="1354132687745" expanded="true" signature="1412:1450" placeholder="..." />
+                <marker date="1354134325181" expanded="true" signature="1259:1492" placeholder="..." />
+                <marker date="1354134325181" expanded="true" signature="1327:1365" placeholder="..." />
                 <element signature="n#style#0;n#div#0;n#li#0;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#li#0;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#1;n#form#0;n#div#0;n#li#0;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -78,7 +64,16 @@
       <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/libraries/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="24" selection-start="1209" selection-end="1209" vertical-scroll-proportion="0.0">
+            <state line="1" column="33" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="img_upload.psp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/img_upload.psp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="21" selection-start="353" selection-end="353" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -88,6 +83,15 @@
         <entry file="file://$PROJECT_DIR$/libraries/js/modals/modals.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="37" column="40" selection-start="1489" selection-end="1489" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="modules.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libraries/js/modules/modules.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="29" selection-start="34" selection-end="34" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -117,28 +121,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plugins.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libraries/js/plugins.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="script.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libraries/js/script.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="18" selection-start="99" selection-end="99" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="offer.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="offer.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/offer/offer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="7" selection-start="165" selection-end="165" vertical-scroll-proportion="-0.625">
+            <state line="19" column="47" selection-start="855" selection-end="855" vertical-scroll-proportion="-0.024734983">
               <folding />
             </state>
           </provider>
@@ -157,8 +143,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/scripts/load_functions/__init__.py" />
-        <option value="$PROJECT_DIR$/scripts/__init__.py" />
         <option value="$PROJECT_DIR$/scripts/DatabaseHandler.psp" />
         <option value="$PROJECT_DIR$/scripts/DatabaseHandler.py" />
         <option value="$PROJECT_DIR$/values.sql" />
@@ -173,6 +157,8 @@
         <option value="$PROJECT_DIR$/libraries/js/modals/modals.js" />
         <option value="$PROJECT_DIR$/libraries/js/log_in/log_in.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/libraries/js/modules/modules.js" />
+        <option value="$PROJECT_DIR$/libraries/js/app.js" />
       </list>
     </option>
   </component>
@@ -235,11 +221,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="scripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -253,7 +235,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="libraries" />
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="offer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -460,30 +446,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/values.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="152" column="0" selection-start="15953" selection-end="16564" vertical-scroll-proportion="0.7594502" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/user/user.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="52" selection-end="52" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/robots.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="84" selection-end="84" vertical-scroll-proportion="0.06872852" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="18" selection-start="1991" selection-end="1991" vertical-scroll-proportion="0.9140893">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/main_page/main_page.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="44" selection-start="449" selection-end="449" vertical-scroll-proportion="0.38372093">
@@ -497,20 +459,6 @@
     <entry file="file://$PROJECT_DIR$/scripts/load_function.psp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="135" column="33" selection-start="5514" selection-end="5514" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/js/modals/modals.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="40" selection-start="1489" selection-end="1489" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="24" selection-start="1209" selection-end="1209" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -533,14 +481,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/libraries/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="18" selection-start="99" selection-end="99" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/offer/offer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="7" selection-start="165" selection-end="165" vertical-scroll-proportion="-0.625">
+        <state line="39" column="18" selection-start="1271" selection-end="1271" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -574,10 +515,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="4" selection-start="1198" selection-end="1198" vertical-scroll-proportion="-1.1821516">
+        <state line="35" column="41" selection-start="1674" selection-end="1674" vertical-scroll-proportion="-9.272727">
           <folding>
-            <marker date="1354132687745" expanded="true" signature="1344:1577" placeholder="..." />
-            <marker date="1354132687745" expanded="true" signature="1412:1450" placeholder="..." />
+            <marker date="1354134325181" expanded="true" signature="1259:1492" placeholder="..." />
+            <marker date="1354134325181" expanded="true" signature="1327:1365" placeholder="..." />
             <element signature="n#style#0;n#div#0;n#li#0;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#li#0;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#1;n#form#0;n#div#0;n#li#0;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -588,6 +529,57 @@
             <element signature="n#style#0;n#li#1;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#li#2;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/js/modernizr-2.5.3.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/js/modals/modals.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="40" selection-start="1489" selection-end="1489" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/js/modules/modules.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="29" selection-start="34" selection-end="34" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="33" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/products/products.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/img_upload.psp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="21" selection-start="353" selection-end="353" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/offer/offer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="47" selection-start="855" selection-end="855" vertical-scroll-proportion="-0.024734983">
+          <folding />
         </state>
       </provider>
     </entry>
