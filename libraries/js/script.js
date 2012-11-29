@@ -12,7 +12,7 @@ jQuery(function () {
         range:true,
         min:0,
         max:1000,
-        values:[ 0, 0 ],
+        values:[ 0, 1000 ],
         slide:function (event, ui) {
             $("#min_amount").val(ui.values[ 0 ]);
             $("#max_amount").val(ui.values[ 1 ]);

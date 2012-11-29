@@ -84,19 +84,33 @@ if conn:
             echo({'error':"No user id as 'id' passed"})
 
     def LF_sign_up():
-        global cursor
+        global cursor,conn
         if form.has_key("email") and form.has_key("password") and form.has_key("address") and form.has_key("phone"):
-            query = "INSERT INTO `users` (`email`,`password`,`address`,`phone`,`type`,`createtime`) VALUES "\
-                    "('" + str(form["email"]) + "',MD5('" + str(form["password"]) + "'),'" + str(form["address"]) + "','" + str(form["phone"]) + "','regular',NOW());"
+            query = "SELECT `user_id` " \
+                    "FROM `users` " \
+                    "WHERE `email`='"+str(form['email'])+"'"
+
             cursor.execute(query)
-            query = "SELECT `user_id`, `email` "\
-                    "FROM users "\
-                    "WHERE email='" + str(form["email"]) + "' AND address='" + str(form["address"]) + "' AND phone='" + str(form["phone"]) + "';"
-            cursor.execute(query)
-            res = cursor.fetchone()
-            echo({'user_id':res[0],'email':res[1]})
+            id = cursor.fetchone()
+
+            if (id):
+                echo({'error':'User already exists'})
+            else:
+                query = "INSERT INTO `users` (`email`,`password`,`address`,`phone`,`type`,`createtime`) VALUES "\
+                        "('" + str(form["email"]) + "',MD5('" + str(form["password"]) + "'),'" + str(form["address"]) + "','" + str(form["phone"]) + "','regular',NOW())"
+                cursor.execute(query)
+                conn.commit()
+                query = "SELECT `user_id`, `email` "\
+                        "FROM users "\
+                        "WHERE email='" + str(form["email"]) + "' AND address='" + str(form["address"]) + "' AND phone='" + str(form["phone"]) + "'"
+                cursor.execute(query)
+                res = cursor.fetchone()
+                if res:
+                    echo({'user_id':res[0],'email':res[1]})
+                else:
+                    echo({'error':'Failed to create the user. Please try again later.'})
         else:
-            echo({'error':"Not enough parameters provided to create account"})
+            echo({'error':"Not enough parameters"})
 
     def LF_sign_in():
         if (form.has_key('user') and form.has_key('password')):
@@ -124,13 +138,12 @@ if conn:
                 query = "INSERT INTO `user_review` (`ratter_id`,`rated_id`,`rating`,`comment`) VALUES "\
                         "(" + form["from"] + "," + str(user[0]) + "," + str(form["rating"]) + ",'" + str(form["review"]) + "');"
                 cursor.execute(query)
-                echo(cursor.info())
             else:
                 echo({'error':"Could not determine user from email"})
         echo({'error':"Not enough parameters provided to create review"})
 
     def LF_create_offer():
-        global cursor
+        global cursor,conn
         if form.has_key("name") and form.has_key("description") and form.has_key("price") and form.has_key("user_id") and form.has_key("category"):
             picture_path = "http://placehold.it/300x200"
             #if form.has_key("picture"):
@@ -139,13 +152,14 @@ if conn:
             query = "INSERT INTO `products` (`name`,`description`,`picture_path`) "\
                     "VALUES ('" + str(form["name"]) + "','" + str(form["description"]) + "','" + str(picture_path) + "');"
             cursor.execute(query)
+            conn.commit()
             query = "SELECT p.product_id "\
                     "FROM products p "\
                     "WHERE p.name = '" + str(form["name"]) + "' "\
                     "AND p.description = '" + str(form["description"]) + "' "\
                     "AND p.picture_path = '" + str(picture_path) + "';"
             cursor.execute(query)
-            #product_id = cursor.last_id()
+
             product_id = cursor.fetchone()[0]
             query = "SELECT c.category_id "\
                     "FROM categories c "\
@@ -155,10 +169,11 @@ if conn:
             query = "INSERT INTO `selling_products` (`user_id`, `product_id`, `price`, `create_date`, `expire_date`, `negotiable`) "\
                     "VALUES (" + str(form["user_id"]) + "," + str(product_id) + "," + str(form["price"]) + ",NOW(),DATE_ADD(NOW(), INTERVAL 1 MONTH),0);"
             cursor.execute(query)
+            conn.commit()
             query = "INSERT INTO `product_to_category` (`product_id`,`category_id`) "\
                     "VALUES (" + str(product_id) + "," + str(category_id) + ");"
             cursor.execute(query)
-            echo({'info':cursor.info()})
+            conn.commit()
         else:
             echo({'error':"Not enough parameters provided!"})
 
@@ -185,7 +200,6 @@ if conn:
             query = "DELETE FROM products "\
                     "WHERE product_id=" + str(form["id"])
             cursor.execute(query)
-            echo({'info':cursor.info()})
         else:
             echo({'error':"No product_id as id provided!"})
 
@@ -196,7 +210,6 @@ if conn:
                     "SET password=MD5('" + str(form["password"]) + "') "\
                     "WHERE user_id=" + str(form["id"]) + ";"
             cursor.execute(query)
-            echo({'info':cursor.info()})
         else:
             echo({'error':"Not enough parameters provided"})
 
