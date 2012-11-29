@@ -8,6 +8,7 @@ jQuery(function () {
         window.jMarket.Modules.LogIn.log_in($(this));
     });
     $('#sign_up_modal').on('click', window.jMarket.Modules.Modals.signUp.load);
+    $('#imprint').on('click',window.jMarket.Modules.Imprint._load);
     $("#slider-range").slider({
         range:true,
         min:0,

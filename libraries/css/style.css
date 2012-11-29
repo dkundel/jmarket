@@ -1,107 +1,108 @@
-html{
-  height: 100%;
-  min-width: 1120px;
-  font-family: "PTSansRegular", sans-serif;
+html {
+    height: 100%;
+    min-width: 1120px;
+    font-family: "PTSansRegular", sans-serif;
 }
 
-body{
-  height: 100%;
-  position: relative;
+body {
+    height: 100%;
+    position: relative;
+}
+
+a {
+    cursor: pointer;
 }
 
 h1, h2, h3, h4 {
-  font-family: "ChunkFiveRegular", sans-serif;
-  font-weight: normal;
+    font-family: "ChunkFiveRegular", sans-serif;
+    font-weight: normal;
 }
 
 h1, h2, h3 {
-  color: #213b87;
+    color: #213b87;
 }
 
 .brand {
-  width: 150px;
+    width: 150px;
 }
 
 .brand img {
-  position: absolute;
-  top: 0px;
+    position: absolute;
+    top: 0px;
 }
 
-.dropdown-menu{
-  padding: 15px; 
-  padding-bottom: 0px;
+.dropdown-menu {
+    padding: 15px;
+    padding-bottom: 0px;
 }
 
 div[role="main"] {
-  padding-top: 30px;
+    padding-top: 30px;
 }
 
-p.address{
-  font-family: "PTSansNarrowRegular", sans-serif;
-  font-size: 15px;
-  line-height: 15px;
+p.address {
+    font-family: "PTSansNarrowRegular", sans-serif;
+    font-size: 15px;
+    line-height: 15px;
 }
 
-.nav_bar_left .sidebar-nav{
-  margin-top: 20px;
-  margin-left: 10px;
+.nav_bar_left .sidebar-nav {
+    margin-top: 20px;
+    margin-left: 10px;
 }
 
 .content_wrapper {
-  padding: 20px 20px;
+    padding: 20px 20px;
 }
 
 li.span3.product {
-  margin-left: 0px;
-  margin-right: 1.564102564102564%;
+    margin-left: 0px;
+    margin-right: 1.564102564102564%;
 }
 
 #input-price-from, #input-price-to {
-  position: static;
+    position: static;
 }
 
 .thumbnail .caption p.caption_bottom {
-  display: inline-block;
+    display: inline-block;
 }
 
 .price-tag {
-  float: right;
-  display: inline-block;
-  margin: 0px;
-  line-height: 30px;
+    float: right;
+    display: inline-block;
+    margin: 0px;
+    line-height: 30px;
 }
 
-.price-tag:after{
-  content: " €";
+.price-tag:after {
+    content: " €";
 }
 
 .user-actions {
-  float: right;
-  margin-bottom: 20px;
+    float: right;
+    margin-bottom: 20px;
 }
 
 .btn-jmarket-orange {
-  background-color: hsl(34, 98%, 44%) !important;
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fca635", endColorstr="#de7e02");
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#fca635), to(#de7e02));
-  background-image: -moz-linear-gradient(top, #fca635, #de7e02);
-  background-image: -ms-linear-gradient(top, #fca635, #de7e02);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fca635), color-stop(100%, #de7e02));
-  background-image: -webkit-linear-gradient(top, #fca635, #de7e02);
-  background-image: -o-linear-gradient(top, #fca635, #de7e02);
-  background-image: linear-gradient(#fca635, #de7e02);
-  border-color: #de7e02 #de7e02 hsl(34, 98%, 40%);
-  color: #fff !important;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.26);
-  -webkit-font-smoothing: antialiased;
+    background-color: hsl(34, 98%, 44%) !important;
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = "#fca635", endColorstr = "#de7e02");
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#fca635), to(#de7e02));
+    background-image: -moz-linear-gradient(top, #fca635, #de7e02);
+    background-image: -ms-linear-gradient(top, #fca635, #de7e02);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fca635), color-stop(100%, #de7e02));
+    background-image: -webkit-linear-gradient(top, #fca635, #de7e02);
+    background-image: -o-linear-gradient(top, #fca635, #de7e02);
+    background-image: linear-gradient(#fca635, #de7e02);
+    border-color: #de7e02 #de7e02 hsl(34, 98%, 40%);
+    color: #fff !important;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.26);
+    -webkit-font-smoothing: antialiased;
 }
 
-.price-filter{
+.price-filter {
     margin-top: 50px;
 }
 
-.logout li{
-    cursor: pointer;
-}
 
