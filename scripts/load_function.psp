@@ -152,7 +152,6 @@ if conn:
 
     def LF_create_offer():
         global cursor,conn
-        echo("something")
         if form.has_key("name") and form.has_key("description") and form.has_key("price") and form.has_key("user_id") and form.has_key("category") and form.has_key('picture'):
             picture_path = "img/products/"
 
