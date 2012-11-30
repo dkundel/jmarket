@@ -217,6 +217,7 @@ if conn:
             query = "DELETE FROM products "\
                     "WHERE product_id=" + str(form["id"])
             cursor.execute(query)
+            conn.commit()
         else:
             echo({'error':"No product_id as id provided!"})
 

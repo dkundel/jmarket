@@ -31,6 +31,15 @@ var Product = {
 			
 			}
 		});
+	},
+	delete: function _delete(id){
+		var data = {
+			function: 'delete_product',
+			id: id
+		};
+		$.post(window.jMarket.requestUrl, data, function(data){
+
+		});
 	}
 };
 
