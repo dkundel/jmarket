@@ -38,7 +38,14 @@ var Product = {
 			id: id
 		};
 		$.post(window.jMarket.requestUrl, data, function(data){
-
+			data = JSON.parse(data);
+			if(data.error){
+				window.jMarket.Modules.DisplayMessage.print(data.error, "error");
+				return;
+			} else {
+				window.jMarket.Modules.DisplayMessage.print("Product with ID " + id + " has been deleted", "success");
+				window.jMarket.Modules.MainPage.load();
+			}
 		});
 	}
 };
