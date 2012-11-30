@@ -1,5 +1,7 @@
 <%
 import json,MySQLdb as MDB
+import os
+from time import gmtime,strftime
 
 conn = None
 
@@ -33,6 +35,9 @@ if conn:
         cursor.execute(query)
         rows = cursor.fetchall()
         return rows
+
+    def LF_get_categories():
+        echo({'categories':PRIVATE_get_categories()})
 
     def LF_construct_main_page():
         global cursor
@@ -147,11 +152,18 @@ if conn:
 
     def LF_create_offer():
         global cursor,conn
-        if form.has_key("name") and form.has_key("description") and form.has_key("price") and form.has_key("user_id") and form.has_key("category"):
-            picture_path = "http://placehold.it/300x200"
-            #if form.has_key("picture"):
-                #echo("File upload not supported yet!")
+        echo("something")
+        if form.has_key("name") and form.has_key("description") and form.has_key("price") and form.has_key("user_id") and form.has_key("category") and form.has_key('picture'):
+            picture_path = "img/products/"
 
+            fileitem = form['picture']
+            fname = form['user_id']+"_"+strftime("%d_%m_%Y_%H_%M_%S", gmtime())+".jpeg"
+
+            dir_path = os.path.join(os.path.dirname(req.filename), '../img/products')
+
+            open(os.path.join(dir_path, fname), 'wb').write(fileitem.file.read())
+
+            picture_path=picture_path+fname
             query = "INSERT INTO `products` (`name`,`description`,`picture_path`) "\
                     "VALUES ('" + str(form["name"]) + "','" + str(form["description"]) + "','" + str(picture_path) + "');"
             cursor.execute(query)
@@ -177,6 +189,7 @@ if conn:
                     "VALUES (" + str(product_id) + "," + str(category_id) + ");"
             cursor.execute(query)
             conn.commit()
+            echo({'product_id':product_id})
         else:
             echo({'error':"Not enough parameters provided!"})
 

@@ -4,8 +4,10 @@
       </div>
       <div class="modal-body">
         <div class="row-fluid">
-          <form class="form-horizontal" action='' method="POST">
+          <form class="form-horizontal" enctype="multipart/form-data" action="scripts/load_function.psp" method="POST" id="create_offer_form">
             <fieldset>
+                <input type="hidden" name="function" value="create_offer" />
+                <input type="hidden" name="user_id" value=""/>
               <div class="control-group">
                 <!-- Name -->
                 <label class="control-label"  for="name">Product Name</label>
@@ -19,12 +21,7 @@
                 <!-- Category -->
                 <label class="control-label" for="category">Category</label>
                 <div class="controls">
-                  <select id="category" name="category" placeholder="" class="input-xlarge">
-                    <!-- different categories -->
-                    <option name="electronics">Electronics</option>
-                    <option name="clothing">Clothing</option>
-                    <option name="furniture">Furniture</option>
-                    <!-- end different categories -->
+                  <select id="category" name="category" placeholder="" class="input-xlarge" style="text-transform: capitalize;">
                   </select>
                   <p class="help-block">Please state the category</p>
                 </div>
@@ -65,7 +62,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" data-dismiss="modal" class="btn">Close</button>
-        <button type="button" class="btn btn-jmarket-orange">Create Offer</button>
+        <button type="button" class="btn btn-jmarket-orange" id="create_product">Create Offer</button>
       </div>
 
 
