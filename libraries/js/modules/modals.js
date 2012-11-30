@@ -20,33 +20,33 @@ var Modals = {
             var match_email = /^\w+\.\w+@jacobs-university.de$/;
             var match_phone = /^\d{4}$/;
 
-            if (!email.match(match_email)){
-                window.jMarket.Modules.DisplayMessage.print("Invalid email address. Please insert a Jacobs e-mail.","error");
+            if (!email.match(match_email)) {
+                window.jMarket.Modules.DisplayMessage.print("Invalid email address. Please insert a Jacobs e-mail.", "error");
                 return;
             }
 
-            if (!address){
-                window.jMarket.Modules.DisplayMessage.print("Address field is required.","error");
+            if (!address) {
+                window.jMarket.Modules.DisplayMessage.print("Address field is required.", "error");
                 return;
             }
 
-            if (!phone.match(match_phone)){
-                window.jMarket.Modules.DisplayMessage.print("Invalid phone number. Please insert a Jacobs number.","error");
+            if (!phone.match(match_phone)) {
+                window.jMarket.Modules.DisplayMessage.print("Invalid phone number. Please insert a Jacobs number.", "error");
                 return;
             }
 
-            if (!password){
-                window.jMarket.Modules.DisplayMessage.print("Password is required.","error");
+            if (!password) {
+                window.jMarket.Modules.DisplayMessage.print("Password is required.", "error");
                 return;
             }
 
-            if (password.length < 8){
-                window.jMarket.Modules.DisplayMessage.print("Password must contain at least 8 characters.","error");
+            if (password.length < 8) {
+                window.jMarket.Modules.DisplayMessage.print("Password must contain at least 8 characters.", "error");
                 return;
             }
 
-            if (password != confirm_password){
-                window.jMarket.Modules.DisplayMessage.print("Password doesn't match.","error");
+            if (password != confirm_password) {
+                window.jMarket.Modules.DisplayMessage.print("Password doesn't match.", "error");
                 return;
             }
 
@@ -59,8 +59,8 @@ var Modals = {
             };
             $.post(window.jMarket.requestUrl, data, function (data) {
                 data = JSON.parse(data);
-                if (data.error){
-                    window.jMarket.Modules.DisplayMessage.print(data.error,"error");
+                if (data.error) {
+                    window.jMarket.Modules.DisplayMessage.print(data.error, "error");
                     return;
                 }
                 Modals.modal.modal('hide');
@@ -68,13 +68,13 @@ var Modals = {
                 date.setTime(date.getTime() + (30 * 60 * 500));
                 $.cookie('user_login', JSON.stringify(data), { expires:date, path:'/' });
                 window.jMarket.Modules.LogIn._display_welcome(data.email);
-                window.jMarket.Modules.DisplayMessage.print("Welcome to jMarket!",'info');
+                window.jMarket.Modules.DisplayMessage.print("Welcome to jMarket!", 'info');
             });
         }
     },
     createOffer:{
         load:function _load() {
-            if (!$.cookie('user_login')){
+            if (!$.cookie('user_login')) {
                 return;
             }
 
@@ -85,34 +85,39 @@ var Modals = {
                     Modals.modal.modal();
                 });
 
-                var data ={
+                var data = {
                     function:'get_categories'
                 }
 
-                $.post(window.jMarket.requestUrl,data,function(data){
+                $.post(window.jMarket.requestUrl, data, function (data) {
                     data = JSON.parse(data);
-                    if (data.error){
-                        window.jMarket.Modules.DisplayMessage.print(data.error,'error');
+                    if (data.error) {
+                        window.jMarket.Modules.DisplayMessage.print(data.error, 'error');
                         return;
                     }
                     var select = Modals.modal.find('select#category');
                     var options = "";
-                    for (var id in data.categories){
+                    for (var id in data.categories) {
                         var category = data.categories[id];
-                        options+='<option name="'+category[0]+'">'+category[1]+'</option>';
+                        options += '<option name="' + category[0] + '">' + category[1] + '</option>';
                     }
                     select.html(options);
 
                     var user_id = JSON.parse($.cookie('user_login')).user_id;
                     $('input[name="user_id"]').val(user_id);
                 });
-                $('button#create_product').live('click',function(){
+                $('button#create_product').live('click', function () {
                     var form = $('form#create_offer_form');
-                    var data = {
-                        user_id:1,
-                        function: "create_offer"
-                    }
-                    form.submit();
+                    form.ajaxForm(function (data) {
+
+                        data = JSON.parse(data);
+                        if (data.error) {
+                            window.jMarket.Modules.DisplayMessage.print(data.error, 'error');
+                        } else {
+                            Modals.modal.modal('hide');
+                            window.jMarket.Modules.Product.getInfo(data.product_id);
+                        }
+                    }).submit();
 
                 });
             }, 500);
