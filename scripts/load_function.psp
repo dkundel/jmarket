@@ -196,7 +196,7 @@ if conn:
     def LF_get_product_info():
         global cursor
         if form.has_key("id"):
-            query = "SELECT p.`product_id`, p.`name`, p.`description`, p.`picture_path`, s.`expire_date`, s.`price`, s.`negotiable`, u.`user_id`, u.`email`, c.`name` "\
+            query = "SELECT p.`product_id`, p.`name`, p.`description`, p.`picture_path`, s.`price`, s.`negotiable`, u.`user_id`, u.`email`, c.`name` "\
                     "FROM products p "\
                     "INNER JOIN selling_products s ON p.product_id = s.product_id "\
                     "INNER JOIN users u ON s.user_id = u.user_id "\
@@ -204,9 +204,9 @@ if conn:
                     "INNER JOIN categories c ON ptc.category_id = c.category_id "\
                     "WHERE p.product_id = " + form["id"] + ";"
             cursor.execute(query)
-            if cursor.rowcount == 1:
-                rows = cursor.fetchone()
-                echo(rows)
+            row = cursor.fetchone()
+            if row:
+                echo({'product_info':row})
             else:
                 echo({'error':"No product with this id"})
         else:
@@ -240,7 +240,9 @@ if form.has_key("function"):
                 func()      # depends on function, of course
             except:
                 echo({'error':"Server encountered an error. Please try again later.(1)"})
+                pass
     except:
         echo({'error':"Server encountered an error. Please try again later.(2)"})
+        pass
 else:
     echo({'error':"No database connection. Please try again later."})
