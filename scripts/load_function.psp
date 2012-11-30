@@ -36,7 +36,7 @@ if conn:
 
     def LF_construct_main_page():
         global cursor
-        query = "SELECT p.product_id ,p.name,p.description,sp.price,p.picture_path " \
+        query = "SELECT p.`product_id` ,p.`name`,p.`description`,sp.`price`,p.`picture_path` " \
                 "FROM products p " \
                 "INNER JOIN selling_products sp ON sp.product_id = p.product_id "\
                 "WHERE sp.expire_date > NOW() "\
@@ -51,7 +51,7 @@ if conn:
         global cursor
         if form.has_key("product_name"):
             name = form['product_name']
-            query = "SELECT p.product_id ,p.name,p.description,sp.price,p.picture_path "\
+            query = "SELECT p.`product_id` ,p.`name`,p.`description`,sp.`price`,p.`picture_path` "\
                     "FROM products p "\
                     "INNER JOIN selling_products sp ON sp.product_id = p.product_id "\
                     "WHERE sp.expire_date > NOW() AND p.name LIKE ('%"+str(name)+"%') "\
@@ -72,7 +72,7 @@ if conn:
     def LF_get_user_information():
         global cursor
         if form.has_key("id"):
-            query = "SELECT u.user_id, u.email, u.address, u.phone "\
+            query = "SELECT u.`user_id`, u.`email`, u.`address`, u.`phone` "\
                     "FROM users u "\
                     "WHERE u.user_id=" + str(form["id"])
             cursor.execute(query)
@@ -132,7 +132,7 @@ if conn:
     def LF_create_review():
         global cursor
         if form.has_key("from") and form.has_key("to") and form.has_key("review") and form.has_key("rating"):
-            query = "SELECT u.user_id "\
+            query = "SELECT u.`user_id` "\
                     "FROM users "\
                     "WHERE u.email = '" + str(form["to"]) + "';"
             cursor.execute(query)
@@ -156,7 +156,7 @@ if conn:
                     "VALUES ('" + str(form["name"]) + "','" + str(form["description"]) + "','" + str(picture_path) + "');"
             cursor.execute(query)
             conn.commit()
-            query = "SELECT p.product_id "\
+            query = "SELECT p.`product_id` "\
                     "FROM products p "\
                     "WHERE p.name = '" + str(form["name"]) + "' "\
                     "AND p.description = '" + str(form["description"]) + "' "\
@@ -164,7 +164,7 @@ if conn:
             cursor.execute(query)
 
             product_id = cursor.fetchone()[0]
-            query = "SELECT c.category_id "\
+            query = "SELECT c.`category_id` "\
                     "FROM categories c "\
                     "WHERE UPPER(c.name) = UPPER('" + str(form["category"]) + "');"
             cursor.execute(query)
@@ -183,10 +183,12 @@ if conn:
     def LF_get_product_info():
         global cursor
         if form.has_key("id"):
-            query = "SELECT p.product_id, p.name, p.description, p.picture_path, s.expire_date, s.price, s.negotiable, u.email "\
+            query = "SELECT p.`product_id`, p.`name`, p.`description`, p.`picture_path`, s.`expire_date`, s.`price`, s.`negotiable`, u.`email`, c.`name` "\
                     "FROM products p "\
                     "INNER JOIN selling_products s ON p.product_id = s.product_id "\
                     "INNER JOIN users u ON s.user_id = u.user_id "\
+                    "INNER JOIN product_to_category ptc ON p.product_id = ptc.product_id "\
+                    "INNER JOIN categories c ON ptc.category_id = c.category_id "\
                     "WHERE p.product_id = " + form["id"] + ";"
             cursor.execute(query)
             if cursor.rowcount == 1:

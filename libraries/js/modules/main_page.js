@@ -11,7 +11,7 @@ var MainPage = {
                 '<img src="http://placehold.it/300x200" alt=""><div class="caption">';
             content += '<h3>' + content_data[i][1] + '</h3>';
             content += '<p>' + content_data[i][2] + '</p>';
-            content += '<p class="caption_bottom"><a href="#' + content_data[i][0] + '" class="btn btn-jmarket-orange"><i class="icon-share icon-white"></i> Details</a></p>';
+            content += '<p class="caption_bottom"><a href="javascript:window.jMarket.Modules.Product.getInfo(' + content_data[i][0] + ');" class="btn btn-jmarket-orange"><i class="icon-share icon-white"></i> Details</a></p>';
             content += '<h3 class="price-tag">' + content_data[i][3] + '</h3>';
             content += '<div class="clearfix"></div></div></div></li>';
         }

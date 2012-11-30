@@ -14,6 +14,7 @@ $LAB
 .script('libraries/js/modules/display_message.js')
 .script('libraries/js/modules/log_out.js')
 .script('libraries/js/modules/user.js')
+.script('libraries/js/modules/product.js')
 .script('libraries/js/modules/imprint.js')
 .script('libraries/js/modules/search.js')
 .script('libraries/js/script.js');

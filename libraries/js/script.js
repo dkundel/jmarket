@@ -13,7 +13,7 @@ jQuery(function () {
     });
     $('#sign_up_modal').on('click', window.jMarket.Modules.Modals.signUp.load);
     $('#imprint').on('click',window.jMarket.Modules.Imprint._load);
-    $('#user_log_out').on('click', window.jMarket.)
+    $('#user_log_out').on('click', window.jMarket.Modules.LogOut.logout);
     $("#search_form").ajaxForm();
     $("#search_form").submit(window.jMarket.Modules.Search.submit);
     $('a#logout_button').on('click',window.jMarket.Modules.LogOut.logout);
