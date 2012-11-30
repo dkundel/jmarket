@@ -124,11 +124,12 @@ var Modals = {
         }
     },
     createReview:{
-        load:function _load() {
+        load:function _load(email) {
             $('body').modalmanager('loading');
 
             setTimeout(function () {
                 Modals.modal.load('scripts/review/review.html', '', function () {
+                    $('form[name="review_form"]').find('input[name="name"]').val(email);
                     Modals.modal.modal();
                 });
             }, 500);
@@ -138,9 +139,9 @@ var Modals = {
             if(user_login){
                 var user_id = user_login.user_id;
                 $review = $('form[name="review_form"]');
-                var to_email = $review.find('form[name="name"]').val();
-                var review = $review.find('form[name="review"]').val();
-                var rating = parseInt($review.find('form[name="rating"]').val(), 10);
+                var to_email = $review.find('input[name="name"]').val();
+                var review = $review.find('input[name="review"]').val();
+                var rating = parseInt($review.find('input[name="rating"]').val(), 10);
                 var match_email = /^\w+\.\w+@jacobs-university.de$/; 
                 if(!to_email.match(match_email)){
                     window.jMarket.Modules.DisplayMessage.print("E-Mail is not a Jacobs E-Mail", "error");
@@ -185,7 +186,7 @@ var Modals = {
             }, 500);
         },
         submit: function _submit() {
-            var $form = $('#change_password_form');
+            var $form = $('form[name="change_password_form"]');
             var old_pw = $form.find('input[name="old_password"]').val();
             var pw = $form.find('input[name="password"]').val();
             var pw_confirm = $form.find('input[name="password_confirm"]').val();

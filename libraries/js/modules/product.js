@@ -1,5 +1,6 @@
 var Product = {
 	_renderProductInfo: function _render_product_info(data){
+		var user_id = (JSON.parse($.cookie('user_login'))).user_id;
 		data = data.product_info;
 		var html = '<div class="row"><div class="span10">';
 		html += '<h3>' + data[1] + '</h3>';
@@ -8,7 +9,10 @@ var Product = {
 		html += '</div></div><div class="span6">';
 		html += '<p>' + data[2] + '</p>';
 		html += '<p><h3 class="price-tag">' + data[4] + '</h3>&nbsp;';
-		html += '<a class="btn btn-jmarket-orange" href="mailto:' + data[7] + '">Contact Seller</a></p></div>';
+		html += '<a class="btn btn-jmarket-orange" href="mailto:' + data[7] + '">Contact Seller</a>';
+		if(data[6] == user_id)
+			html += '<a class="btn btn-jmarket-orange" href="javascript:window.jMarket.Modules.Product.delete(' + data[0] + ')">Delete Product</a>';
+		html += '</p></div>';
 		html += '</div><div class="row"><div class="span10"><p></p>';
 		html += '<p><i class="icon-user"></i> by <a href="javascript:window.jMarket.Modules.User.getProfilePage(' + data[6] +');">';
 		html += (data[7].split("@jacobs-university.de"))[0] + "</a> | ";
@@ -33,6 +37,11 @@ var Product = {
 		});
 	},
 	delete: function _delete(id){
+		var user_login = JSON.parse($.cookie('user_login'));
+		if(!user_login){
+			window.jMarket.Modules.DisplayMessage.print("User is not logged in.", "error");
+			return;
+		}
 		var data = {
 			function: 'delete_product',
 			id: id

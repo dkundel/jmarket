@@ -10,7 +10,7 @@ var User = {
             html += "<i class='icon-star-empty'></i>";
 
         html += "</span></p></div><div class='user-actions'>" +
-            "<a href='javascript:jMarket.Modules.Modals.createOffer.load();' class='create-review-btn btn btn-jmarket-orange'><i class='icon-edit icon-white'></i> Create User Review</a>" +
+            "<a href='javascript:jMarket.Modules.Modals.createReview.load("+ data.user_info[0][1] +");' class='create-review-btn btn btn-jmarket-orange'><i class='icon-edit icon-white'></i> Create User Review</a>" +
             "<a href='javascript:jMarket.Modules.Modals.changePassword.load();' class='change-password-btn btn btn-jmarket-orange'><i class='icon-edit icon-white'></i> Change Password</a>" +
             "</div><div class='clearfix'></div></div>";
 
