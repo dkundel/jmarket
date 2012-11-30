@@ -3,9 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="80bc9143-5dd0-4a6d-99bf-35d49c6ea826" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/.gitignore" afterPath="$PROJECT_DIR$/img/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/modules/modals.js" afterPath="$PROJECT_DIR$/libraries/js/modules/modals.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/load_function.psp" afterPath="$PROJECT_DIR$/scripts/load_function.psp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/css/style.css" afterPath="$PROJECT_DIR$/libraries/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/modules/main_page.js" afterPath="$PROJECT_DIR$/libraries/js/modules/main_page.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/modules/search.js" afterPath="$PROJECT_DIR$/libraries/js/modules/search.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/script.js" afterPath="$PROJECT_DIR$/libraries/js/script.js" />
     </list>
     <list id="b5db40e1-5186-4751-8aff-90f92af58882" name="New changelist" comment="New changelist" />
     <ignored path="jmarket.iws" />
@@ -26,10 +28,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="load_function.psp" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="load_function.psp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/load_function.psp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="278" column="0" selection-start="12093" selection-end="12093" vertical-scroll-proportion="0.9656357">
+            <state line="271" column="0" selection-start="11799" selection-end="11799" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -38,11 +40,29 @@
       <file leaf-file-name="main_page.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/libraries/js/modules/main_page.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="36" selection-start="1751" selection-end="1751" vertical-scroll-proportion="0.0">
+            <state line="42" column="43" selection-start="2158" selection-end="2158" vertical-scroll-proportion="0.0">
               <folding>
-                <marker date="1354296410858" expanded="false" signature="1340:1383" placeholder="..." />
-                <marker date="1354296410858" expanded="false" signature="1468:1484" placeholder="..." />
+                <marker date="1354312651911" expanded="true" signature="1556:1599" placeholder="..." />
+                <marker date="1354312651911" expanded="true" signature="1640:1656" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="search.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/libraries/js/modules/search.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="8" selection-start="122" selection-end="122" vertical-scroll-proportion="0.06872852">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libraries/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="111" column="18" selection-start="2208" selection-end="2208" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -50,7 +70,7 @@
       <file leaf-file-name="modals.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/libraries/js/modules/modals.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="119" column="23" selection-start="4393" selection-end="4829" vertical-scroll-proportion="0.0">
+            <state line="112" column="48" selection-start="4469" selection-end="4469" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -59,10 +79,10 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="153" column="7" selection-start="7947" selection-end="7947" vertical-scroll-proportion="0.0">
+            <state line="118" column="74" selection-start="6734" selection-end="6734" vertical-scroll-proportion="-9.75">
               <folding>
-                <marker date="1354296262338" expanded="true" signature="1352:1585" placeholder="..." />
-                <marker date="1354296262338" expanded="true" signature="1420:1458" placeholder="..." />
+                <marker date="1354311793718" expanded="true" signature="1352:1585" placeholder="..." />
+                <marker date="1354311793718" expanded="true" signature="1420:1458" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -92,7 +112,7 @@
       <file leaf-file-name="script.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/libraries/js/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="25" selection-start="681" selection-end="681" vertical-scroll-proportion="0.0">
+            <state line="4" column="45" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -115,18 +135,18 @@
         <option value="$PROJECT_DIR$/libraries/js/app.js" />
         <option value="$PROJECT_DIR$/libraries/js/modules/imprint.js" />
         <option value="$PROJECT_DIR$/scripts/imprint/imprint.html" />
-        <option value="$PROJECT_DIR$/libraries/js/script.js" />
-        <option value="$PROJECT_DIR$/libraries/js/modules/search.js" />
         <option value="$PROJECT_DIR$/libraries/js/modules/display_message.js" />
-        <option value="$PROJECT_DIR$/libraries/css/style.css" />
         <option value="$PROJECT_DIR$/scripts/create_offer.psp" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/libraries/js/modules/main_page.js" />
         <option value="$PROJECT_DIR$/scripts/offer/offer.html" />
         <option value="$PROJECT_DIR$/img/.gitignore" />
         <option value="$PROJECT_DIR$/libraries/js/modules/product.js" />
         <option value="$PROJECT_DIR$/libraries/js/modules/modals.js" />
         <option value="$PROJECT_DIR$/scripts/load_function.psp" />
+        <option value="$PROJECT_DIR$/libraries/css/style.css" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/libraries/js/script.js" />
+        <option value="$PROJECT_DIR$/libraries/js/modules/main_page.js" />
+        <option value="$PROJECT_DIR$/libraries/js/modules/search.js" />
       </list>
     </option>
   </component>
@@ -176,6 +196,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="jmarket" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jmarket" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jmarket" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -452,7 +486,9 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/libraries/js/modules/log_in.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="41" selection-start="881" selection-end="881" vertical-scroll-proportion="0.0" />
+        <state line="26" column="41" selection-start="881" selection-end="881" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/libraries/js/app.js">
@@ -467,32 +503,10 @@
         <state line="3" column="0" selection-start="149" selection-end="149" vertical-scroll-proportion="0.053003535" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/js/modules/search.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="44" selection-start="598" selection-end="598" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="1" selection-start="475" selection-end="475" vertical-scroll-proportion="0.44418052">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libraries/js/modules/imprint.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="73" selection-end="73" vertical-scroll-proportion="0.05154639" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="153" column="7" selection-start="7947" selection-end="7947" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1354296262338" expanded="true" signature="1352:1585" placeholder="..." />
-            <marker date="1354296262338" expanded="true" signature="1420:1458" placeholder="..." />
-          </folding>
+        <state line="3" column="0" selection-start="73" selection-end="73" vertical-scroll-proportion="0.05154639">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -506,13 +520,6 @@
     <entry file="file://$PROJECT_DIR$/libraries/js/modules/product.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="12" selection-start="1364" selection-end="1364" vertical-scroll-proportion="0.5154639">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="25" selection-start="681" selection-end="681" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -531,6 +538,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="111" column="18" selection-start="2208" selection-end="2208" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/js/modules/modals.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="112" column="48" selection-start="4469" selection-end="4469" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/load_function.psp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="271" column="0" selection-start="11799" selection-end="11799" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="118" column="74" selection-start="6734" selection-end="6734" vertical-scroll-proportion="-9.75">
+          <folding>
+            <marker date="1354311793718" expanded="true" signature="1352:1585" placeholder="..." />
+            <marker date="1354311793718" expanded="true" signature="1420:1458" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="45" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/libraries/js/modules/display_message.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="12" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0">
@@ -543,24 +588,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/libraries/js/modules/main_page.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="36" selection-start="1751" selection-end="1751" vertical-scroll-proportion="0.0">
+        <state line="42" column="43" selection-start="2158" selection-end="2158" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1354296410858" expanded="false" signature="1340:1383" placeholder="..." />
-            <marker date="1354296410858" expanded="false" signature="1468:1484" placeholder="..." />
+            <marker date="1354312651911" expanded="true" signature="1556:1599" placeholder="..." />
+            <marker date="1354312651911" expanded="true" signature="1640:1656" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/js/modules/modals.js">
+    <entry file="file://$PROJECT_DIR$/libraries/js/modules/search.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="23" selection-start="4393" selection-end="4829" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/load_function.psp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="278" column="0" selection-start="12093" selection-end="12093" vertical-scroll-proportion="0.9656357">
+        <state line="4" column="8" selection-start="122" selection-end="122" vertical-scroll-proportion="0.06872852">
           <folding />
         </state>
       </provider>
