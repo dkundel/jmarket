@@ -11,14 +11,14 @@ var Modals = {
         },
         submit:function _load() {
 
-            email = $("form[name='sign_up'] input[name='email']").val();
-            password = $("form[name='sign_up'] input[name='password']").val();
-            confirm_password = $("form[name='sign_up'] input[name='password_confirm']").val();
-            phone = $("form[name='sign_up'] input[name='phone']").val();
-            address = $("form[name='sign_up'] input[name='address']").val();
+            var email = $("form[name='sign_up'] input[name='email']").val();
+            var password = $("form[name='sign_up'] input[name='password']").val();
+            var confirm_password = $("form[name='sign_up'] input[name='password_confirm']").val();
+            var phone = $("form[name='sign_up'] input[name='phone']").val();
+            var address = $("form[name='sign_up'] input[name='address']").val();
 
-            match_email = /^\w+\.\w+@jacobs-university.de$/;
-            match_phone = /^\d{4}$/;
+            var match_email = /^\w+\.\w+@jacobs-university.de$/;
+            var match_phone = /^\d{4}$/;
 
             if (!email.match(match_email)){
                 window.jMarket.Modules.DisplayMessage.print("Invalid email address. Please insert a Jacobs e-mail.","error");
@@ -127,6 +127,46 @@ var Modals = {
                     Modals.modal.modal();
                 });
             }, 500);
+        },
+        submit: function _submit() {
+            var user_login = JSON.parse($.cookie('user_login'));
+            if(user_login){
+                var user_id = user_login.user_id;
+                $review = $('form[name="review_form"]');
+                var to_email = $review.find('form[name="name"]').val();
+                var review = $review.find('form[name="review"]').val();
+                var rating = parseInt($review.find('form[name="rating"]').val(), 10);
+                var match_email = /^\w+\.\w+@jacobs-university.de$/; 
+                if(!to_email.match(match_email)){
+                    window.jMarket.Modules.DisplayMessage.print("E-Mail is not a Jacobs E-Mail", "error");
+                    return;
+                }
+                if(rating <= 0 || rating > 5){
+                    window.jMarket.Modules.DisplayMessage.print("Invalid rating score!", "error");
+                    return;
+                }
+                var data = {
+                    function: 'create_review',
+                    from: user_id,
+                    to: to_email,
+                    review: review,
+                    rating: rating
+                }
+                $.post(window.jMarket.requestUrl, data, function(data){
+                    data = JSON.parse(data);
+                    if(data.error){
+                        window.jMarket.Modules.DisplayMessage.print(data.error, "error");
+                        return;
+                    } else {
+                        window.jMarket.Modules.DisplayMessage.print("Review successfully created!", "success");
+                        Modal.modal.modal('hide');
+                        return;
+                    }
+                });
+            } else {
+                window.jMarket.Modules.DisplayMessage.print("User not logged in!", "error");
+                return;
+            }
         }
     },
     changePassword:{
@@ -138,6 +178,35 @@ var Modals = {
                     Modals.modal.modal();
                 });
             }, 500);
+        },
+        submit: function _submit() {
+            var $form = $('#change_password_form');
+            var old_pw = $form.find('input[name="old_password"]').val();
+            var pw = $form.find('input[name="password"]').val();
+            var pw_confirm = $form.find('input[name="password_confirm"]').val();
+            if(pw.length < 8){
+                window.jMarket.Modules.DisplayMessage.print("Password must contain at least 8 characters.","error");
+                return;
+            }
+            if(pw != pw_confirm){
+                window.jMarket.Modules.DisplayMessage.print("Password doesn't match.","error");
+                return;
+            }
+            var data = {
+                function: 'change_password',
+                password: pw,
+                old_password: old_pw
+            };
+            $.post(window.jMarket.requestUrl, data, function(data){
+                data = JSON.parse(data);
+                if(data.error){
+                    window.jMarket.Modules.DisplayMessage.print(data.error, "error");
+                    return;
+                } else {
+                    window.jMarket.Modules.DisplayMessage.print("Password has been changed!", "success");
+                    Modals.modal.modal('hide');
+                }
+            });
         }
     }
 }
