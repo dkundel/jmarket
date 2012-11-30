@@ -7,7 +7,7 @@ var MainPage = {
         var content_data = data.products;
         for (var i = 0; i < content_data.length; ++i) {
             content += '<li class="span3 product"><div class="thumbnail">' +
-                '<img src="http://placehold.it/300x200" alt=""><div class="caption">';
+                '<img src="'+content_data[i][4]+'" alt=""><div class="caption">';
             content += '<h3>' + content_data[i][1] + '</h3>';
             content += '<p>' + content_data[i][2] + '</p>';
             content += '<p class="caption_bottom"><a href="javascript:window.jMarket.Modules.Product.getInfo(' + content_data[i][0] + ');" class="btn btn-jmarket-orange"><i class="icon-share icon-white"></i> Details</a></p>';
