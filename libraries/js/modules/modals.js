@@ -65,7 +65,7 @@ var Modals = {
                 }
                 Modals.modal.modal('hide');
                 var date = new Date();
-                date.setTime(date.getTime() + (30 * 60 * 1000));
+                date.setTime(date.getTime() + (30 * 60 * 500));
                 $.cookie('user_login', JSON.stringify(data), { expires:date, path:'/' });
                 window.jMarket.Modules.LogIn._display_welcome(data.email);
                 window.jMarket.Modules.DisplayMessage.print("Welcome to jMarket!",'info');
@@ -74,15 +74,49 @@ var Modals = {
     },
     createOffer:{
         load:function _load() {
+            if (!$.cookie('user_login')){
+                return;
+            }
+
             $('body').modalmanager('loading');
 
             setTimeout(function () {
                 Modals.modal.load('scripts/offer/offer.html', '', function () {
                     Modals.modal.modal();
                 });
-            }, 1000);
-        }
 
+                var data ={
+                    function:'get_categories'
+                }
+
+                $.post(window.jMarket.requestUrl,data,function(data){
+                    data = JSON.parse(data);
+                    if (data.error){
+                        window.jMarket.Modules.DisplayMessage.print(data.error,'error');
+                        return;
+                    }
+                    var select = Modals.modal.find('select#category');
+                    var options = "";
+                    for (var id in data.categories){
+                        var category = data.categories[id];
+                        options+='<option name="'+category[0]+'">'+category[1]+'</option>';
+                    }
+                    select.html(options);
+
+                    var user_id = JSON.parse($.cookie('user_login')).user_id;
+                    $('input[name="user_id"]').val(user_id);
+                });
+                $('button#create_product').live('click',function(){
+                    var form = $('form#create_offer_form');
+                    var data = {
+                        user_id:1,
+                        function: "create_offer"
+                    }
+                    form.submit();
+
+                });
+            }, 500);
+        }
     },
     createReview:{
         load:function _load() {
@@ -92,7 +126,7 @@ var Modals = {
                 Modals.modal.load('scripts/review/review.html', '', function () {
                     Modals.modal.modal();
                 });
-            }, 1000);
+            }, 500);
         }
     },
     changePassword:{
@@ -103,7 +137,7 @@ var Modals = {
                 Modals.modal.load('scripts/change_password/change_password.html', '', function () {
                     Modals.modal.modal();
                 });
-            }, 1000);
+            }, 500);
         }
     }
 }

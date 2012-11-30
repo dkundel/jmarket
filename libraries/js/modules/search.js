@@ -16,6 +16,7 @@ var Search = {
 					window.jMarket.Modules.DisplayMessage.print(data.error, 'error');
 					return;
 				} else {
+                    data = JSON.parse(data);
 					window.jMarket.Modules.MainPage.renderData(data);
 				}
 			}
