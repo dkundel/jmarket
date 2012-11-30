@@ -103,4 +103,11 @@ li.span3.product {
     margin-top: 50px;
 }
 
+.filter-checkbox{
+    margin-bottom: 3px;
+}
 
+.filter-checkbox.active > a > .badge-info{
+    background: #fff;
+    color: #3A87AD;
+}

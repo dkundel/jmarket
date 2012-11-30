@@ -2,7 +2,6 @@ var Search = {
 	submit: function _submit(){
 		$searchField = $("#product_search");
 		search_query = $searchField.val();
-		console.log(search_query);
 		if(search_query.length < 2){
 			window.jMarket.Modules.DisplayMessage.print("Search must be at least two characters long.", "info");
 			return false;
