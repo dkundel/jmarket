@@ -10,7 +10,7 @@ var Product = {
 		html += '<p><h3 class="price-tag">' + data[4] + '</h3>&nbsp;';
 		html += '<a class="btn btn-jmarket-orange" href="mailto:' + data[7] + '">Contact Seller</a></p></div>';
 		html += '</div><div class="row"><div class="span10"><p></p>';
-		html += '<p><i class="icon-user"></i> by <a href="javascript:window.jMarket.Modules.User.getProfilePage(' + user[6] +');">';
+		html += '<p><i class="icon-user"></i> by <a href="javascript:window.jMarket.Modules.User.getProfilePage(' + data[6] +');">';
 		html += (data[7].split("@jacobs-university.de"))[0] + "</a> | ";
 		html += '<i class="icon-tags"></i> Category : <span class="label label-warning">' + data[8] + '</span>';
 		html += '</p></div>';

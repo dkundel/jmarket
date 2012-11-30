@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="80bc9143-5dd0-4a6d-99bf-35d49c6ea826" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/modules/main_page.js" afterPath="$PROJECT_DIR$/libraries/js/modules/main_page.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/load_function.psp" afterPath="$PROJECT_DIR$/scripts/load_function.psp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/modules/product.js" afterPath="$PROJECT_DIR$/libraries/js/modules/product.js" />
     </list>
     <list id="b5db40e1-5186-4751-8aff-90f92af58882" name="New changelist" comment="New changelist" />
     <ignored path="jmarket.iws" />
@@ -28,7 +27,7 @@
       <file leaf-file-name="load_function.psp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/load_function.psp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="248" column="0" selection-start="10382" selection-end="10382" vertical-scroll-proportion="0.0">
+            <state line="201" column="37" selection-start="8609" selection-end="8609" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#3#29#0" expanded="true" />
               </folding>
@@ -39,7 +38,7 @@
       <file leaf-file-name="product.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/libraries/js/modules/product.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="17" selection-start="1460" selection-end="1460" vertical-scroll-proportion="0.53264606">
+            <state line="12" column="120" selection-start="772" selection-end="772" vertical-scroll-proportion="0.20618556">
               <folding />
             </state>
           </provider>
@@ -163,8 +162,8 @@
         <option value="$PROJECT_DIR$/libraries/js/modules/modals.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/libraries/js/modules/main_page.js" />
-        <option value="$PROJECT_DIR$/libraries/js/modules/product.js" />
         <option value="$PROJECT_DIR$/scripts/load_function.psp" />
+        <option value="$PROJECT_DIR$/libraries/js/modules/product.js" />
       </list>
     </option>
   </component>
@@ -614,7 +613,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/load_function.psp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="248" column="0" selection-start="10382" selection-end="10382" vertical-scroll-proportion="0.0">
+        <state line="201" column="37" selection-start="8609" selection-end="8609" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#3#29#0" expanded="true" />
           </folding>
@@ -623,7 +622,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/libraries/js/modules/product.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="17" selection-start="1460" selection-end="1460" vertical-scroll-proportion="0.53264606">
+        <state line="12" column="120" selection-start="772" selection-end="772" vertical-scroll-proportion="0.20618556">
           <folding />
         </state>
       </provider>
