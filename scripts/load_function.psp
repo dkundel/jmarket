@@ -55,16 +55,19 @@ if conn:
     def LF_search_product():
         global cursor
         if form.has_key("product_name"):
-            name = form['product_name']
-            query = "SELECT p.`product_id` ,p.`name`,p.`description`,sp.`price`,p.`picture_path` "\
-                    "FROM products p "\
-                    "INNER JOIN selling_products sp ON sp.product_id = p.product_id "\
-                    "WHERE sp.expire_date > NOW() AND p.name LIKE ('%"+str(name)+"%') "\
-                    "ORDER BY sp.price DESC "
-            cursor.execute(query)
-            rows = cursor.fetchall()
-            categories = PRIVATE_get_categories()
-            echo({'products':rows, 'categories': categories})
+            if form['product_name']:
+                name = form['product_name']
+                query = "SELECT p.`product_id` ,p.`name`,p.`description`,sp.`price`,p.`picture_path` "\
+                        "FROM products p "\
+                        "INNER JOIN selling_products sp ON sp.product_id = p.product_id "\
+                        "WHERE sp.expire_date > NOW() AND p.name LIKE ('%"+str(name)+"%') "\
+                        "ORDER BY sp.price DESC "
+                cursor.execute(query)
+                rows = cursor.fetchall()
+                categories = PRIVATE_get_categories()
+                echo({'products':rows, 'categories': categories})
+            else:
+                echo({'error':"No product name for searching passed"})
         else:
             echo({'error':"No product name for searching passed"})
 
@@ -77,157 +80,184 @@ if conn:
     def LF_get_user_information():
         global cursor
         if form.has_key("id"):
-            query = "SELECT u.`user_id`, u.`email`, u.`address`, u.`phone` "\
-                    "FROM users u "\
-                    "WHERE u.user_id=" + str(form["id"])
-            cursor.execute(query)
-            rows = cursor.fetchall()
-            query = "SELECT AVG(`rating`) "\
-                    "FROM user_review "\
-                    "WHERE rated_id=" + str(form["id"])
-            cursor.execute(query)
-            rnk = cursor.fetchone()[0]
-            echo({'user_info':rows, 'user_ranking': rnk})
+            if form['id']:
+                query = "SELECT u.`user_id`, u.`email`, u.`address`, u.`phone` "\
+                        "FROM users u "\
+                        "WHERE u.user_id=" + str(form["id"])
+                cursor.execute(query)
+                rows = cursor.fetchall()
+                query = "SELECT AVG(`rating`) "\
+                        "FROM user_review "\
+                        "WHERE rated_id=" + str(form["id"])
+                cursor.execute(query)
+                rnk = cursor.fetchone()[0]
+                echo({'user_info':rows, 'user_ranking': rnk})
+            else:
+                echo({'error':"No user id as 'id' passed"})
         else:
             echo({'error':"No user id as 'id' passed"})
 
     def LF_sign_up():
         global cursor,conn
         if form.has_key("email") and form.has_key("password") and form.has_key("address") and form.has_key("phone"):
-            query = "SELECT `user_id` " \
-                    "FROM `users` " \
-                    "WHERE `email`='"+str(form['email'])+"'"
+            if form["email"] and form["password"] and form["address"] and form["phone"]:
+                query = "SELECT `user_id` " \
+                        "FROM `users` " \
+                        "WHERE `email`='"+str(form['email'])+"'"
 
-            cursor.execute(query)
-            id = cursor.fetchone()
+                cursor.execute(query)
+                id = cursor.fetchone()
 
-            if (id):
-                echo({'error':'User already exists'})
-            else:
-                query = "INSERT INTO `users` (`email`,`password`,`address`,`phone`,`type`,`createtime`) VALUES "\
-                        "('" + str(form["email"]) + "',MD5('" + str(form["password"]) + "'),'" + str(form["address"]) + "','" + str(form["phone"]) + "','regular',NOW())"
-                cursor.execute(query)
-                conn.commit()
-                query = "SELECT `user_id`, `email` "\
-                        "FROM users "\
-                        "WHERE email='" + str(form["email"]) + "' AND address='" + str(form["address"]) + "' AND phone='" + str(form["phone"]) + "'"
-                cursor.execute(query)
-                res = cursor.fetchone()
-                if res:
-                    echo({'user_id':res[0],'email':res[1]})
+                if (id):
+                    echo({'error':'User already exists'})
                 else:
-                    echo({'error':'Failed to create the user. Please try again later.'})
+                    query = "INSERT INTO `users` (`email`,`password`,`address`,`phone`,`type`,`createtime`) VALUES "\
+                            "('" + str(form["email"]) + "',MD5('" + str(form["password"]) + "'),'" + str(form["address"]) + "','" + str(form["phone"]) + "','regular',NOW())"
+                    cursor.execute(query)
+                    conn.commit()
+                    query = "SELECT `user_id`, `email` "\
+                            "FROM users "\
+                            "WHERE email='" + str(form["email"]) + "' AND address='" + str(form["address"]) + "' AND phone='" + str(form["phone"]) + "'"
+                    cursor.execute(query)
+                    res = cursor.fetchone()
+                    if res:
+                        echo({'user_id':res[0],'email':res[1]})
+                    else:
+                        echo({'error':'Failed to create the user. Please try again later.'})
+            else:
+                echo({'error':"Not enough parameters"})
         else:
             echo({'error':"Not enough parameters"})
 
     def LF_sign_in():
         if (form.has_key('user') and form.has_key('password')):
-            user = form['user']
-            passwd = form['password']
-            query = "SELECT `user_id`, `email` " \
-                    "FROM `users` " \
-                    "WHERE `email`='"+str(user)+"' AND `password`=MD5('"+str(passwd)+"')"
-            cursor.execute(query)
-            id = cursor.fetchone()
-            if id:
-                echo({"user_id":id[0],"email":id[1]})
+            if ['user'] and form['password']:
+                user = form['user']
+                passwd = form['password']
+                query = "SELECT `user_id`, `email` " \
+                        "FROM `users` " \
+                        "WHERE `email`='"+str(user)+"' AND `password`=MD5('"+str(passwd)+"')"
+                cursor.execute(query)
+                id = cursor.fetchone()
+                if id:
+                    echo({"user_id":id[0],"email":id[1]})
             else:
                 echo({'error':'Invalid user or password'})
+        else:
+            echo({'error':'Invalid user or password'})
 
     def LF_create_review():
-        global cursor
+        global cursor,conn
         if form.has_key("from") and form.has_key("to") and form.has_key("review") and form.has_key("rating"):
-            query = "SELECT u.`user_id` "\
-                    "FROM users "\
-                    "WHERE u.email = '" + str(form["to"]) + "';"
-            cursor.execute(query)
-            if cursor.rowcount == 1:
-                user = cursor.fetchone()
-                query = "INSERT INTO `user_review` (`ratter_id`,`rated_id`,`rating`,`comment`) VALUES "\
-                        "(" + form["from"] + "," + str(user[0]) + "," + str(form["rating"]) + ",'" + str(form["review"]) + "');"
+            if form["from"] and form["to"] and form["review"] and form["rating"]:
+                query = "SELECT u.`user_id` "\
+                        "FROM users "\
+                        "WHERE u.email = '" + str(form["to"]) + "';"
                 cursor.execute(query)
+                user = cursor.fetchone()
+                if user:
+                    query = "INSERT INTO `user_review` (`ratter_id`,`rated_id`,`rating`,`comment`) VALUES "\
+                            "(" + form["from"] + "," + str(user[0]) + "," + str(form["rating"]) + ",'" + str(form["review"]) + "');"
+                    cursor.execute(query)
+                    conn.commit()
+                else:
+                    echo({'error':"Could not determine user from email"})
             else:
-                echo({'error':"Could not determine user from email"})
-        echo({'error':"Not enough parameters provided to create review"})
+                echo({'error':"Not enough parameters provided to create review"})
+        else:
+            echo({'error':"Not enough parameters provided to create review"})
+
+
 
     def LF_create_offer():
         global cursor,conn
         if form.has_key("name") and form.has_key("description") and form.has_key("price") and form.has_key("user_id") and form.has_key("category") and form.has_key('picture'):
-            picture_path = "img/products/"
+            if form['name'] and form['description'] and form['price'] and form['user_id'] and form['category'] and form['picture']:
+                picture_path = "img/products/"
 
-            fileitem = form['picture']
-            fname = form['user_id']+"_"+strftime("%d_%m_%Y_%H_%M_%S", gmtime())+".jpeg"
+                fileitem = form['picture']
+                fname = form['user_id']+"_"+strftime("%d_%m_%Y_%H_%M_%S", gmtime())+".jpeg"
 
-            dir_path = os.path.join(os.path.dirname(req.filename), '../img/products')
+                dir_path = os.path.join(os.path.dirname(req.filename), '../img/products')
 
-            open(os.path.join(dir_path, fname), 'wb').write(fileitem.file.read())
+                open(os.path.join(dir_path, fname), 'wb').write(fileitem.file.read())
 
-            picture_path=picture_path+fname
-            query = "INSERT INTO `products` (`name`,`description`,`picture_path`) "\
-                    "VALUES ('" + str(form["name"]) + "','" + str(form["description"]) + "','" + str(picture_path) + "');"
-            cursor.execute(query)
-            conn.commit()
-            query = "SELECT p.`product_id` "\
-                    "FROM products p "\
-                    "WHERE p.name = '" + str(form["name"]) + "' "\
-                    "AND p.description = '" + str(form["description"]) + "' "\
-                    "AND p.picture_path = '" + str(picture_path) + "';"
-            cursor.execute(query)
+                picture_path=picture_path+fname
+                query = "INSERT INTO `products` (`name`,`description`,`picture_path`) "\
+                        "VALUES ('" + str(form["name"]) + "','" + str(form["description"]) + "','" + str(picture_path) + "');"
+                cursor.execute(query)
+                conn.commit()
+                query = "SELECT p.`product_id` "\
+                        "FROM products p "\
+                        "WHERE p.name = '" + str(form["name"]) + "' "\
+                        "AND p.description = '" + str(form["description"]) + "' "\
+                        "AND p.picture_path = '" + str(picture_path) + "';"
+                cursor.execute(query)
 
-            product_id = cursor.fetchone()[0]
-            query = "SELECT c.`category_id` "\
-                    "FROM categories c "\
-                    "WHERE UPPER(c.name) = UPPER('" + str(form["category"]) + "');"
-            cursor.execute(query)
-            category_id = cursor.fetchone()[0]
-            query = "INSERT INTO `selling_products` (`user_id`, `product_id`, `price`, `create_date`, `expire_date`, `negotiable`) "\
-                    "VALUES (" + str(form["user_id"]) + "," + str(product_id) + "," + str(form["price"]) + ",NOW(),DATE_ADD(NOW(), INTERVAL 1 MONTH),0);"
-            cursor.execute(query)
-            conn.commit()
-            query = "INSERT INTO `product_to_category` (`product_id`,`category_id`) "\
-                    "VALUES (" + str(product_id) + "," + str(category_id) + ");"
-            cursor.execute(query)
-            conn.commit()
-            echo({'product_id':product_id})
-        else:
-            echo({'error':"Not enough parameters provided!"})
+                product_id = cursor.fetchone()[0]
+                query = "SELECT c.`category_id` "\
+                        "FROM categories c "\
+                        "WHERE UPPER(c.name) = UPPER('" + str(form["category"]) + "');"
+                cursor.execute(query)
+                category_id = cursor.fetchone()[0]
+                query = "INSERT INTO `selling_products` (`user_id`, `product_id`, `price`, `create_date`, `expire_date`, `negotiable`) "\
+                        "VALUES (" + str(form["user_id"]) + "," + str(product_id) + "," + str(form["price"]) + ",NOW(),DATE_ADD(NOW(), INTERVAL 1 MONTH),0);"
+                cursor.execute(query)
+                conn.commit()
+                query = "INSERT INTO `product_to_category` (`product_id`,`category_id`) "\
+                        "VALUES (" + str(product_id) + "," + str(category_id) + ");"
+                cursor.execute(query)
+                conn.commit()
+                echo({'product_id':product_id})
+            else:
+                echo({'error':"Not enough parameters provided!"})
 
     def LF_get_product_info():
         global cursor
         if form.has_key("id"):
-            query = "SELECT p.`product_id`, p.`name`, p.`description`, p.`picture_path`, s.`price`, s.`negotiable`, u.`user_id`, u.`email`, c.`name` "\
-                    "FROM products p "\
-                    "INNER JOIN selling_products s ON p.product_id = s.product_id "\
-                    "INNER JOIN users u ON s.user_id = u.user_id "\
-                    "INNER JOIN product_to_category ptc ON p.product_id = ptc.product_id "\
-                    "INNER JOIN categories c ON ptc.category_id = c.category_id "\
-                    "WHERE p.product_id = " + form["id"] + ";"
-            cursor.execute(query)
-            row = cursor.fetchone()
-            if row:
-                echo({'product_info':row})
+            if form['id']:
+                query = "SELECT p.`product_id`, p.`name`, p.`description`, p.`picture_path`, s.`price`, s.`negotiable`, u.`user_id`, u.`email`, c.`name` "\
+                        "FROM products p "\
+                        "INNER JOIN selling_products s ON p.product_id = s.product_id "\
+                        "INNER JOIN users u ON s.user_id = u.user_id "\
+                        "INNER JOIN product_to_category ptc ON p.product_id = ptc.product_id "\
+                        "INNER JOIN categories c ON ptc.category_id = c.category_id "\
+                        "WHERE p.product_id = " + form["id"] + ";"
+                cursor.execute(query)
+                row = cursor.fetchone()
+                if row:
+                    echo({'product_info':row})
+                else:
+                    echo({'error':"No product with this id"})
             else:
-                echo({'error':"No product with this id"})
+                echo({'error':"No product id as 'id' provided"})
         else:
             echo({'error':"No product id as 'id' provided"})
 
     def LF_delete_product():
         global cursor
         if form.has_key("id"):
-            query = "DELETE FROM products "\
-                    "WHERE product_id=" + str(form["id"])
-            cursor.execute(query)
-            conn.commit()
+            if form['id']:
+                query = "DELETE FROM products "\
+                        "WHERE product_id=" + str(form["id"])
+                cursor.execute(query)
+                conn.commit()
+            else:
+                echo({'error':"No product_id as id provided!"})
         else:
             echo({'error':"No product_id as id provided!"})
 
     def LF_change_password():
-        global cursor
+        global cursor,conn
         if form.has_key("password") and form.has_key("id"):
-            query = "UPDATE users "\
-                    "SET password=MD5('" + str(form["password"]) + "') "\
-                    "WHERE user_id=" + str(form["id"]) + ";"
-            cursor.execute(query)
+            if form['password'] and form['id']:
+                query = "UPDATE users "\
+                        "SET password=MD5('" + str(form["password"]) + "') "\
+                        "WHERE user_id=" + str(form["id"]) + ";"
+                cursor.execute(query)
+                conn.commit()
+            else:
+                echo({'error':"Not enough parameters provided"})
         else:
             echo({'error':"Not enough parameters provided"})
 

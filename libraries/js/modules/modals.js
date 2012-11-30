@@ -109,6 +109,7 @@ var Modals = {
                 $('button#create_product').live('click', function () {
                     var form = $('form#create_offer_form');
                     form.ajaxForm(function (data) {
+
                         data = JSON.parse(data);
                         if (data.error) {
                             window.jMarket.Modules.DisplayMessage.print(data.error, 'error');
