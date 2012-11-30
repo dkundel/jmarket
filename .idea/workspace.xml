@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80bc9143-5dd0-4a6d-99bf-35d49c6ea826" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/product_details/product_details_tmpl.html" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/libraries/bootstrap/css/bootstrap-responsive.css" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/libraries/bootstrap/css/bootstrap-responsive.min.css" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/libraries/bootstrap/css/bootstrap.css" afterPath="" />
@@ -10,16 +11,10 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/libraries/bootstrap/img/glyphicons-halflings.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/libraries/bootstrap/js/bootstrap.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/libraries/bootstrap/js/bootstrap.min.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/scripts/img_upload.psp" afterPath="$PROJECT_DIR$/scripts/create_offer.psp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/css/style.css" afterPath="$PROJECT_DIR$/libraries/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/modules/display_message.js" afterPath="$PROJECT_DIR$/libraries/js/modules/display_message.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/modules/main_page.js" afterPath="$PROJECT_DIR$/libraries/js/modules/main_page.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/modules/modals.js" afterPath="$PROJECT_DIR$/libraries/js/modules/modals.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/modules/search.js" afterPath="$PROJECT_DIR$/libraries/js/modules/search.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/modules/product.js" afterPath="$PROJECT_DIR$/libraries/js/modules/product.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/load_function.psp" afterPath="$PROJECT_DIR$/scripts/load_function.psp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/offer/offer.html" afterPath="$PROJECT_DIR$/scripts/offer/offer.html" />
     </list>
     <list id="b5db40e1-5186-4751-8aff-90f92af58882" name="New changelist" comment="New changelist" />
     <ignored path="jmarket.iws" />
@@ -51,23 +46,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="modals.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="modals.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/libraries/js/modules/modals.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="114" column="25" selection-start="4495" selection-end="4495" vertical-scroll-proportion="1.8556701">
+            <state line="114" column="25" selection-start="4495" selection-end="4495" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="72" selection-start="4185" selection-end="4185" vertical-scroll-proportion="-12.0">
-              <folding>
-                <marker date="1354293027738" expanded="true" signature="1352:1585" placeholder="..." />
-                <marker date="1354293027738" expanded="true" signature="1420:1458" placeholder="..." />
-              </folding>
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -139,11 +131,11 @@
         <option value="$PROJECT_DIR$/libraries/js/modules/main_page.js" />
         <option value="$PROJECT_DIR$/libraries/js/modules/display_message.js" />
         <option value="$PROJECT_DIR$/libraries/css/style.css" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/scripts/create_offer.psp" />
         <option value="$PROJECT_DIR$/scripts/offer/offer.html" />
         <option value="$PROJECT_DIR$/libraries/js/modules/modals.js" />
         <option value="$PROJECT_DIR$/scripts/load_function.psp" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -512,16 +504,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="72" selection-start="4185" selection-end="4185" vertical-scroll-proportion="-12.0">
-          <folding>
-            <marker date="1354293027738" expanded="true" signature="1352:1585" placeholder="..." />
-            <marker date="1354293027738" expanded="true" signature="1420:1458" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/offer/offer.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="62" selection-start="539" selection-end="539" vertical-scroll-proportion="-5.625">
@@ -561,7 +543,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/libraries/js/modules/modals.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="114" column="25" selection-start="4495" selection-end="4495" vertical-scroll-proportion="1.8556701">
+        <state line="114" column="25" selection-start="4495" selection-end="4495" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
