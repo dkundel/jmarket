@@ -2,6 +2,7 @@ $LAB
 .script('libraries/js/vendor/jquery-1.7.1.js').wait()
 .script('libraries/js/vendor/jquery-ui.min.js')
 .script('libraries/js/vendor/jquery.cookie.js')
+.script('libraries/js/vendor/jquery.form.js')
 .script('libraries/js/vendor/bootstrap.min.js').wait()
 .script('libraries/js/vendor/bootstrap-modal.js')
 .script('libraries/js/vendor/bootstrap-modalmanager.js')
@@ -14,4 +15,5 @@ $LAB
 .script('libraries/js/modules/log_out.js')
 .script('libraries/js/modules/user.js')
 .script('libraries/js/modules/imprint.js')
+.script('libraries/js/modules/search.js')
 .script('libraries/js/script.js');

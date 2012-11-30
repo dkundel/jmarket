@@ -3,7 +3,7 @@ var MainPage = {
 	requestData: {
 		function: "construct_main_page"
 	},
-	_renderData: function _render_data(data){
+	renderData: function _render_data(data){
 		var content = '<div class="row-fluid"><ul class="thumbnails">';
         content_data = data.products;
         for (var i = 0; i < content_data.length; ++i) {
@@ -30,7 +30,7 @@ var MainPage = {
             if (data.error){
 
             }
-			MainPage._renderData(data);
+			MainPage.renderData(data);
 		});
 	}
 };

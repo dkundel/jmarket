@@ -3,12 +3,23 @@
  */
 jQuery(function () {
     window.jMarket.Modules.MainPage.load();
+
+    /*
+        EVENT LISTENER
+     */
     $('form#login_form').submit(function (e) {
         e.preventDefault();
         window.jMarket.Modules.LogIn.log_in($(this));
     });
     $('#sign_up_modal').on('click', window.jMarket.Modules.Modals.signUp.load);
     $('#imprint').on('click',window.jMarket.Modules.Imprint._load);
+    $('#user_log_out').on('click', window.jMarket.)
+    $("#search_form").ajaxForm();
+    $("#search_form").submit(window.jMarket.Modules.Search.submit);
+    $('a#logout_button').on('click',window.jMarket.Modules.LogOut.logout);
+    $('a#sell_product_button').on('click', window.jMarket.Modules.Modals.createOffer.load);
+    $('a#my_account_button').on('click', window.jMarket.Modules.getMyProfile);
+
     $("#slider-range").slider({
         range:true,
         min:0,
@@ -39,9 +50,7 @@ jQuery(function () {
         window.jMarket.Modules.LogIn._display_welcome(login_check.email);
     }
 
-    $('a#logout_button').click(function(){
-        window.jMarket.Modules.LogOut.logout();
-    });
+    
 });
 
 
