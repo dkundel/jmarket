@@ -1,5 +1,6 @@
 var Product = {
 	_renderProductInfo: function _render_product_info(data){
+		data = data.product_info;
 		var html = '<div class="row"><div class="span10">';
 		html += '<h3>' + data[1] + '</h3>';
 		html += '<div class="row"><div class="span4"><div class="thumbnail">';
@@ -26,11 +27,8 @@ var Product = {
 				window.jMarket.Modules.DisplayMessage.print(data.error, "error");
 				return;
 			} else {
-				if(data.length == 10){
 					Product._renderProductInfo(data);
-				} else {
-					window.jMarket.Modules.DisplayMessage.print("Not enough information for this product!", "error");
-				}
+			
 			}
 		});
 	}
