@@ -1,6 +1,3 @@
-/* Author:
-
- */
 jQuery(function () {
     window.jMarket.Modules.MainPage.load(true);
 
@@ -18,7 +15,12 @@ jQuery(function () {
     $("#search_form").submit(window.jMarket.Modules.Search.submit);
     $('a#logout_button').on('click',window.jMarket.Modules.LogOut.logout);
     $('a#sell_product_button').on('click', window.jMarket.Modules.Modals.createOffer.load);
-    $('a#my_account_button').on('click', window.jMarket.Modules.getMyProfile);
+    $('a#my_account_button').on('click', window.jMarket.Modules.User.getMyProfile);
+    $('.to_home_page').on('click',function(){
+        window.jMarket.Modules.MainPage.load();
+        $('.active').removeClass('active');
+    });
+    $("a#sales_button").on('click',window.jMarket.Modules.Product.getMyProducts);
 
     $("#slider-range").slider({
         range:true,
@@ -26,8 +28,8 @@ jQuery(function () {
         max:2000,
         values:[ 0, 2000 ],
         slide:function (event, ui) {
-            $("#min_amount").val(ui.values[ 0 ]);
-            $("#max_amount").val(ui.values[ 1 ]);
+            $("#min_price").val(ui.values[ 0 ]);
+            $("#max_price").val(ui.values[ 1 ]);
         }
     });
     var $modal = $('#sign_up_modal');
@@ -49,8 +51,6 @@ jQuery(function () {
         login_check = JSON.parse(login_check);
         window.jMarket.Modules.LogIn._display_welcome(login_check.email);
     }
-
-    
 });
 
 

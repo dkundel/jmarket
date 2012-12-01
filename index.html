@@ -39,13 +39,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </a>
-                <a class="brand" href="index.html" name="jMarket"><img alt="jMarket" src="img/logo/jmarket_150.png"></a>
+                <a class="brand" name="jMarket"><img alt="jMarket" class="to_home_page" src="img/logo/jmarket_150.png"></a>
 
                 <div class="nav-collapse collapse">
                     <ul class="nav">
-                        <li><a href="index.html"><i class="icon-home"></i> Home</a></li>
-                        <li class="divider-vertical"></li>
-                        <li><a href="#"><i class="icon-tags"></i> Categories</a></li>
+                        <li><a class="to_home_page"><i class="icon-home"></i> Home</a></li>
                         <li class="divider-vertical"></li>
                         <li><a id="imprint"><i class="icon-info-sign"></i> Imprint</a></li>
                     </ul>
@@ -57,7 +55,7 @@
                             </div>
                         </form>
                         <li class="dropdown login">
-                            <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong
+                            <a class="dropdown-toggle"  data-toggle="dropdown">Sign In <strong
                                     class="caret"></strong></a>
 
                             <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
@@ -79,7 +77,7 @@
                             </div>
                         </li>
                         <li class="dropdown logout" style="display: none">
-                            <a class="dropdown-toggle" href="#" data-toggle="dropdown">Welcome <span
+                            <a class="dropdown-toggle"  data-toggle="dropdown">Welcome <span
                                     id="user_name"></span><strong
                                     class="caret"></strong></a>
                             <ul class="dropdown-menu" role="menu" style="padding-bottom: 5px;">
@@ -108,7 +106,7 @@
             <div class="well">
                 <ul class="nav nav-list" id="category_list">
                     <li class="nav-header">Categories</li>
-                    <li><a href="#">All</a></li>
+                    <li><a >All</a></li>
                 </ul>
 
                 <ul class="nav nav-list price-filter">
@@ -117,13 +115,13 @@
                         <div class="input-prepend input-append">
                             <span class="add-on">Min</span>
                             <input class="span3" type="text" id="min_price"
-                                   style="color: #f6931f; font-weight: bold;" value="0"/>
+                                   style="color: #f6931f; font-weight: bold; min-width: 50px" value="0"/>
                             <span class="add-on">&euro;</span>
                         </div>
                         <div class="input-prepend input-append">
                             <span class="add-on">Max</span>
                             <input class="span3" type="text" id="max_price"
-                                   style="color: #f6931f; font-weight: bold;" value="2000"/>
+                                   style="color: #f6931f; font-weight: bold; min-width: 50px" value="2000"/>
                             <span class="add-on">&euro;</span>
                         </div>
                     </li>
@@ -131,7 +129,7 @@
                         <div id="slider-range"></div>
                     </li>
                     <li style="margin-top: 5px;">
-                        <button class="btn btn-mini apply-filter" style="width: 100%;"><i class="icon-filter"></i>Filter</button>
+                        <button class="btn btn-mini apply-filter" style="width: 100%;"><i class="icon-filter"></i>Get products</button>
                     </li>
 
                 </ul>

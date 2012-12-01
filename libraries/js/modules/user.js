@@ -1,7 +1,7 @@
 var User = {
     _renderProfilePage:function _render_profile_page(data) {
         var html = "<div class='well'><div class='user-information'><p><i class='icon-envelope'></i> " +
-            data.user_info[0][1] + "</p><p><i class='icon-home'></i> " +
+            "<span class='user-email'>" + data.user_info[0][1] + "</span></p><p><i class='icon-home'></i> " +
             data.user_info[0][2] + "</p><p><i class='icon-phone'></i> " +
             data.user_info[0][3] + "</p><p>Rating: <span class='rating_stars'>";
         for (var i = 1; i <= parseInt(data.user_ranking, 10); ++i)
@@ -9,9 +9,22 @@ var User = {
         for (var i = 1; i < 5 - parseInt(data.user_ranking, 10); ++i)
             html += "<i class='icon-star-empty'></i>";
 
-        html += "</span></p></div><div class='user-actions'>" +
-            "<a href='javascript:jMarket.Modules.Modals.createOffer.load();' class='create-review-btn btn btn-jmarket-orange'><i class='icon-edit icon-white'></i> Create User Review</a>" +
-            "<a href='javascript:jMarket.Modules.Modals.changePassword.load();' class='change-password-btn btn btn-jmarket-orange'><i class='icon-edit icon-white'></i> Change Password</a>" +
+        html += "</span></p></div><div class='user-actions'>";
+
+        var create_review_button = "<a href='javascript:jMarket.Modules.Modals.createReview.load();' class='create-review-btn btn btn-jmarket-orange'><i class='icon-edit icon-white'></i> Review user</a>";
+        var change_password_button ="<a href='javascript:jMarket.Modules.Modals.changePassword.load();' class='change-password-btn btn btn-jmarket-orange'><i class='icon-edit icon-white'></i> Change Password</a>";
+        if ($.cookie('user_login')){
+            var user_data = JSON.parse($.cookie('user_login'));
+            if (user_data.email == data.user_info[0][1]){
+                create_review_button="";
+            }else{
+                change_password_button="";
+            }
+        }else{
+            create_review_button="";
+            change_password_button="";
+        }
+        html +=create_review_button+ change_password_button +
             "</div><div class='clearfix'></div></div>";
 
         $('div.content_wrapper').html(html);

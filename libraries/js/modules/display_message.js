@@ -14,7 +14,7 @@ var DisplayMessage = {
         $('body').append($('<div style="position: absolute; top: 25px; left: 25%; word-wrap: break-word; z-index: 10000" class="alert alert-' + type + ' span7 box-shadow user-message">' + message + '</div>').prepend(close).fadeIn());
         setTimeout(function () {
             $('.user-message').remove();
-        }, 6000);
+        }, 5000);
     }
 };
 

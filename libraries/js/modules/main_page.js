@@ -3,21 +3,30 @@ var MainPage = {
         function:"construct_main_page"
     },
     renderData:function _render_data(data, navbar) {
+        if (data.error) {
+            window.jMarket.Modules.DisplayMessage.print(data.error, "error");
+            return;
+        }
         var content = '<div class="row-fluid"><ul class="thumbnails">';
         var content_data = data.products;
-        for (var i = 0; i < content_data.length; ++i) {
-            content += '<li class="span3 product"><div class="thumbnail">' +
-                '<img src="' + content_data[i][4] + '" alt=""><div class="caption">';
-            content += '<h3>' + content_data[i][1] + '</h3>';
-            content += '<p>' + content_data[i][2] + '</p>';
-            content += '<p class="caption_bottom"><a href="javascript:window.jMarket.Modules.Product.getInfo(' + content_data[i][0] + ');" class="btn btn-jmarket-orange"><i class="icon-share icon-white"></i> Details</a></p>';
-            content += '<h3 class="price-tag">' + content_data[i][3] + '</h3>';
-            content += '<div class="clearfix"></div></div></div></li>';
+        if (data.products.length == 0) {
+            content = "No products available."
+        } else {
+            for (var i = 0; i < content_data.length; ++i) {
+                content += '<li class="span3 product"><div class="thumbnail" style="height: 400px;">' +
+                    '<img src="' + content_data[i][4] + '" alt=""><div class="caption">';
+                content += '<h3>' + content_data[i][1] + '</h3>';
+                content += '<div style="height: 100px; overflow: hidden; text-overflow: ellipsis;">' + content_data[i][2] + '</div>';
+                content += '<p class="caption_bottom"><a href="javascript:window.jMarket.Modules.Product.getInfo(' + content_data[i][0] + ');" class="btn btn-jmarket-orange"><i class="icon-share icon-white"></i> Details</a></p>';
+                content += '<h3 class="price-tag">' + content_data[i][3] + '</h3>';
+                content += '<div class="clearfix"></div></div></div></li>';
+            }
+            content += "</ul></div>"
         }
-        content += "</ul></div>"
+
         $('div.content_wrapper').html(content);
 
-        if (navbar){
+        if (navbar) {
             MainPage.renderNavbar(data);
         }
     },
@@ -25,9 +34,9 @@ var MainPage = {
     renderNavbar:function (data) {
         nav_content = data.categories;
         nav_list = $('div.nav_bar_left').find('ul#category_list');
-        var nav_html = '<li class="nav-header">Categories</li><li class="filter-all"><a href="#">All</a></li>';
+        var nav_html = '<li class="nav-header">Categories</li><li class="filter-all"><a>All</a></li>';
         for (var i = 0; i < nav_content.length; ++i) {
-            nav_html += '<li class="filter-checkbox"  data-category-id="' + nav_content[i][0] + '"><a style="text-transform: capitalize; cursor: pointer" >' + nav_content[i][1] + '<span style="margin-left: 5px" class="badge badge-info">' + nav_content[i][2] + '</span></a></li>';
+            nav_html += '<li class="filter-checkbox"  data-category-id="' + nav_content[i][0] + '"><a style="text-transform: capitalize; cursor: pointer" >' + nav_content[i][1] + '</a></li>';
         }
         nav_list.html(nav_html);
         MainPage._init_filters();
@@ -40,7 +49,7 @@ var MainPage = {
                 window.jMarket.Modules.DisplayMessage.print(data.error, "error");
                 return;
             }
-            MainPage.renderData(data,navbar);
+            MainPage.renderData(data, navbar);
         });
     },
 
@@ -97,9 +106,12 @@ var MainPage = {
                 min_price:min_price,
                 max_price:max_price,
                 filter:filter,
-                category_ids:category_ids
+                category_ids:category_ids.join(',')
             }
-
+            $.post(window.jMarket.requestUrl, data, function (data) {
+                data = JSON.parse(data);
+                MainPage.renderData(data);
+            });
 
         });
     }

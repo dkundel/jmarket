@@ -47,6 +47,7 @@ p.address {
 .nav_bar_left .sidebar-nav {
     margin-top: 20px;
     margin-left: 10px;
+    min-width: 165px;
 }
 
 .content_wrapper {
