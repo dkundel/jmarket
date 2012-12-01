@@ -138,10 +138,6 @@ var Modals = {
                 var user_id = user_login.user_id;
                 $review = $('form[name="review_form"]');
 
-                var to_email = $('span.user-email').text();
-                var review = $review.find('[name="review"]').val();
-                var rating = parseInt($review.find('[name="rating"]').val(),10);
-
                 if(rating <= 0 || rating > 5){
                     window.jMarket.Modules.DisplayMessage.print("Invalid rating score!", "error");
                     return;
@@ -183,11 +179,6 @@ var Modals = {
             }, 500);
         },
         submit: function _submit() {
-            if (!$.cookie('user_login')){
-                window.location='.';
-            }
-
-            var $form = $('[name="change_password_form"]');
             var old_pw = $form.find('input[name="old_password"]').val();
             var pw = $form.find('input[name="password"]').val();
             var pw_confirm = $form.find('input[name="password_confirm"]').val();

@@ -22,47 +22,10 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/img/products/galaxysIII.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/img/products/ipad_mini.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/img/products/kindle.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/create_offer.psp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/main_page/main_page.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/values.sql" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/favicon.ico" afterPath="$PROJECT_DIR$/favicon.ico" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/fontawesome/FontAwesome-Vectors.pdf" afterPath="$PROJECT_DIR$/libraries/fontawesome/FontAwesome-Vectors.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/fontawesome/FontAwesome.ttf" afterPath="$PROJECT_DIR$/libraries/fontawesome/FontAwesome.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/css/bootstrap.css" afterPath="$PROJECT_DIR$/libraries/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/css/style.css" afterPath="$PROJECT_DIR$/libraries/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/fontawesome/.gitignore" afterPath="$PROJECT_DIR$/libraries/fontawesome/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/fontawesome/README.md" afterPath="$PROJECT_DIR$/libraries/fontawesome/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/fontawesome/css/font-awesome-ie7.css" afterPath="$PROJECT_DIR$/libraries/fontawesome/css/font-awesome-ie7.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/fontawesome/css/font-awesome.css" afterPath="$PROJECT_DIR$/libraries/fontawesome/css/font-awesome.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/fontawesome/less/font-awesome-ie7.less" afterPath="$PROJECT_DIR$/libraries/fontawesome/less/font-awesome-ie7.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/fontawesome/less/font-awesome.less" afterPath="$PROJECT_DIR$/libraries/fontawesome/less/font-awesome.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/fontawesome/sass/font-awesome.sass" afterPath="$PROJECT_DIR$/libraries/fontawesome/sass/font-awesome.sass" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/fontawesome/sass/font-awesome.scss" afterPath="$PROJECT_DIR$/libraries/fontawesome/sass/font-awesome.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/app.js" afterPath="$PROJECT_DIR$/libraries/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/modules/display_message.js" afterPath="$PROJECT_DIR$/libraries/js/modules/display_message.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/modules/imprint.js" afterPath="$PROJECT_DIR$/libraries/js/modules/imprint.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/modules/jmarket.js" afterPath="$PROJECT_DIR$/libraries/js/modules/jmarket.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/modules/log_in.js" afterPath="$PROJECT_DIR$/libraries/js/modules/log_in.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/modules/log_out.js" afterPath="$PROJECT_DIR$/libraries/js/modules/log_out.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/modules/main_page.js" afterPath="$PROJECT_DIR$/libraries/js/modules/main_page.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/modules/modals.js" afterPath="$PROJECT_DIR$/libraries/js/modules/modals.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/modules/modules.js" afterPath="$PROJECT_DIR$/libraries/js/modules/modules.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/modules/product.js" afterPath="$PROJECT_DIR$/libraries/js/modules/product.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/modules/search.js" afterPath="$PROJECT_DIR$/libraries/js/modules/search.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/modules/user.js" afterPath="$PROJECT_DIR$/libraries/js/modules/user.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/script.js" afterPath="$PROJECT_DIR$/libraries/js/script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/vendor/jquery.cookie.js" afterPath="$PROJECT_DIR$/libraries/js/vendor/jquery.cookie.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/vendor/jquery.form.js" afterPath="$PROJECT_DIR$/libraries/js/vendor/jquery.form.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/vendor/libs.js" afterPath="$PROJECT_DIR$/libraries/js/vendor/libs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/vendor/order.js" afterPath="$PROJECT_DIR$/libraries/js/vendor/order.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/vendor/require-jquery.js" afterPath="$PROJECT_DIR$/libraries/js/vendor/require-jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/vendor/require.js" afterPath="$PROJECT_DIR$/libraries/js/vendor/require.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/change_password/change_password.html" afterPath="$PROJECT_DIR$/scripts/change_password/change_password.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/load_function.psp" afterPath="$PROJECT_DIR$/scripts/load_function.psp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/product_details/product_details_tmpl.html" afterPath="$PROJECT_DIR$/scripts/product_details/product_details_tmpl.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/review/review.html" afterPath="$PROJECT_DIR$/scripts/review/review.html" />
     </list>
     <list id="b5db40e1-5186-4751-8aff-90f92af58882" name="New changelist" comment="New changelist" />
     <ignored path="jmarket.iws" />
@@ -86,7 +49,7 @@
       <file leaf-file-name="user.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/libraries/js/modules/user.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="14" selection-start="1459" selection-end="1459" vertical-scroll-proportion="0.3488372">
+            <state line="27" column="55" selection-start="1663" selection-end="1663" vertical-scroll-proportion="0.47093022">
               <folding />
             </state>
           </provider>
@@ -95,7 +58,7 @@
       <file leaf-file-name="change_password.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/change_password/change_password.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="123" selection-start="1699" selection-end="1699" vertical-scroll-proportion="-25.625">
+            <state line="41" column="123" selection-start="1699" selection-end="1699" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -113,10 +76,8 @@
       <file leaf-file-name="load_function.psp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/load_function.psp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="184" column="24" selection-start="7718" selection-end="7718" vertical-scroll-proportion="-10.354838">
-              <folding>
-                <element signature="e#3#29#0" expanded="true" />
-              </folding>
+            <state line="184" column="24" selection-start="7718" selection-end="7718" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -124,7 +85,7 @@
       <file leaf-file-name="offer.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/offer/offer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -133,12 +94,12 @@
       <file leaf-file-name="product.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/libraries/js/modules/product.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="0" selection-start="2059" selection-end="2059" vertical-scroll-proportion="0.0">
+            <state line="100" column="0" selection-start="3745" selection-end="3745" vertical-scroll-proportion="0.0">
               <folding>
-                <marker date="1354373468957" expanded="false" signature="136:145" placeholder="..." />
-                <marker date="1354373468957" expanded="false" signature="255:264" placeholder="..." />
-                <marker date="1354373468957" expanded="false" signature="551:560" placeholder="..." />
-                <marker date="1354373468957" expanded="false" signature="1036:1068" placeholder="..." />
+                <marker date="1354392515446" expanded="true" signature="136:145" placeholder="..." />
+                <marker date="1354392515446" expanded="true" signature="255:264" placeholder="..." />
+                <marker date="1354392515446" expanded="true" signature="551:560" placeholder="..." />
+                <marker date="1354392515446" expanded="true" signature="1036:1068" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -147,7 +108,7 @@
       <file leaf-file-name="modals.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/libraries/js/modules/modals.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="66" selection-start="3481" selection-end="3481" vertical-scroll-proportion="0.0">
+            <state line="124" column="28" selection-start="4971" selection-end="4971" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -157,11 +118,7 @@
         <entry file="file://$PROJECT_DIR$/libraries/js/modules/main_page.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="38" column="180" selection-start="2002" selection-end="2002" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1354377251897" expanded="false" signature="631:645" placeholder="..." />
-                <marker date="1354377251897" expanded="false" signature="847:904" placeholder="..." />
-                <marker date="1354377251897" expanded="false" signature="1931:1974" placeholder="..." />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -169,7 +126,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="131" column="126" selection-start="7510" selection-end="7510" vertical-scroll-proportion="-32.25">
+            <state line="131" column="126" selection-start="7510" selection-end="7510" vertical-scroll-proportion="0.0">
               <folding>
                 <marker date="1354367447837" expanded="true" signature="1352:1585" placeholder="..." />
                 <marker date="1354367447837" expanded="true" signature="1420:1458" placeholder="..." />
@@ -208,13 +165,13 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/scripts/user/user.html" />
         <option value="$PROJECT_DIR$/libraries/js/script.js" />
-        <option value="$PROJECT_DIR$/libraries/js/modules/product.js" />
         <option value="$PROJECT_DIR$/img/.htaccess" />
         <option value="$PROJECT_DIR$/.htaccess" />
         <option value="$PROJECT_DIR$/libraries/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/libraries/js/modules/main_page.js" />
-        <option value="$PROJECT_DIR$/libraries/js/modules/modals.js" />
         <option value="$PROJECT_DIR$/scripts/load_function.psp" />
+        <option value="$PROJECT_DIR$/libraries/js/modules/modals.js" />
+        <option value="$PROJECT_DIR$/libraries/js/modules/product.js" />
         <option value="$PROJECT_DIR$/libraries/js/modules/user.js" />
       </list>
     </option>
@@ -324,8 +281,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="preferences.lookFeel" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -440,14 +397,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="24" width="1920" height="1055" extended-state="0" />
+    <frame x="0" y="24" width="1920" height="1055" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25250924" sideWeight="0.33813748" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26445395" sideWeight="0.6707317" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26766595" sideWeight="0.6707317" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -519,9 +476,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/libraries/js/modules/search.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="9" selection-start="768" selection-end="768" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="27" column="9" selection-start="768" selection-end="768" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/libraries/js/modules/display_message.js">
@@ -536,9 +491,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/review/review.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="8" selection-start="1526" selection-end="1526" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="39" column="8" selection-start="1526" selection-end="1526" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/libraries/css/style.css">
@@ -569,7 +522,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="131" column="126" selection-start="7510" selection-end="7510" vertical-scroll-proportion="-32.25">
+        <state line="131" column="126" selection-start="7510" selection-end="7510" vertical-scroll-proportion="0.0">
           <folding>
             <marker date="1354367447837" expanded="true" signature="1352:1585" placeholder="..." />
             <marker date="1354367447837" expanded="true" signature="1420:1458" placeholder="..." />
@@ -580,11 +533,7 @@
     <entry file="file://$PROJECT_DIR$/libraries/js/modules/main_page.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="38" column="180" selection-start="2002" selection-end="2002" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1354377251897" expanded="false" signature="631:645" placeholder="..." />
-            <marker date="1354377251897" expanded="false" signature="847:904" placeholder="..." />
-            <marker date="1354377251897" expanded="false" signature="1931:1974" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -604,42 +553,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/change_password/change_password.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="123" selection-start="1699" selection-end="1699" vertical-scroll-proportion="-25.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/js/modules/modals.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="66" selection-start="3481" selection-end="3481" vertical-scroll-proportion="0.0">
+        <state line="41" column="123" selection-start="1699" selection-end="1699" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/load_function.psp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="184" column="24" selection-start="7718" selection-end="7718" vertical-scroll-proportion="-10.354838">
-          <folding>
-            <element signature="e#3#29#0" expanded="true" />
-          </folding>
+        <state line="184" column="24" selection-start="7718" selection-end="7718" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/js/modules/modals.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="124" column="28" selection-start="4971" selection-end="4971" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/libraries/js/modules/product.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="0" selection-start="2059" selection-end="2059" vertical-scroll-proportion="0.0">
+        <state line="100" column="0" selection-start="3745" selection-end="3745" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1354373468957" expanded="false" signature="136:145" placeholder="..." />
-            <marker date="1354373468957" expanded="false" signature="255:264" placeholder="..." />
-            <marker date="1354373468957" expanded="false" signature="551:560" placeholder="..." />
-            <marker date="1354373468957" expanded="false" signature="1036:1068" placeholder="..." />
+            <marker date="1354392515446" expanded="true" signature="136:145" placeholder="..." />
+            <marker date="1354392515446" expanded="true" signature="255:264" placeholder="..." />
+            <marker date="1354392515446" expanded="true" signature="551:560" placeholder="..." />
+            <marker date="1354392515446" expanded="true" signature="1036:1068" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/libraries/js/modules/user.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="14" selection-start="1459" selection-end="1459" vertical-scroll-proportion="0.3488372">
+        <state line="27" column="55" selection-start="1663" selection-end="1663" vertical-scroll-proportion="0.47093022">
           <folding />
         </state>
       </provider>
