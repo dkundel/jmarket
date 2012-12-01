@@ -11,10 +11,10 @@ def echo(text):
 def create_db_connection():
     global conn
     if not conn:
-        host = "flanche.net"
-        user = "dmgk"
-        password ="BtUETwBqZQ2A2wM6"
-        db = "dmgk"
+        host = ""
+        user = ""
+        password =""
+        db = ""
         try:
             conn = MDB.connect(host,user,password,db)
         except:
