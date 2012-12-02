@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80bc9143-5dd0-4a6d-99bf-35d49c6ea826" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/edit_product/edit_product.html" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/img/products/10_30_11_2012_17_20_37.jpeg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/img/products/10_30_11_2012_18_46_32.jpeg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/img/products/10_30_11_2012_18_47_28.jpeg" afterPath="" />
@@ -24,10 +23,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/img/products/ipad_mini.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/img/products/kindle.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/values.sql" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/modules/display_message.js" afterPath="$PROJECT_DIR$/libraries/js/modules/display_message.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/modules/modals.js" afterPath="$PROJECT_DIR$/libraries/js/modules/modals.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libraries/js/modules/product.js" afterPath="$PROJECT_DIR$/libraries/js/modules/product.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/load_function.psp" afterPath="$PROJECT_DIR$/scripts/load_function.psp" />
     </list>
     <list id="b5db40e1-5186-4751-8aff-90f92af58882" name="New changelist" comment="New changelist" />
@@ -79,7 +74,7 @@
       <file leaf-file-name="load_function.psp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/load_function.psp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="24" selection-start="333" selection-end="333" vertical-scroll-proportion="0.26913875">
+            <state line="13" column="0" selection-start="197" selection-end="197" vertical-scroll-proportion="0.19736843">
               <folding />
             </state>
           </provider>
@@ -177,9 +172,9 @@
         <option value="$PROJECT_DIR$/libraries/js/modules/user.js" />
         <option value="$PROJECT_DIR$/libraries/js/modules/modals.js" />
         <option value="$PROJECT_DIR$/scripts/edit_product/edit_product.html" />
-        <option value="$PROJECT_DIR$/scripts/load_function.psp" />
         <option value="$PROJECT_DIR$/libraries/js/modules/product.js" />
         <option value="$PROJECT_DIR$/libraries/js/modules/display_message.js" />
+        <option value="$PROJECT_DIR$/scripts/load_function.psp" />
       </list>
     </option>
   </component>
@@ -565,7 +560,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/load_function.psp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="24" selection-start="333" selection-end="333" vertical-scroll-proportion="0.26913875">
+        <state line="13" column="0" selection-start="197" selection-end="197" vertical-scroll-proportion="0.19736843">
           <folding />
         </state>
       </provider>
