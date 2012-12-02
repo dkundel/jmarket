@@ -11,10 +11,14 @@ def echo(text):
 def create_db_connection():
     global conn
     if not conn:
-        host = "flanche.net"
-        user = "dmgk"
-        password ="BtUETwBqZQ2A2wM6"
-        db = "dmgk"
+#        host = "flanche.net"
+#        user = "dmgk"
+#        password ="BtUETwBqZQ2A2wM6"
+#        db = "dmgk"
+        host="localhost"
+        user="dominik"
+        password="password123"
+        db="jMarket"
         try:
             conn = MDB.connect(host,user,password,db)
         except:
@@ -168,7 +172,27 @@ if conn:
         else:
             echo({'error':"Not enough parameters provided to create review"})
 
+    def LF_edit_offer():
+        global cursor,conn
+        if form.has_key("name") and form.has_key("description") and form.has_key("price") and form.has_key("id"):
+            if form['name'] and form['description'] and form['price'] and form['id']:
+                query = "UPDATE `products` " \
+                        "SET `name`='"+str(form['name'])+"', " \
+                        "`description`='"+str(form['description'])+"'" \
+                        "WHERE product_id="+str(form['id'])
+                cursor.execute(query)
 
+                query = "UPDATE selling_products "\
+                        "SET price="+str(form['price'])+" "\
+                        "WHERE product_id="+str(form['id'])
+                cursor.execute(query)
+
+                conn.commit()
+                echo({'success':'success'})
+            else:
+                echo({'error':"Not enough parameters provided!"})
+        else:
+            echo({'error':"Not enough parameters provided!"})
 
     def LF_create_offer():
         global cursor,conn

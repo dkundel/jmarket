@@ -15,7 +15,9 @@ var Product = {
 
         var action_button;
         if (user_products) {
-            action_button = '<button class="btn btn-danger" style="float: right; margin-left: 10px;" onclick="window.jMarket.Modules.Product.delete(' + data[0] + ')">Delete</button>'
+            action_button = '<button class="btn btn-danger" style="float: right; margin-left: 10px;" onclick="window.jMarket.Modules.Product.delete(' + data[0] + ')">Delete</button>';
+            action_button += '<button class="btn btn-primary" style="float: right; margin-left: 10px;" onclick="window.jMarket.Modules.Product.edit(' + data[0] + ')">Edit</button>';
+
         } else {
             action_button = '<a class="btn btn-jmarket-orange" href="mailto:' + data[7] + '">Contact Seller</a> ';
         }
@@ -44,7 +46,7 @@ var Product = {
             return;
         }
 
-        user_info = JSON.parse($.cookie('user_login'));
+        var user_info = JSON.parse($.cookie('user_login'));
 
 
         var confirm = window.confirm("Delete product?");
@@ -66,6 +68,78 @@ var Product = {
                 }
             });
         }
+    },
+
+    edit:function(id){
+        if (!$.cookie('user_login')){
+            return;
+        }
+
+        $('body').modalmanager('loading');
+
+        setTimeout(function () {
+            Modals.modal.load('scripts/edit_product/edit_product.html', '', function () {
+                Modals.modal.modal();
+                setTimeout(function(){
+                    $('button#save_edit_product').click(function () {
+                        var form = $('form#edit_offer_form');
+
+                        data={
+                            function:'edit_offer',
+                            id: id,
+                            name:form.find('input[name="name"]').val(),
+                            description: form.find('textarea#description').val(),
+                            price: form.find('input[name="price"]').val()
+                        }
+
+                        $.post(window.jMarket.requestUrl,data,function(data){
+                            data = JSON.parse(data);
+                            if (data.error){
+                                window.jMarket.Modules.DisplayMessage.print(data.error,'error');
+                                return;
+                            }
+
+                            Modals.modal.modal('hide');
+                            window.jMarket.Modules.DisplayMessage.print("Successfully saved.", "success");
+                            Product.getMyProducts();
+
+                        });
+                    });
+                },500);
+            });
+
+            var data = {
+                function:'get_product_info',
+                id:id
+            }
+
+            $.post(window.jMarket.requestUrl, data, function (data) {
+
+                data = JSON.parse(data);
+                if (data.error) {
+                    window.jMarket.Modules.DisplayMessage.print(data.error, 'error');
+                    return;
+                }
+                var product_info = data.product_info;
+                //1 -> name
+                //2 -> description
+                //4 -> price
+                //6 -> user_id
+                var user_id = JSON.parse($.cookie('user_login')).user_id;
+                $('input[name="user_id"]').val(user_id);
+
+                if (user_id!=product_info[6]){
+                    window.jMarket.Modules.DisplayMessage.print("Product does not belong to user.",'error');
+                    return;
+                }
+                var form = Modals.modal.find('form');
+                form.find('input[name="name"]').val(product_info[1]);
+                form.find('textarea#description').text(product_info[2]);
+                form.find('input[name="price"]').val(product_info[4]);
+            });
+
+        }, 500);
+
     },
 
     getMyProducts:function () {

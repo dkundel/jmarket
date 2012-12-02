@@ -83,6 +83,20 @@ var Modals = {
             setTimeout(function () {
                 Modals.modal.load('scripts/offer/offer.html', '', function () {
                     Modals.modal.modal();
+                    setTimeout(function(){
+                        $('button#create_product').click(function () {
+                            var form = $('form#create_offer_form');
+                            form.ajaxForm(function (data) {
+                                data = JSON.parse(data);
+                                if (data.error) {
+                                    window.jMarket.Modules.DisplayMessage.print(data.error, 'error');
+                                } else {
+                                    Modals.modal.modal('hide');
+                                    window.jMarket.Modules.Product.getInfo(data.product_id);
+                                }
+                            }).submit();
+                        });
+                    },500);
                 });
 
                 var data = {
@@ -90,6 +104,7 @@ var Modals = {
                 }
 
                 $.post(window.jMarket.requestUrl, data, function (data) {
+
                     data = JSON.parse(data);
                     if (data.error) {
                         window.jMarket.Modules.DisplayMessage.print(data.error, 'error');
@@ -106,18 +121,7 @@ var Modals = {
                     var user_id = JSON.parse($.cookie('user_login')).user_id;
                     $('input[name="user_id"]').val(user_id);
                 });
-                $('button#create_product').live('click', function () {
-                    var form = $('form#create_offer_form');
-                    form.ajaxForm(function (data) {
-                        data = JSON.parse(data);
-                        if (data.error) {
-                            window.jMarket.Modules.DisplayMessage.print(data.error, 'error');
-                        } else {
-                            Modals.modal.modal('hide');
-                            window.jMarket.Modules.Product.getInfo(data.product_id);
-                        }
-                    }).submit();
-                });
+
             }, 500);
         }
     },

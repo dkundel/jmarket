@@ -1,0 +1,50 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3>Edit product</h3>
+</div>
+<div class="modal-body">
+    <div class="row-fluid">
+        <form class="form-horizontal" method="POST" id="edit_offer_form">
+            <fieldset>
+                <input type="hidden" name="function" value="create_offer" />
+                <input type="hidden" name="user_id" value=""/>
+                <div class="control-group">
+                    <!-- Name -->
+                    <label class="control-label"  for="name">Product Name</label>
+                    <div class="controls">
+                        <input type="text" id="name" name="name" placeholder="" class="input-xlarge">
+                        <p class="help-block">Please enter the name of your offer</p>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <!-- Description -->
+                    <label class="control-label"  for="description">Description</label>
+                    <div class="controls">
+                        <textarea id="description" name="description" placeholder="" class="input-xlarge"></textarea>
+                        <p class="help-block">Please enter a description for your offer.</p>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <!-- Price -->
+                    <label class="control-label"  for="price">Price</label>
+                    <div class="controls">
+                        <div class="input-append">
+                            <input class="input-small" id="price" name="price" type="text">
+                            <span class="add-on">&euro;</span>
+                        </div>
+                        <p class="help-block">Please enter a price.</p>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" data-dismiss="modal" class="btn">Close</button>
+    <button type="button" class="btn btn-jmarket-orange" id="save_edit_product">Save</button>
+</div>
+
+
