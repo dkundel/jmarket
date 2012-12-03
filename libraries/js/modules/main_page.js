@@ -1,7 +1,19 @@
+/**
+ * Module for constructing the main page
+ * @type {Object}
+ * @author Dominik Kundel
+ */
+
 var MainPage = {
     requestData:{
         function:"construct_main_page"
     },
+    /**
+     * Function for displaying the main page content (navigation optional)
+     * @param data - data for display
+     * @param navbar - if true display the navbar, if false display only the product list
+     * @private
+     */
     renderData:function _render_data(data, navbar) {
         if (data.error) {
             window.jMarket.Modules.DisplayMessage.print(data.error, "error");
@@ -31,6 +43,11 @@ var MainPage = {
         }
     },
 
+    /**
+     * Function for displaying the navigation bar
+     * @param data - category list
+     * @private
+     */
     renderNavbar:function (data) {
         nav_content = data.categories;
         nav_list = $('div.nav_bar_left').find('ul#category_list');
@@ -42,6 +59,10 @@ var MainPage = {
         MainPage._init_filters();
     },
 
+    /**
+     * Function for loading the mainpage content
+     * @param navbar -true if the navbar has to be printed
+     */
     load:function _load(navbar) {
         $.post(window.jMarket.requestUrl, MainPage.requestData, function (data) {
             data = JSON.parse(data);
@@ -53,6 +74,11 @@ var MainPage = {
         });
     },
 
+    /**
+     * Initialize the category filters
+     * @private
+     * @author George Merticariu
+     */
     _init_filters:function () {
         var filter_container = $('div.nav_bar_left');
         var filter_all = filter_container.find('li.filter-all');

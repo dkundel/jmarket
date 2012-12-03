@@ -1,6 +1,24 @@
+/**
+ * Module for loading modal windows
+ * @type {Object}
+ * @author Dominik Kundel
+ */
+
 var Modals = {
+    /**
+     * modal container
+     */
     modal:$('#modal_container'),
+
+    /**
+     * sign up module
+     * open modal window, validate user input, tries to create account, print success/error message
+     */
     signUp:{
+        /**
+         * Open the modal window
+         * @private
+         */
         load:function _load() {
             $('body').modalmanager('loading');
             setTimeout(function () {
@@ -9,6 +27,13 @@ var Modals = {
                 });
             }, 500);
         },
+        /**
+         * validate user input
+         * tries to create account
+         * print error/success message
+         * on success logs user in
+         * @private
+         */
         submit:function _load() {
 
             var email = $("form[name='sign_up'] input[name='email']").val();
@@ -72,7 +97,19 @@ var Modals = {
             });
         }
     },
+    /**
+     * Module for creating an offer
+     */
     createOffer:{
+        /**
+         * if user is not login exits
+         * open modal window
+         * add the category list
+         * sends the form as an ajaxForm
+         * print success/error message
+         * on success redirects to product page
+         * @private
+         */
         load:function _load() {
             if (!$.cookie('user_login')) {
                 return;
@@ -125,7 +162,17 @@ var Modals = {
             }, 500);
         }
     },
+
+    /**
+     * Create review module
+     * creates a review for an user
+     */
     createReview:{
+        /**
+         * Loads the create review window
+         * bind the submit function to crete review button
+         * @private
+         */
         load:function _load() {
             $('body').modalmanager('loading');
 
@@ -136,6 +183,11 @@ var Modals = {
                 });
             }, 500);
         },
+        /**
+         *  Create user review via ajax
+         *  print success/error message
+          * @private
+         */
         submit: function _submit() {
             var user_login = JSON.parse($.cookie('user_login'));
             if(user_login){
@@ -172,7 +224,15 @@ var Modals = {
             }
         }
     },
+
+    /**
+     * Module for changing the password
+     */
     changePassword:{
+        /**
+         * open the change password modal
+         * @private
+         */
         load:function _load() {
             $('body').modalmanager('loading');
 
@@ -182,6 +242,13 @@ var Modals = {
                 });
             }, 500);
         },
+
+        /**
+         * take the data from the form
+         * change the password via ajax
+         * print error/success message
+         * @private
+         */
         submit: function _submit() {
             var old_pw = $form.find('input[name="old_password"]').val();
             var pw = $form.find('input[name="password"]').val();

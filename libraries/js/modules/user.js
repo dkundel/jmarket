@@ -1,4 +1,15 @@
+/**
+ * Module for controling user actions
+ * @type {Object}
+ * @author Dominik Kundel
+ */
 var User = {
+    /**
+     *
+     * @param data
+     * @private
+     * @author George Merticariu & Dominik Kundel
+     */
     _renderProfilePage:function _render_profile_page(data) {
         var html = "<div class='well'><div class='user-information'><p><i class='icon-envelope'></i> " +
             "<span class='user-email'>" + data.user_info[0][1] + "</span></p><p><i class='icon-home'></i> " +
@@ -30,6 +41,11 @@ var User = {
         $('div.content_wrapper').html(html);
     },
 
+    /**
+     *
+     * @param id
+     * @private
+     */
     getProfilePage:function _get_profile_page(id) {
         var data = {
             function:'get_user_information',
@@ -46,6 +62,10 @@ var User = {
         });
     },
 
+    /**
+     *
+     * @private
+     */
     getMyProfile:function _get_my_profile() {
         if ($.cookie('user_login')) {
             var login = JSON.parse($.cookie('user_login'));

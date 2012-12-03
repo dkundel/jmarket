@@ -1,4 +1,16 @@
+/**
+ * Module for controlling products actions
+ * @type {Object}
+ * @author Dominik Kundel
+ */
 var Product = {
+    /**
+     *
+     * @param data
+     * @param user_products
+     * @return {String}
+     * @private
+     */
     _renderProductInfo:function _render_product_info(data, user_products) {
         var html = '<div class="row" style="margin: 0"><div class="span10">';
         html += '<h3>' + data[1] + '</h3>';
@@ -26,6 +38,11 @@ var Product = {
         return html;
 
     },
+    /**
+     *
+     * @param id
+     * @private
+     */
     getInfo:function _get_info(id) {
         var data = {
             function:'get_product_info',
@@ -41,6 +58,11 @@ var Product = {
             }
         });
     },
+    /**
+     *
+     * @param id
+     * @private
+     */
     delete:function _delete(id) {
         if (!$.cookie('user_login')) {
             return;
@@ -70,6 +92,11 @@ var Product = {
         }
     },
 
+    /**
+     *
+     * @param id
+     * @author George Merticariu
+     */
     edit:function(id){
         if (!$.cookie('user_login')){
             return;
@@ -142,6 +169,9 @@ var Product = {
 
     },
 
+    /**
+     * @author George Merticariu
+     */
     getMyProducts:function () {
         if (!$.cookie('user_login')) {
             return;

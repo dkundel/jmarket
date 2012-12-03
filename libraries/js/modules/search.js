@@ -1,3 +1,8 @@
+/**
+ * Module for displaying the search results
+ * @type {Object}
+ * @author Dominik Kundel
+ */
 var Search = {
 	submit: function _submit(){
 		$searchField = $("#product_search");
