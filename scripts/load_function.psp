@@ -5,9 +5,17 @@ from time import gmtime,strftime
 
 conn = None
 
+#
+# Takes any object (preferably JSON, array, string) and
+# sends out a response as a JSON file
+#
 def echo(text):
     req.write(json.dumps(text))
 
+#
+# creates a connection to the MySQL database
+# and stores it in a global variable conn
+#
 def create_db_connection():
     global conn
     if not conn:
@@ -20,11 +28,18 @@ def create_db_connection():
         except:
             echo({'error':"Failed to connect to the database"})
 
+# calls function to establish connection
 create_db_connection()
 
+# execute if connection exists
 if conn:
+    # create cursor to access the data
     cursor = conn.cursor()
 
+    #
+    # Fetches all available categories by id and name
+    # and returns the array of results
+    #
     def PRIVATE_get_categories():
         global cursor
         query = "SELECT c.`category_id`, c.`name` "\
@@ -34,9 +49,27 @@ if conn:
         rows = cursor.fetchall()
         return rows
 
+    #
+    # function to request all available categories in a JSON
+    # 
+    # Returns: 
+    # {
+    #   "categories": [<array of [<category_id>,<category_name>]]
+    # }
+    #
     def LF_get_categories():
         echo({'categories':PRIVATE_get_categories()})
 
+    #
+    # function that requests all available categories as well
+    # as the 16 most recently offered products
+    # 
+    # Returns:
+    # {
+    #   "products": [<array of [<product_id>,<name>,<description>,<price>,<picture_path>]],
+    #   "categories": [see LF_get_categories]
+    # }
+    #
     def LF_construct_main_page():
         global cursor
         query = "SELECT p.`product_id` ,p.`name`,p.`description`,sp.`price`,p.`picture_path` " \
@@ -50,6 +83,13 @@ if conn:
         categories = PRIVATE_get_categories()
         echo({'products': products, 'categories': categories})
 
+    #
+    # Searches for all products that have the form["product_name"] value
+    # as part of the product name
+    # 
+    # Return:
+    # similar to LF_construct_main_page 
+    #
     def LF_search_product():
         global cursor
         if form.has_key("product_name"):
@@ -69,12 +109,15 @@ if conn:
         else:
             echo({'error':"No product name for searching passed"})
 
-    def LF_get_offers_by_category_name():
-        echo("")
-
-    def LF_get_offers_by_category_type():
-        echo()
-
+    #
+    # Function to request user information depending on his/her id as form["id"]
+    # 
+    # Return:
+    # {
+    #   "user_info": [[<user_id>,<user_name>,<email>,<address>,<phone>]],
+    #   "user_ranking": <avg_ranking>
+    # }
+    #
     def LF_get_user_information():
         global cursor
         if form.has_key("id"):
@@ -95,6 +138,16 @@ if conn:
         else:
             echo({'error':"No user id as 'id' passed"})
 
+    # 
+    # Function to create a new user if form["email"], form["password"], form["address"], form["phone"]
+    # exist and returns a JSON to store it at the client
+    # 
+    # Returns:
+    # {
+    #   "user_id": <user_id>,
+    #   "email": <email>
+    # }
+    # 
     def LF_sign_up():
         global cursor,conn
         if form.has_key("email") and form.has_key("password") and form.has_key("address") and form.has_key("phone"):
@@ -127,6 +180,16 @@ if conn:
         else:
             echo({'error':"Not enough parameters"})
 
+    # 
+    # If user email and password are passed checks if thes correspond with the values in the database
+    # and returns the user information to store on client side
+    # 
+    # Returns:
+    # {
+    #   "user_id": <user_id>,
+    #   "email": <email>
+    # }
+    # 
     def LF_sign_in():
         if (form.has_key('user') and form.has_key('password')):
             if ['user'] and form['password']:
@@ -146,6 +209,11 @@ if conn:
         else:
             echo({'error':'Invalid user or password'})
 
+    # 
+    # Checks if the keys: from, to, review, rating are available in the form variable and non empty
+    # and creates then the review. If this was successful a JSON with success attribute is passed otherwise
+    # an error attribute with the error message
+    # 
     def LF_create_review():
         global cursor,conn
         if form.has_key("from") and form.has_key("to") and form.has_key("review") and form.has_key("rating"):
@@ -168,6 +236,10 @@ if conn:
         else:
             echo({'error':"Not enough parameters provided to create review"})
 
+    # 
+    # If the keys name, description, price, id are part of the form variable and non-empty the product is updated
+    # and the return is similar to LF_create_review
+    # 
     def LF_edit_offer():
         global cursor,conn
         if form.has_key("name") and form.has_key("description") and form.has_key("price") and form.has_key("id"):
@@ -190,17 +262,30 @@ if conn:
         else:
             echo({'error':"Not enough parameters provided!"})
 
+    # 
+    # If the keys name, description, price, user_id, category, picture are passed to the form variable and
+    # non-empty the picture is first stored on the server and then the product created with the corresponding
+    # picture path and the other information. The response (if successful) is a JSON with the product_id as attribtue
+    # 
+    # Returns:
+    # {
+    #   "product_id": <product_id>
+    # }
+    # 
     def LF_create_offer():
         global cursor,conn
         if form.has_key("name") and form.has_key("description") and form.has_key("price") and form.has_key("user_id") and form.has_key("category") and form.has_key('picture'):
             if form['name'] and form['description'] and form['price'] and form['user_id'] and form['category'] and form['picture']:
                 picture_path = "img/products/"
 
+                # creates filename string
                 fileitem = form['picture']
                 fname = form['user_id']+"_"+strftime("%d_%m_%Y_%H_%M_%S", gmtime())+".jpeg"
 
+                # defines the directory path
                 dir_path = os.path.join(os.path.dirname(req.filename), '../img/products')
 
+                # opens destination file and writes the information from the uploaded picture
                 open(os.path.join(dir_path, fname), 'wb').write(fileitem.file.read())
                 picture_path=picture_path+fname
                 query = "INSERT INTO `products` (`name`,`description`,`picture_path`) "\
@@ -232,6 +317,24 @@ if conn:
             else:
                 echo({'error':"Not enough parameters provided!"})
 
+    # 
+    # Function to request the product information depending on the form["id"] value as product_id.
+    # 
+    # Returns: 
+    # {
+    #   "product_info": [
+    #                       <product_id>,
+    #                       <name>,
+    #                       <description>,
+    #                       <picture_path>,
+    #                       <price>,
+    #                       <negotiable>,
+    #                       <user_id>,
+    #                       <email>,
+    #                       <category_name>
+    #                   ]
+    # }
+    # 
     def LF_get_product_info():
         global cursor
         if form.has_key("id"):
@@ -254,6 +357,10 @@ if conn:
         else:
             echo({'error':"No product id as 'id' provided"})
 
+    # 
+    # Deletes the product and it's picture that correspond to form["product_id"] and returns a JSON with either a 
+    # success attribute or an error attribute stating a message
+    # 
     def LF_delete_product():
         global cursor,conn
         if form.has_key("user_id") and form.has_key("product_id"):
@@ -280,6 +387,11 @@ if conn:
         else:
             echo({'error':"No product_id as id provided!"})
 
+    # 
+    # Checks if the form["old_password"] corresponds to the value in the database and then updates
+    # the password by setting the new one. If this was successful a "successs" string is returned otherwise
+    # a JSON with an error attribute holding the error message.
+    # 
     def LF_change_password():
         global cursor,conn
         if form.has_key("password") and form.has_key("id") and form.has_key("old_password"):
@@ -302,6 +414,15 @@ if conn:
         else:
             echo({'error':"Not enough parameters provided"})
 
+    #
+    # Allows to filter the products by a certain min_price and max_price as well as a list of categories
+    # and returns the list of products that fit this filter
+    # 
+    # Returns:
+    # {
+    #   "products": [<array of [<product_id>,<name>,<description>,<price>,<picture_path>]]
+    # }
+    #
     def LF_filter_products():
         global cursor
         if form.has_key("min_price") and form.has_key("max_price") and form.has_key("filter"):
@@ -333,7 +454,24 @@ if conn:
         else:
             echo({"error":"Not enough parameters provided(2)"})
 
-
+    # 
+    # Function to request all products by the user with the user id -> form["user_id"]
+    # 
+    # Returns:
+    # {
+    #   "user_products": [<array of [
+    #                       <product_id>,
+    #                       <name>,
+    #                       <description>,
+    #                       <picture_path>,
+    #                       <price>,
+    #                       <negotiable>,
+    #                       <user_id>,
+    #                       <email>,
+    #                       <category_name>
+    #                       ]]
+    # }
+    # 
     def LF_get_user_products():
         global cursor
         if form.has_key("user_id"):
@@ -353,12 +491,17 @@ if conn:
         else:
             echo({'error':'Not enough papameters provided'})
 
+# part being responsible to call the correct function depending on the request
+# reads the function parameter of the request and calls the function if available.
 if form.has_key("function"):
+    # creates function name depending on passed parameter
     funcName = "LF_" + form["function"]
     try:
+        # checks if function exists
         func = locals()[funcName]
         if callable(func):
             try:
+                # calls function
                 func()      # depends on function, of course
             except:
                 echo({'error':"Server encountered an error. Please try again later.(1)"})
